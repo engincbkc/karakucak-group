@@ -63,10 +63,10 @@ export default function MnkMimarlikPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Mimari Tasaru0131m</h3>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Mimari Tasarım</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Konut, ticari, kurumsal ve karma kullanu0131mlu0131 projeler iu00e7in yeniliku00e7i ve estetik mimari 
-                tasaru0131mlar geliu015ftiriyoruz.
+                Konut, ticari, kurumsal ve karma kullanımlı projeler için yenilikçi ve estetik mimari 
+                tasarımlar geliştiriyoruz.
               </p>
             </motion.div>
 
@@ -83,10 +83,10 @@ export default function MnkMimarlikPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">u0130u00e7 Mimarlu0131k</h3>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">İç Mimarlık</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Fonksiyonel ve estetik iu00e7 mekanlar yaratarak, kullanu0131cu0131 deneyimini ve yau015fam kalitesini 
-                yu00fckseltiyoruz.
+                Fonksiyonel ve estetik iç mekanlar yaratarak, kullanıcı deneyimini ve yaşam kalitesini 
+                yükseltiyoruz.
               </p>
             </motion.div>
 
