@@ -2,7 +2,7 @@
 
 import React from "react"
 import Link from "next/link"
-import { cn } from "@/lib/utils"
+// cn import removed as it's not being used
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react"
 
 export function Footer() {

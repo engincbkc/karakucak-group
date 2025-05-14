@@ -55,38 +55,7 @@ const sectors = [
   }
 ];
 
-// Özel CSS stil tanımları
-const swiperCustomStyles = {
-  '.swiper-button-next, .swiper-button-prev': {
-    color: 'rgba(255, 255, 255, 0.7)',
-    width: '50px',
-    height: '50px',
-    borderRadius: '50%',
-    background: 'rgba(0, 0, 0, 0.3)',
-    '&:hover': {
-      color: 'white',
-      background: 'rgba(0, 0, 0, 0.5)'
-    },
-    '&::after': {
-      fontSize: '22px',
-      fontWeight: 'bold'
-    }
-  },
-  '.swiper-button-next': {
-    right: '20px'
-  },
-  '.swiper-button-prev': {
-    left: '20px'
-  },
-  '.swiper-pagination-bullet': {
-    background: 'white',
-    opacity: 0.5,
-    '&-active': {
-      opacity: 1,
-      background: '#60a5fa'
-    }
-  }
-};
+// CSS styles are injected directly through useEffect
 
 export function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);

@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 // Using named imports instead of general import to avoid "export *" error
-import { motion, AnimatePresence, useAnimation, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function HakkimizdaPage() {
   return (
@@ -45,7 +45,7 @@ export default function HakkimizdaPage() {
                 Hikayemiz
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                Karakucak Group, 1995 yu0131lu0131nda Ahmet Karakucak tarafu0131ndan, otomotiv paru00e7alaru0131 u00fcretimi ile 
+                Karakucak Group'un başarı hikayesi, kurucumuz Said Karakucak'ın tarafu0131ndan, otomotiv paru00e7alaru0131 u00fcretimi ile 
                 faaliyete bau015fladu0131. Yu0131llar iu00e7inde su00fcrekli bu00fcyu00fcyen ve geliu015fen u015firketimiz, otomotiv sektu00f6ru00fcndeki 
                 bau015faru0131larla gu00fcu00e7lenerek, madencilik alanu0131na yatu0131ru0131m yaptu0131.
               </p>
@@ -57,7 +57,7 @@ export default function HakkimizdaPage() {
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300">
                 Karakucak Group olarak, yeniliku00e7i ve su00fcrdu00fcru00fclebilir iu015f modellerimizle sektu00f6rlerimizde 
-                fark yaratmaya devam ediyoruz.
+                grubu olma yolunda emin adımlarla ilerliyoruz.
               </p>
             </motion.div>
             <motion.div
@@ -69,7 +69,7 @@ export default function HakkimizdaPage() {
             >
               <Image 
                 src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3" 
-                alt="Kurucumuz Ahmet Karakucak"
+                alt="Kurucumuz Said Bey'in vizyonu"
                 width={600}
                 height={400}
                 className="w-full h-auto"
@@ -131,7 +131,7 @@ export default function HakkimizdaPage() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Su00fcrdu00fcru00fclebilirlik</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                u00c7evre ve toplum iu00e7in sorumlu bir u015fekilde hareket ederek, gelecek nesillere daha iyi 
+                1998'den günümüze kadar sürdürdüğümüz kalite anlayışımız, güven ve yenilikçilikle, Türkiye'nin lider şirketlercek nesillere daha iyi 
                 bir du00fcnya bu0131rakmayu0131 hedefliyoruz.
               </p>
             </motion.div>
@@ -164,7 +164,7 @@ export default function HakkimizdaPage() {
             >
               <div className="h-14 w-14 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-red-600 dark:text-red-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Ekip u00c7alu0131u015fmasu0131</h3>
@@ -191,7 +191,7 @@ export default function HakkimizdaPage() {
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Misyonumuz</h3>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
                 Karakucak Group olarak misyonumuz, faaliyet gu00f6sterdiu011fimiz tu00fcm sektu00f6rlerde yu00fcksek kaliteli 
-                u00fcru00fcn ve hizmetler sunarak, mu00fcu015fterilerimizin beklentilerini au015fmak ve du00fcrustlukten 
+                u00fcru00fcn ve hizmetler sunarak, mu00fcu015fterşirketimizin temel değerleri'ni au015fmak ve du00fcrustlukten 
                 u00f6du00fcn vermeden su00fcrdu00fcru00fclebilir bir gelecek inu015fa etmektir.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300">

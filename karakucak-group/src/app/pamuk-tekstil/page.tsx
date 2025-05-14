@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import SectorPage from "@/components/layout/sector-page";
+// SectorPage import removed as it's not being used
 import Image from "next/image";
 import { motion, useInView, useAnimation, AnimatePresence } from "framer-motion";
 import Link from "next/link";

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react"
 import Link from "next/link"
-import Image from "next/image"
+// Image import removed as it's not being used
 import { useTheme } from "next-themes"
 import { cn } from "@/lib/utils"
 import { Menu, X, ChevronDown, Sun, Moon } from "lucide-react"
