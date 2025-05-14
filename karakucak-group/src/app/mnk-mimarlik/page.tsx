@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -10,8 +12,8 @@ export default function MnkMimarlikPage() {
       <section className="relative bg-gray-900 text-white">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3"
-            alt="MNK Mimarlu0131k"
+            src="https://images.unsplash.com/photo-1613564813921-310cee8ec805?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=90"
+            alt="MNK Mimarlık"
             fill
             className="object-cover opacity-30"
             priority
@@ -19,10 +21,10 @@ export default function MnkMimarlikPage() {
         </div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">MNK Mimarlu0131k</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">MNK Mimarlık</h1>
             <p className="text-xl mb-8">
-              Su00fcrdu00fcru00fclebilir ve yeniliku00e7i mimari tasaru0131mlarla u00e7evresel, 
-              ekonomik ve sosyal deu011fer yaratan projeler geliu015ftiriyoruz.
+              Sürdürülebilir ve yenilikçi mimari tasarımlarla çevresel, 
+              ekonomik ve sosyal değer yaratan projeler geliştiriyoruz.
             </p>
           </div>
         </div>
@@ -42,8 +44,8 @@ export default function MnkMimarlikPage() {
               Hizmetlerimiz
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              MNK Mimarlu0131k olarak, modern ve su00fcrdu00fcru00fclebilir tasaru0131m anlayu0131u015fu0131yla 
-              mu00fcu015fterilerimize kapsamlu0131 mimari hizmetler sunuyoruz.
+              MNK Mimarlık olarak, modern ve sürdürülebilir tasarım anlayışıyla 
+              müşterilerimize kapsamlı mimari hizmetler sunuyoruz.
             </p>
           </motion.div>
 
@@ -101,17 +103,17 @@ export default function MnkMimarlikPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Su00fcrdu00fcru00fclebilir Tasaru0131m</h3>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Sürdürülebilir Tasarım</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
-                u00c7evre dostu malzemeler ve enerji verimli sistemlerle, su00fcrdu00fcru00fclebilir ve eko-dostu yapu0131lar 
-                tasarlu0131yoruz.
+                Çevre dostu malzemeler ve enerji verimli sistemlerle, sürdürülebilir ve eko-dostu yapılar 
+                tasarlıyoruz.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* u00d6ne u00c7u0131kan Projeler */}
+      {/* Öne Çıkan Projeler */}
       <section className="py-16 bg-gray-100 dark:bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -122,10 +124,10 @@ export default function MnkMimarlikPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              u00d6ne u00c7u0131kan Projelerimiz
+              Öne Çıkan Projelerimiz
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              MNK Mimarlu0131k'in imzasu0131nu0131 tau015fu0131yan yeniliku00e7i ve u00f6du00fcllu00fc projelerimizden bazu0131laru0131
+              MNK Mimarlık'ın imzasını taşıyan yenilikçi ve ödüllü projelerimizden bazıları
             </p>
           </motion.div>
 
@@ -149,11 +151,11 @@ export default function MnkMimarlikPage() {
               <div className="p-6 flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Eco Tower Office Complex</h3>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  u0130stanbul'da LEED Platinum sertifikalu0131, su00fcrdu00fcru00fclebilir ofis kompleksi. Yenilenebilir enerji 
-                  kaynaklaru0131, yau011fmur suyu hasadu0131 ve dou011fal aydu0131nlatma ile %60 enerji tasarrufu sau011flu0131yor.
+                  İstanbul'da LEED Platinum sertifikalı, sürdürülebilir ofis kompleksi. Yenilenebilir enerji 
+                  kaynakları, yağmur suyu hasadı ve doğal aydınlatma ile %60 enerji tasarrufu sağlıyor.
                 </p>
                 <div className="mt-auto">
-                  <span className="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-xs font-semibold px-2.5 py-0.5 rounded-full mr-2">u00d6du00fcllu00fc Proje</span>
+                  <span className="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-xs font-semibold px-2.5 py-0.5 rounded-full mr-2">Ödüllü Proje</span>
                   <span className="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs font-semibold px-2.5 py-0.5 rounded-full">LEED Platinum</span>
                 </div>
               </div>
@@ -178,12 +180,12 @@ export default function MnkMimarlikPage() {
               <div className="p-6 flex-grow">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Seaside Residential Complex</h3>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  u0130zmir'de dou011fayla bu00fctu00fcnleu015fen modern konut kompleksi. u00c7au011fdau015f tasaru0131mu0131 ve aku0131llu0131 ev 
-                  teknolojileriyle, konforlu ve su00fcrdu00fcru00fclebilir bir yau015fam alanu0131 sunuyor.
+                  İzmir'de doğayla bütünleşen modern konut kompleksi. Çağdaş tasarımı ve akıllı ev 
+                  teknolojileriyle, konforlu ve sürdürülebilir bir yaşam alanı sunuyor.
                 </p>
                 <div className="mt-auto">
-                  <span className="inline-block bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 text-xs font-semibold px-2.5 py-0.5 rounded-full mr-2">Modern Yau015fam</span>
-                  <span className="inline-block bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 text-xs font-semibold px-2.5 py-0.5 rounded-full">Aku0131llu0131 Ev</span>
+                  <span className="inline-block bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 text-xs font-semibold px-2.5 py-0.5 rounded-full mr-2">Modern Yaşam</span>
+                  <span className="inline-block bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 text-xs font-semibold px-2.5 py-0.5 rounded-full">Akıllı Ev</span>
                 </div>
               </div>
             </motion.div>
@@ -194,13 +196,13 @@ export default function MnkMimarlikPage() {
               href="/projeler" 
               className="px-6 py-3 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
             >
-              Tu00fcm Projeleri Gu00f6ru00fcntu00fcle
+              Tüm Projeleri Görüntüle
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Yaklau015fu0131mu0131mu0131z */}
+      {/* Yaklaşımımız */}
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -211,22 +213,22 @@ export default function MnkMimarlikPage() {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                Tasaru0131m Yaklau015fu0131mu0131mu0131z
+                Tasarım Yaklaşımımız
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                MNK Mimarlu0131k olarak, insan odaklu0131 ve u00e7evre dostu tasaru0131m prensiplerini benimsiyoruz. 
-                Her projeyi, kullanu0131cu0131 deneyimini u00f6n planda tutarak ve yerel bau011flamu0131 gu00f6z u00f6nu00fcnde 
-                bulundurarak ele alu0131yoruz.
+                MNK Mimarlık olarak, insan odaklı ve çevre dostu tasarım prensiplerini benimsiyoruz. 
+                Her projeyi, kullanıcı deneyimini ön planda tutarak ve yerel bağlamı göz önünde 
+                bulundurarak ele alıyoruz.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                Yeniliku00e7i teknolojiler ve malzemelerle, estetik, iu015flevsellik ve su00fcrdu00fcru00fclebilirliu011fi 
-                bir araya getirerek, zamanu0131n u00f6tesinde deu011fer yaratan yapu0131lar tasarlu0131yoruz.
+                Yenilikçi teknolojiler ve malzemelerle, estetik, işlevsellik ve sürdürülebilirliği 
+                bir araya getirerek, zamanın ötesinde değer yaratan yapılar tasarıyoruz.
               </p>
               <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300">
-                <li className="mb-2">Kullanu0131cu0131 odaklu0131 tasaru0131m</li>
-                <li className="mb-2">Su00fcrdu00fcru00fclebilir ve u00e7evre dostu yaklau015fu0131m</li>
-                <li className="mb-2">Yeniliku00e7i ve u00e7au011fdau015f estetik anlayu0131u015fu0131</li>
-                <li>Yerel ku00fcltu00fcr ve bau011flama saygu0131</li>
+                <li className="mb-2">Kullanıcı odaklı tasarım</li>
+                <li className="mb-2">Sürdürülebilir ve çevre dostu yaklaşım</li>
+                <li className="mb-2">Yenilikçi ve çağdaş estetik anlayışı</li>
+                <li>Yerel kültür ve bağlama saygı</li>
               </ul>
             </motion.div>
             <motion.div
@@ -238,7 +240,7 @@ export default function MnkMimarlikPage() {
             >
               <Image 
                 src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3" 
-                alt="Mimarlu0131k Ekibimiz"
+                alt="Mimarlık Ekibimiz"
                 width={600}
                 height={400}
                 className="w-full h-auto"

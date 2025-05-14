@@ -110,16 +110,13 @@ export function Header() {
                 className="ml-4 p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
                 aria-label="Toggle theme"
               >
-                {typeof window !== "undefined" ? (
-                  theme === "dark" ? (
-                    <Sun className="h-5 w-5" />
-                  ) : (
-                    <Moon className="h-5 w-5" />
-                  )
-                ) : (
-                  // Sunucu tarafu0131nda varsayu0131lan olarak Moon ikonunu gu00f6ster
+                {/* Sunucu ve istemci tarafında tutarlı tema ikonu gösterimi */}
+                <div className="dark:hidden">
                   <Moon className="h-5 w-5" />
-                )}
+                </div>
+                <div className="hidden dark:block">
+                  <Sun className="h-5 w-5" />
+                </div>
               </button>
             </div>
           </div>

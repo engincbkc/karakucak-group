@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -10,7 +12,7 @@ export default function PamukTekstilPage() {
       <section className="relative bg-green-900 text-white">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1606914879483-62d3dda669ae?ixlib=rb-4.0.3"
+            src="https://images.unsplash.com/photo-1618372609037-74fd1f9f7f1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=90"
             alt="Pamuk ve Tekstil"
             fill
             className="object-cover opacity-30"
