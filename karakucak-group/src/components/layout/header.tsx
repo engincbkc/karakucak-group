@@ -5,7 +5,9 @@ import Link from "next/link"
 // Image import removed as it's not being used
 import { useTheme } from "next-themes"
 import { cn } from "@/lib/utils"
-import { Menu, X, ChevronDown, Sun, Moon } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
+import { ThemeSwitcher } from "../ui/theme-switcher"
+import { useThemeContext } from "../theme-context"
 
 const navigation = [
   { name: "Ana Sayfa", href: "/" },
@@ -27,7 +29,7 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [openDropdown, setOpenDropdown] = useState("")
-  const { theme, setTheme } = useTheme()
+  const { isDarkTheme } = useThemeContext()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -105,19 +107,7 @@ export function Header() {
 
             {/* Theme Toggle Button */}
             <div className="flex items-center">
-              <button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="ml-4 p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
-                aria-label="Toggle theme"
-              >
-                {/* Sunucu ve istemci tarafında tutarlı tema ikonu gösterimi */}
-                <div className="dark:hidden">
-                  <Moon className="h-5 w-5" />
-                </div>
-                <div className="hidden dark:block">
-                  <Sun className="h-5 w-5" />
-                </div>
-              </button>
+              <ThemeSwitcher variant="icon" className="ml-4" />
             </div>
           </div>
 

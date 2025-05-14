@@ -4,8 +4,11 @@ import React from "react";
 import Image from "next/image";
 import { motion, useInView, useAnimation, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { useThemeContext } from "@/components/theme-context";
+import { ProjectsShowcase } from "@/components/sections/projects-showcase";
 
 export default function MnkMimarlikPage() {
+  const { isDarkTheme } = useThemeContext();
   return (
     <div className="pt-16">
       {/* Hero Section */}
@@ -26,6 +29,16 @@ export default function MnkMimarlikPage() {
               Sürdürülebilir ve yenilikçi mimari tasarımlarla çevresel, 
               ekonomik ve sosyal değer yaratan projeler geliştiriyoruz.
             </p>
+            <Link
+              href="/mnk-mimarlik/projeler"
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Projelerimizi Keşfedin
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </Link>
           </div>
         </div>
       </section>
@@ -113,94 +126,9 @@ export default function MnkMimarlikPage() {
         </div>
       </section>
 
-      {/* Öne Çıkan Projeler */}
-      <section className="py-16 bg-gray-100 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              Öne Çıkan Projelerimiz
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              MNK Mimarlık'ın imzasını taşıyan yenilikçi ve ödüllü projelerimizden bazıları
-            </p>
-          </motion.div>
+      {/* Projeler Showcase Bileşeni */}
+      <ProjectsShowcase isDarkTheme={isDarkTheme} />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Proje 1 */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg flex flex-col h-full"
-            >
-              <div className="relative h-72">
-                <Image
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3"
-                  alt="Eco Tower Office Complex"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6 flex-grow">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Eco Tower Office Complex</h3>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  İstanbul'da LEED Platinum sertifikalı, sürdürülebilir ofis kompleksi. Yenilenebilir enerji 
-                  kaynakları, yağmur suyu hasadı ve doğal aydınlatma ile %60 enerji tasarrufu sağlıyor.
-                </p>
-                <div className="mt-auto">
-                  <span className="inline-block bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 text-xs font-semibold px-2.5 py-0.5 rounded-full mr-2">Ödüllü Proje</span>
-                  <span className="inline-block bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs font-semibold px-2.5 py-0.5 rounded-full">LEED Platinum</span>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Proje 2 */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg flex flex-col h-full"
-            >
-              <div className="relative h-72">
-                <Image
-                  src="https://images.unsplash.com/photo-1613685703305-fba7a6181d86?ixlib=rb-4.0.3"
-                  alt="Seaside Residential Complex"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-6 flex-grow">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Seaside Residential Complex</h3>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  İzmir'de doğayla bütünleşen modern konut kompleksi. Çağdaş tasarımı ve akıllı ev 
-                  teknolojileriyle, konforlu ve sürdürülebilir bir yaşam alanı sunuyor.
-                </p>
-                <div className="mt-auto">
-                  <span className="inline-block bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 text-xs font-semibold px-2.5 py-0.5 rounded-full mr-2">Modern Yaşam</span>
-                  <span className="inline-block bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 text-xs font-semibold px-2.5 py-0.5 rounded-full">Akıllı Ev</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-          
-          <div className="flex justify-center mt-10">
-            <Link 
-              href="/projeler" 
-              className="px-6 py-3 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
-            >
-              Tüm Projeleri Görüntüle
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Yaklaşımımız */}
       <section className="py-16 bg-white dark:bg-gray-900">
