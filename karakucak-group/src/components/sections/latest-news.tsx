@@ -57,7 +57,7 @@ export function LatestNews({
         </div>
         
         {/* Haberler */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {latestNews.map((newsItem, index) => {
             // Kategori bilgisi
             const category = categories[newsItem.category] || {
@@ -65,11 +65,8 @@ export function LatestNews({
               color: "bg-blue-100 text-blue-800"
             };
             
-            // İlk haber öne çıkan olsun
-            const isFirstItem = index === 0;
-            
             return (
-              <div key={newsItem.id} className={isFirstItem ? "col-span-1 lg:col-span-3" : ""}>
+              <div key={newsItem.id} className="h-full">
                 <Link 
                   href={`/haberler/${newsItem.slug}`}
                   className="block h-full transition-transform hover:scale-[1.01] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg"
@@ -78,7 +75,7 @@ export function LatestNews({
                     news={newsItem}
                     categoryLabel={category.label}
                     categoryColor={category.color}
-                    variant={isFirstItem ? "featured" : "default"}
+                    variant="default"
                   />
                 </Link>
               </div>
