@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import Link from "next/link";
+// Using named imports instead of general import to avoid "export *" error
+import { motion, AnimatePresence, useAnimation, useInView } from "framer-motion";
 
 export default function HakkimizdaPage() {
   return (

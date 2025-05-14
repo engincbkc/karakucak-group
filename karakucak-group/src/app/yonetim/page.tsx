@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useInView, useAnimation, AnimatePresence } from "framer-motion";
 
 const executives = [
   {

@@ -2,7 +2,7 @@
 
 import React from "react"
 import Image from "next/image"
-import { motion } from "framer-motion"
+import { motion, useInView, useAnimation } from "framer-motion"
 
 interface DirectorProps {
   name: string

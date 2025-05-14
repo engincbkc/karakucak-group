@@ -2,7 +2,7 @@
 
 import React, { ReactNode } from "react"
 import Image from "next/image"
-import { motion } from "framer-motion"
+import { motion, useInView, useAnimation } from "framer-motion"
 
 interface SectorPageProps {
   title: string

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useInView, useAnimation, AnimatePresence } from "framer-motion";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 
 export default function IletisimPage() {

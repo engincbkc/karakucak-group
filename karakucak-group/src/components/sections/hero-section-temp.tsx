@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useInView, useAnimation, AnimatePresence } from "framer-motion";
 
 // Kurumsal sektör içerikleri
 const sectorContents = [

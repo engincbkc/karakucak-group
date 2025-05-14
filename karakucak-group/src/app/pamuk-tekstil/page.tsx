@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
+import SectorPage from "@/components/layout/sector-page";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useInView, useAnimation, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 export default function PamukTekstilPage() {

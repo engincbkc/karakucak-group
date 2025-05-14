@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import { motion } from "framer-motion"
+import { motion, useInView, useAnimation } from "framer-motion"
 import { Users, TrendingUp, Building2, GlobeLock } from "lucide-react"
 
 const stats = [
