@@ -19,33 +19,51 @@ import "swiper/css/navigation"
 const sectors = [
   {
     id: 1,
-    title: "Otomotiv ve Madencilik",
-    subtitle: "Endüstriyel Çözümler",
-    description: "Yenilikçi ve sürdürülebilir otomotiv çözümleri ile madencilik sektöründe lider yaklaşımlarımızla güvenilir iş ortağınızız.",
-    image: "https://images.unsplash.com/photo-1580983218765-f663bec07b37?q=80&w=2070&auto=format", 
-    link: "/otomotiv-madencilik",
+    title: "Otomotiv",
+    subtitle: "Yenilikçi Teknolojiler",
+    description: "Otomotiv sektöründe yenilikçi teknolojiler ve sürdürülebilir çözümlerle sektöre yön veriyoruz.",
+    image: "https://images.unsplash.com/photo-1537041373723-53e55d254ada?q=80&w=2070&auto=format", 
+    link: "/otomotiv",
     btnText: "Detayları Görüntüle"
   },
   {
     id: 2,
-    title: "Pamuk ve Tekstil",
-    subtitle: "Kaliteli Üretim",
-    description: "Kaliteli pamuk üretiminden modern tekstil ürünlerine kadar Karakucak Group olarak entegre bir hizmet zinciri sunuyoruz.",
-    image: "https://images.unsplash.com/photo-1626099216068-626122d11b42?q=80&w=2070&auto=format",
-    link: "/pamuk-tekstil",
-    btnText: "Tekstil Hizmetlerimiz"
-  },
-  {
-    id: 3,
-    title: "MNK Mimarlık",
-    subtitle: "Modern Tasarım",
-    description: "Sürdürülebilir, modern ve fonksiyonel mimarlık hizmetlerimizle projelerinize değer katıyor, hayallerinizi gerçeğe dönüştürüyoruz.",
+    title: "İnşaat&Taahhüt",
+    subtitle: "Güçlü Yapılar",
+    description: "Modern mimari anlayışımız ve yüksek mühendislik standartlarımızla inşaat sektöründe güvenilir çözümler sunuyoruz.",
     image: "https://images.unsplash.com/photo-1448630360428-65456885c650?q=80&w=2070&auto=format",
-    link: "/mnk-mimarlik",
+    link: "/insaat-taahhut",
     btnText: "Projelerimizi İnceleyin"
   },
   {
+    id: 3,
+    title: "Pamuk Sanayi",
+    subtitle: "Kaliteli Üretim",
+    description: "Sürdürülebilir pamuk üretimi ve işleme teknolojilerimizle tekstil sektörüne değer katıyoruz.",
+    image: "https://images.unsplash.com/photo-1605187337001-2356749647e2?q=80&w=2070&auto=format",
+    link: "/pamuk-sanayi",
+    btnText: "Üretim Sürecimiz"
+  },
+  {
     id: 4,
+    title: "Madencilik",
+    subtitle: "Doğal Kaynaklar",
+    description: "Çevre dostu madencilik uygulamalarımız ve ileri teknoloji ekipmanlarımızla sürdürülebilir madencilik faaliyetleri yürütüyoruz.",
+    image: "https://images.unsplash.com/photo-1565345270904-18a154e34e80?q=80&w=2070&auto=format",
+    link: "/madencilik",
+    btnText: "Madencilik Faaliyetlerimiz"
+  },
+  {
+    id: 5,
+    title: "Tarım",
+    subtitle: "Verimli Teknolojiler",
+    description: "Modern tarım teknolojileri ve sürdürülebilir uygulamalarla tarımsal üretimde verimliliği artırıyoruz.",
+    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=2070&auto=format",
+    link: "/tarim",
+    btnText: "Tarımsal Faaliyetlerimiz"
+  },
+  {
+    id: 6,
     title: "Karakucak Group",
     subtitle: "25 Yıllık Deneyim",
     description: "1998'den beri kalite, güven ve yenilikçilik ilkelerimizle Türkiye'nin önde gelen şirketler grubuyuz. Sektörlerinde lider markalarımızla hizmetinizdeyiz.",

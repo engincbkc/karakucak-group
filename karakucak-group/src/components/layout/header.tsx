@@ -14,9 +14,11 @@ const navigation = [
     name: "Sektörlerimiz", 
     href: "#",
     children: [
-      { name: "Otomotiv ve Madencilik", href: "/otomotiv-madencilik" },
-      { name: "Pamuk ve Tekstil", href: "/pamuk-tekstil" },
-      { name: "MNK Mimarlık", href: "/mnk-mimarlik" },
+      { name: "Otomotiv", href: "/otomotiv" },
+      { name: "İnşaat & Taahhüt", href: "/insaat-taahhut" },
+      { name: "Pamuk Sanayi", href: "/pamuk-sanayi" },
+      { name: "Madencilik", href: "/madencilik" },
+      { name: "Tarım", href: "/tarim" }
     ] 
   },
   { name: "Hakkımızda", href: "/hakkimizda" },

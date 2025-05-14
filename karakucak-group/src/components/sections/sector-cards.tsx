@@ -16,22 +16,34 @@ interface SectorCardProps {
 
 const sectorData = [
   {
-    title: "Otomotiv ve Madencilik",
-    description: "Otomotiv parçaları üretiminden madencilik operasyonlarına kadar geniş bir yelpazede, sürdürülebilirlik odaklı yenilikçi çözümler sunuyoruz.",
-    image: "https://images.unsplash.com/photo-1510066425665-94f3e7580349?ixlib=rb-4.0.3",
-    href: "/otomotiv-madencilik"
+    title: "Otomotiv",
+    description: "Otomotiv sektöründe yenilikçi teknolojiler ve sürdürülebilir çözümlerle müşterilerimizin ihtiyaçlarına uygun çözümler geliştiriyoruz.",
+    image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3",
+    href: "/otomotiv"
   },
   {
-    title: "Pamuk ve Tekstil",
-    description: "Tarladan mağazaya kadar uzanan entegre değer zincirimizle, en kaliteli pamuk ve tekstil ürünlerini üretiyoruz.",
-    image: "https://images.unsplash.com/photo-1542627501-54ba60e4aa60?ixlib=rb-4.0.3",
-    href: "/pamuk-tekstil"
-  },
-  {
-    title: "MNK Mimarlık",
-    description: "Sürdürülebilir ve yenilikçi mimari tasarımlarla çevresel, ekonomik ve sosyal değer yaratan projeler geliştiriyoruz.",
+    title: "İnşaat&Taahhüt",
+    description: "Modern mimari anlayışımız ve yüksek mühendislik standartlarımızla inşaat sektöründe güvenilir çözümler sunuyoruz.",
     image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3",
-    href: "/mnk-mimarlik"
+    href: "/insaat-taahhut"
+  },
+  {
+    title: "Pamuk Sanayi",
+    description: "Sürdürülebilir pamuk üretimi ve işleme teknolojilerimizle tekstil sektörüne değer katan kaliteli ürünler sağlıyoruz.",
+    image: "https://images.unsplash.com/photo-1605187337001-2356749647e2?ixlib=rb-4.0.3",
+    href: "/pamuk-sanayi"
+  },
+  {
+    title: "Madencilik",
+    description: "Çevre dostu madencilik uygulamalarımız ve ileri teknoloji ekipmanlarımızla doğal kaynakları verimli şekilde değerlendiriyoruz.",
+    image: "https://images.unsplash.com/photo-1510172951991-856a654063f9?ixlib=rb-4.0.3",
+    href: "/madencilik"
+  },
+  {
+    title: "Tarım",
+    description: "Modern tarım teknolojileri ve sürdürülebilir uygulamalarla tarımsal üretimde verimliliği artırıyor, geleceğin tarımını şekillendiriyoruz.",
+    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?ixlib=rb-4.0.3",
+    href: "/tarim"
   }
 ]
 

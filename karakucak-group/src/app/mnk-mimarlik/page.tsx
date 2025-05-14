@@ -196,7 +196,7 @@ export default function MnkMimarlikPage() {
               href="/iletisim" 
               className="inline-block bg-white text-gray-900 font-medium px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
             >
-              u0130letiu015fime Geu00e7in
+              İletişime Geçin
             </Link>
           </motion.div>
         </div>
