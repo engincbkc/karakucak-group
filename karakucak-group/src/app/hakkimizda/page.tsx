@@ -22,10 +22,10 @@ export default function HakkimizdaPage() {
         </div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Hakku0131mu0131zda</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Hakkımızda</h1>
             <p className="text-xl mb-8">
-              Otomotiv, madencilik, pamuk, tekstil ve mimarlu0131k sektu00f6rlerinde 25 yu0131lu0131 au015fku0131n deneyimle, 
-              yeniliku00e7i ve su00fcrdu00fcru00fclebilir u00e7u00f6zu00fcmler sunuyoruz.
+              Otomotiv, madencilik, pamuk, tekstil ve mimarlık sektörlerinde 25 yılı aşkın deneyimle, 
+              yenilikçi ve sürdürülebilir çözümler sunuyoruz.
             </p>
           </div>
         </div>
@@ -45,19 +45,19 @@ export default function HakkimizdaPage() {
                 Hikayemiz
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                Karakucak Group'un başarı hikayesi, kurucumuz Said Karakucak'ın tarafu0131ndan, otomotiv paru00e7alaru0131 u00fcretimi ile 
-                faaliyete bau015fladu0131. Yu0131llar iu00e7inde su00fcrekli bu00fcyu00fcyen ve geliu015fen u015firketimiz, otomotiv sektu00f6ru00fcndeki 
-                bau015faru0131larla gu00fcu00e7lenerek, madencilik alanu0131na yatu0131ru0131m yaptu0131.
+                Karakucak Group'un başarı hikayesi, kurucumuz Said Karakucak'ın tarafından, otomotiv parçaları üretimi ile 
+                faaliyete başladı. Yıllar içinde sürekli büyüyen ve gelişen şirketimiz, otomotiv sektöründeki 
+                başarılarla güçlenerek, madencilik alanına yatırım yaptı.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                2005 yu0131lu0131nda pamuk ve tekstil sektu00f6ru00fcne giriu015f yapan grubumuz, 2010 yu0131lu0131nda MNK Mimarlu0131k'u0131 
-                kurarak, kapsamlu0131 bir u015firketler topluluu011fu haline geldi. Bugu00fcn, u00fcu00e7 ku0131tada faaliyetlerimizi 
-                su00fcrdu00fcru00fcyor ve 2500'den fazla u00e7alu0131u015fanu0131mu0131zla mu00fcu015fterilerimize yu00fcksek kaliteli u00fcru00fcn ve 
+                2005 yılında pamuk ve tekstil sektörüne giriş yapan grubumuz, 2010 yılında MNK Mimarlık'ı 
+                kurarak, kapsamlı bir şirketler topluluğu haline geldi. Bugün, üç kıtada faaliyetlerimizi 
+                sürdürüyor ve 2500'den fazla çalışanımızla müşterilerimize yüksek kaliteli ürün ve 
                 hizmetler sunuyoruz.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300">
-                Karakucak Group olarak, yeniliku00e7i ve su00fcrdu00fcru00fclebilir iu015f modellerimizle sektu00f6rlerimizde 
-                grubu olma yolunda emin adımlarla ilerliyoruz.
+                Karakucak Group olarak, yenilikçi ve sürdürülebilir iş modellerimizle sektörlerimizde 
+                lider konumumuzu korumak için emin adımlarla ilerliyoruz.
               </p>
             </motion.div>
             <motion.div

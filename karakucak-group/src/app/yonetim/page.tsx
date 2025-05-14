@@ -7,27 +7,27 @@ import { motion, useInView, useAnimation, AnimatePresence } from "framer-motion"
 const executives = [
   {
     name: "Ahmet Karakucak",
-    position: "Yu00f6netim Kurulu Bau015fkanu0131",
+    position: "Yönetim Kurulu Başkanı",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3",
-    bio: "25 yu0131lu0131 au015fku0131n iu015f deneyimi ile Ahmet Karakucak, grubun kurucusu ve vizyoneridir. Otomotiv ve madencilik sektu00f6ru00fcndeki yatu0131ru0131mlarla bau015flayan kariyeri, tekstil ve mimarlu0131k alanu0131ndaki giriu015fimlerle geniu015flemiu015ftir."
+    bio: "25 yılı aşkın iş deneyimi ile Ahmet Karakucak, grubun kurucusu ve vizyoneridir. Otomotiv ve madencilik sektöründeki yatırımlarla başlayan kariyeri, tekstil ve mimarlık alanındaki girişimlerle genişlemiştir."
   },
   {
-    name: "Ayu015fe Karakucak",
-    position: "Bau015fkan Yardu0131mcu0131su0131",
+    name: "Ayşe Karakucak",
+    position: "Başkan Yardımcısı",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3",
-    bio: "Tekstil sektu00f6ru00fcnde uzmanlaşmu0131u015f olan Ayu015fe Karakucak, grubun pamuk ve tekstil bu00f6lu00fcmu00fcnu00fcn geliu015fiminde u00f6nemli rol oynamu0131u015ftu0131r. Su00fcrdu00fcru00fclebilir u00fcretim ve yeniliku00e7i tasaru0131m konularu0131nda liderlik etmektedir."
+    bio: "Tekstil sektöründe uzmanlaşmış olan Ayşe Karakucak, grubun pamuk ve tekstil bölümünün gelişiminde önemli rol oynamıştır. Sürdürülebilir üretim ve yenilikçi tasarım konularında liderlik etmektedir."
   },
   {
-    name: "Mehmet Yu0131lmaz",
+    name: "Mehmet Yılmaz",
     position: "CEO",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3",
-    bio: "20 yu0131llu0131k yu00f6netim deneyimi ile Mehmet Yu0131lmaz, grubun tu00fcm faaliyetlerini yu00f6netmekte ve stratejik bu00fcyu00fcmeyi sağlamaktadu0131r. u00d6ncu00fc liderlik yaklau015fu0131mu0131 ve vizyon sahibi perspektifi ile u015firketi geleceu011fe tau015fu0131maktadu0131r."
+    bio: "20 yıllık yönetim deneyimi ile Mehmet Yılmaz, grubun tüm faaliyetlerini yönetmekte ve stratejik büyümeyi sağlamaktadır. Öncü liderlik yaklaşımı ve vizyon sahibi perspektifi ile şirketi geleceğe taşımaktadır."
   },
   {
     name: "Ali Kaya",
-    position: "MNK Mimarlu0131k Direktu00f6ru00fc",
+    position: "MNK Mimarlık Direktörü",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3",
-    bio: "u00d6du00fcllu00fc mimar Ali Kaya, MNK Mimarlu0131k bu00f6lu00fcmu00fcnu00fcn kurucusudur. Su00fcrdu00fcru00fclebilir ve yeniliku00e7i mimari tasaru0131mlaru0131yla tanu0131nmaktadu0131r."
+    bio: "Ödüllü mimar Ali Kaya, MNK Mimarlık bölümünün kurucusudur. Sürdürülebilir ve yenilikçi mimari tasarımlarıyla tanınmaktadır."
   },
   {
     name: "Fatma Demir",

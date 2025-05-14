@@ -44,7 +44,7 @@ export default function IletisimPage() {
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3"
-            alt="u0130letiu015fim"
+            alt="İletişim"
             fill
             className="object-cover opacity-40"
             priority
@@ -52,16 +52,16 @@ export default function IletisimPage() {
         </div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">u0130letiu015fim</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">İletişim</h1>
             <p className="text-xl mb-8">
-              Sorularu0131nu0131z, u00f6nerileriniz veya iu015fbirliu011fi fu0131rsatlaru0131 iu00e7in bizimle iletiu015fime geu00e7in.
-              Size en ku0131sa su00fcrrede du00f6nu00fcu015f yapacu011fu0131z.
+              Sorularınız, önerileriniz veya işbirliği fırsatları için bizimle iletişime geçin.
+              Size en kısa sürede dönüş yapacağız.
             </p>
           </div>
         </div>
       </section>
 
-      {/* u0130letiu015fim Bilgileri ve Form */}
+      {/* İletişim Bilgileri ve Form */}
       <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -73,9 +73,9 @@ export default function IletisimPage() {
               className="lg:col-span-1 space-y-8"
             >
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">u0130letiu015fim Bilgilerimiz</h2>
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">İletişim Bilgilerimiz</h2>
                 <p className="text-gray-600 dark:text-gray-300 mb-8">
-                  Au015fau011fu0131daki kanallardan bizimle iletiu015fime geu00e7ebilir veya formu doldurarak mesaju0131nu0131zu0131 iletebilirsiniz.
+                  Aşağıdaki kanallardan bizimle iletişime geçebilir veya formu doldurarak mesajınızı iletebilirsiniz.
                 </p>
               </div>
 
@@ -85,7 +85,7 @@ export default function IletisimPage() {
                   <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">Merkez Ofis</h3>
                   <p className="text-gray-600 dark:text-gray-300">
                     Barbaros Mah. Begonya Sok. No: 3, <br />
-                    Atau015fehir, u0130stanbul, 34746
+                    Ataşehir, İstanbul, 34746
                   </p>
                 </div>
               </div>
@@ -202,7 +202,7 @@ export default function IletisimPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                          Telefon Numaranu0131z
+                          Telefon Numaranız
                         </label>
                         <input
                           id="phone"
@@ -232,7 +232,7 @@ export default function IletisimPage() {
 
                     <div>
                       <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                        Mesaju0131nu0131z *
+                        Mesajınız *
                       </label>
                       <textarea
                         id="message"
@@ -254,7 +254,7 @@ export default function IletisimPage() {
                         className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                       />
                       <label htmlFor="privacy" className="ml-2 block text-sm text-gray-700 dark:text-gray-300">
-                        <a href="/gizlilik-politikasi" className="text-blue-600 dark:text-blue-400 hover:underline">Gizlilik Politikasu0131</a>'nu0131 okudum ve kabul ediyorum.
+                        <a href="/gizlilik-politikasi" className="text-blue-600 dark:text-blue-400 hover:underline">Gizlilik Politikası</a>'nı okudum ve kabul ediyorum.
                       </label>
                     </div>
 
@@ -269,7 +269,7 @@ export default function IletisimPage() {
                             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                           </svg>
-                          Gu00f6nderiliyor...
+                          Gönderiliyor...
                         </>
                       ) : (
                         <>
