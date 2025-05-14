@@ -1,392 +1,322 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
-import { motion, useInView, useAnimation, AnimatePresence } from "framer-motion";
-import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { motion } from "framer-motion";
+import { MapPin, Phone, Mail, Clock, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { SectionHeader } from "@/components/ui/section-header";
 
 export default function IletisimPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Form gönderimi simülasyonu
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    console.log("Form data:", formData);
-    setSubmitSuccess(true);
-    setIsSubmitting(false);
-  };
-
   return (
-    <div className="pt-16">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gray-900 text-white">
+      <section className="relative bg-gradient-to-r from-gray-900 to-blue-900 text-white">
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <Image
-            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3"
-            alt="İletişim"
-            fill
-            className="object-cover opacity-40"
-            priority
-          />
+          <motion.div
+            className="w-full h-full"
+            initial={{ scale: 1.1 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1.5 }}
+          >
+            <Image
+              src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3"
+              alt="İletişim"
+              fill
+              className="object-cover opacity-40"
+              priority
+              sizes="100vw"
+              quality={90}
+            />
+          </motion.div>
         </div>
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">İletişim</h1>
-            <p className="text-xl mb-8">
-              Sorularınız, önerileriniz veya işbirliği fırsatları için bizimle iletişime geçin.
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-36 lg:py-44">
+          <motion.div
+            className="max-w-3xl"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">İletişim</h1>
+            <p className="text-xl md:text-2xl mb-8 text-gray-100">
+              Sorularınız, önerileriniz veya işbirliği fırsatları için{" "}
+              <span className="text-blue-300 font-semibold">Karakucak Group</span> ile iletişime geçin.
               Size en kısa sürede dönüş yapacağız.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* İletişim Bilgileri ve Form */}
-      <section className="py-16 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="lg:col-span-1 space-y-8"
-            >
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">İletişim Bilgilerimiz</h2>
-                <p className="text-gray-600 dark:text-gray-300 mb-8">
-                  Aşağıdaki kanallardan bizimle iletişime geçebilir veya formu doldurarak mesajınızı iletebilirsiniz.
-                </p>
-              </div>
-
-              <div className="rounded-xl bg-gray-50 dark:bg-gray-800 p-6 flex items-start">
-                <MapPin className="h-6 w-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mr-4 mt-1" />
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">Merkez Ofis</h3>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    Barbaros Mah. Begonya Sok. No: 3, <br />
-                    Ataşehir, İstanbul, 34746
-                  </p>
-                </div>
-              </div>
-              
-              <div className="rounded-xl bg-gray-50 dark:bg-gray-800 p-6 flex items-start">
-                <Phone className="h-6 w-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mr-4 mt-1" />
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">Telefon</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-1">
-                    +90 212 123 45 67
-                  </p>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    +90 212 123 45 68
-                  </p>
-                </div>
-              </div>
-              
-              <div className="rounded-xl bg-gray-50 dark:bg-gray-800 p-6 flex items-start">
-                <Mail className="h-6 w-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mr-4 mt-1" />
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">E-posta</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-1">
-                    info@karakucakgroup.com
-                  </p>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    kariyer@karakucakgroup.com
-                  </p>
-                </div>
-              </div>
-
-              <div className="rounded-xl bg-gray-50 dark:bg-gray-800 p-6 flex items-start">
-                <Clock className="h-6 w-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mr-4 mt-1" />
-                <div>
-                  <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">u00c7alu0131u015fma Saatleri</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-1">
-                    Pazartesi - Cuma: 09:00 - 18:00
-                  </p>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    Cumartesi - Pazar: Kapalu0131
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="lg:col-span-2"
-            >
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 h-full">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Bize Yazu0131n</h2>
-                
-                {submitSuccess ? (
-                  <motion.div 
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.5 }}
-                    className="bg-green-100 dark:bg-green-900 p-6 rounded-lg text-center"
-                  >
-                    <div className="flex justify-center mb-4">
-                      <div className="h-16 w-16 bg-green-200 dark:bg-green-800 rounded-full flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-green-600 dark:text-green-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Mesaju0131nu0131z Alu0131ndu0131</h3>
-                    <p className="text-gray-700 dark:text-gray-300 mb-6">
-                      u0130letiu015fiminiz iu00e7in teu015fekku00fcr ederiz. En ku0131sa su00fcrede size du00f6nu00fcu015f yapacu011fu0131z.
-                    </p>
-                    <button 
-                      onClick={() => setSubmitSuccess(false)}
-                      className="px-6 py-3 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"
-                    >
-                      Yeni Mesaj Gu00f6nder
-                    </button>
-                  </motion.div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                          Adu0131nu0131z Soyadu0131nu0131z *
-                        </label>
-                        <input
-                          id="name"
-                          name="name"
-                          type="text"
-                          required
-                          value={formData.name}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        />
-                      </div>
-
-                      <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                          E-posta Adresiniz *
-                        </label>
-                        <input
-                          id="email"
-                          name="email"
-                          type="email"
-                          required
-                          value={formData.email}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                          Telefon Numaranız
-                        </label>
-                        <input
-                          id="phone"
-                          name="phone"
-                          type="tel"
-                          value={formData.phone}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        />
-                      </div>
-
-                      <div>
-                        <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                          Konu *
-                        </label>
-                        <input
-                          id="subject"
-                          name="subject"
-                          type="text"
-                          required
-                          value={formData.subject}
-                          onChange={handleChange}
-                          className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                        Mesajınız *
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        rows={5}
-                        required
-                        value={formData.message}
-                        onChange={handleChange}
-                        className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
-                      ></textarea>
-                    </div>
-
-                    <div className="flex items-center">
-                      <input
-                        id="privacy"
-                        name="privacy"
-                        type="checkbox"
-                        required
-                        className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                      />
-                      <label htmlFor="privacy" className="ml-2 block text-sm text-gray-700 dark:text-gray-300">
-                        <a href="/gizlilik-politikasi" className="text-blue-600 dark:text-blue-400 hover:underline">Gizlilik Politikası</a>'nı okudum ve kabul ediyorum.
-                      </label>
-                    </div>
-
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="flex items-center justify-center w-full px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-70 disabled:cursor-not-allowed"
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                          </svg>
-                          Gönderiliyor...
-                        </>
-                      ) : (
-                        <>
-                          <Send className="mr-2 h-5 w-5" />
-                          Mesaju0131 Gu00f6nder
-                        </>
-                      )}
-                    </button>
-                  </form>
-                )}
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Harita */}
-      <section className="py-16 bg-gray-100 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Bize Ulau015fu0131n</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Merkez ofisimiz u0130stanbul Atau015fehir'de bulunmaktadu0131r. Au015fau011fu0131daki haritadan konumumuzu gu00f6rebilirsiniz.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="rounded-xl overflow-hidden shadow-lg"
-          >
-            <div className="relative h-[500px] w-full">
-              <Image
-                src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5ce?ixlib=rb-4.0.3"
-                alt="Karakucak Group Lokasyon Haritasu0131"
-                fill
-                className="object-cover"
-              />
+            <div className="flex flex-wrap gap-4 mt-8">
+              <Button
+                href="#iletisim-bilgileri"
+                variant="primary"
+                size="lg"
+              >
+                Hemen İletişime Geçin
+              </Button>
+              <Button href="/hakkimizda" variant="outline" size="lg">
+                Hakkımızda Daha Fazla Bilgi Alın
+              </Button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Diu011fer Ofislerimiz */}
-      <section className="py-16 bg-white dark:bg-gray-900">
+      {/* İletişim Bilgileri ve Form */}
+      <section id="iletisim-bilgileri" className="py-24 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Diu011fer Ofislerimiz</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Du00fcnya u00e7apu0131nda hizmet au011fu0131mu0131z ve bu00f6lgesel ofislerimiz ile her zaman yanu0131nu0131zdayu0131z.
-            </p>
-          </motion.div>
+          <SectionHeader
+            title="Bize Ulaşın"
+            subtitle="Aşağıdaki bilgileri kullanarak bize ulaşabilir veya iletişim formunu doldurarak mesajınızı gönderebilirsiniz. En kısa sürede sizinle iletişime geçeceğiz."
+            alignment="center"
+            className="mb-16"
+          />
 
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 xl:gap-16">
+            <div className="lg:col-span-1">
+              <div className="space-y-6">
+                <div className="rounded-xl bg-gray-50 dark:bg-gray-800 p-6 flex items-start">
+                  <MapPin className="h-6 w-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mr-4 mt-1" />
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">Merkez Ofis</h3>
+                    <p className="text-gray-600 dark:text-gray-300">Barbaros Mah. Begonya Sok. No: 3, Ataşehir, İstanbul, 34746</p>
+                  </div>
+                </div>
+
+                <div className="rounded-xl bg-gray-50 dark:bg-gray-800 p-6 flex items-start">
+                  <Phone className="h-6 w-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mr-4 mt-1" />
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">Telefon</h3>
+                    <p className="text-gray-600 dark:text-gray-300">+90 212 123 45 67</p>
+                    <p className="text-gray-600 dark:text-gray-300">+90 212 987 65 43</p>
+                  </div>
+                </div>
+
+                <div className="rounded-xl bg-gray-50 dark:bg-gray-800 p-6 flex items-start">
+                  <Mail className="h-6 w-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mr-4 mt-1" />
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">E-posta</h3>
+                    <p className="text-gray-600 dark:text-gray-300">info@karakucakgroup.com</p>
+                    <p className="text-gray-600 dark:text-gray-300">satis@karakucakgroup.com</p>
+                  </div>
+                </div>
+
+                <div className="rounded-xl bg-gray-50 dark:bg-gray-800 p-6 flex items-start">
+                  <Clock className="h-6 w-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mr-4 mt-1" />
+                  <div>
+                    <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">Çalışma Saatleri</h3>
+                    <p className="text-gray-600 dark:text-gray-300">Pazartesi - Cuma: 09:00 - 18:00</p>
+                    <p className="text-gray-600 dark:text-gray-300">Cumartesi - Pazar: Kapalı</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:col-span-2">
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 md:p-8">
+                <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">İletişim Formu</h3>
+                <form className="space-y-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                        Adınız Soyadınız
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+                        placeholder="Adınız Soyadınız"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                        E-posta Adresiniz
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+                        placeholder="E-posta adresiniz"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                      Konu
+                    </label>
+                    <input
+                      type="text"
+                      id="subject"
+                      className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+                      placeholder="Mesajınızın konusu"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                      Mesajınız
+                    </label>
+                    <textarea
+                      id="message"
+                      rows={5}
+                      className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+                      placeholder="Mesajınızı buraya yazın..."
+                    ></textarea>
+                  </div>
+
+                  <div>
+                    <Button type="submit" className="w-full sm:w-auto">
+                      Mesajı Gönder
+                    </Button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Harita Bölümü */}
+      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            title="Bize Nasıl Ulaşabilirsiniz?"
+            subtitle="Aşağıdaki haritayı kullanarak ofisimize kolayca ulaşabilirsiniz. Ziyaret öncesinde randevu almanızı öneririz."
+            alignment="center"
+            className="mb-16"
+          />
+          
+          <div className="rounded-xl overflow-hidden shadow-lg h-[400px] md:h-[500px] w-full">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.6504900105844!2d29.10011661087428!3d40.99333142012033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac7891defb571%3A0xc2f1e099d5f8727c!2sBattery%20Plaza!5e0!3m2!1str!2str!4v1715711222932!5m2!1str!2str" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen={true} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      
+      {/* Şubelerimiz */}
+      <section className="py-20 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            title="Şubelerimiz"
+            subtitle="Karakucak Group olarak farklı lokasyonlardaki şubelerimizle hizmetinizdeyiz."
+            alignment="center"
+            className="mb-16"
+          />
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+              <div className="h-48 relative">
+                <Image
+                  src="https://images.unsplash.com/photo-1472157510526-64a67e847582?ixlib=rb-4.0.3"
+                  alt="İstanbul Ofisi"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">İstanbul Merkez Ofis</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">Barbaros Mah. Begonya Sok. No: 3, Ataşehir, İstanbul, 34746</p>
+                <div className="flex items-center text-gray-600 dark:text-gray-400 mb-2">
+                  <Phone className="w-4 h-4 mr-2" />
+                  <span>+90 212 123 45 67</span>
+                </div>
+                <div className="flex items-center text-gray-600 dark:text-gray-400">
+                  <Mail className="w-4 h-4 mr-2" />
+                  <span>istanbul@karakucakgroup.com</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+              <div className="h-48 relative">
+                <Image
+                  src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?ixlib=rb-4.0.3"
+                  alt="Ankara Ofisi"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">Ankara Ofis</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">Kızılay Mah. Atatürk Bulvarı No: 55, Çankaya, Ankara, 06420</p>
+                <div className="flex items-center text-gray-600 dark:text-gray-400 mb-2">
+                  <Phone className="w-4 h-4 mr-2" />
+                  <span>+90 312 987 65 43</span>
+                </div>
+                <div className="flex items-center text-gray-600 dark:text-gray-400">
+                  <Mail className="w-4 h-4 mr-2" />
+                  <span>ankara@karakucakgroup.com</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+              <div className="h-48 relative">
+                <Image
+                  src="https://images.unsplash.com/photo-1589912187435-81282611f4ba?ixlib=rb-4.0.3"
+                  alt="İzmir Ofisi"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">İzmir Ofis</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">Alsancak Mah. Kordon Cad. No: 32, Konak, İzmir, 35220</p>
+                <div className="flex items-center text-gray-600 dark:text-gray-400 mb-2">
+                  <Phone className="w-4 h-4 mr-2" />
+                  <span>+90 232 345 67 89</span>
+                </div>
+                <div className="flex items-center text-gray-600 dark:text-gray-400">
+                  <Mail className="w-4 h-4 mr-2" />
+                  <span>izmir@karakucakgroup.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* CTA Section */}
+      <section className="py-20 bg-blue-700 text-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md"
+              transition={{ duration: 0.6 }}
             >
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Ankara Ofisi</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                u00c7ankaya Cad. No: 42, Kat: 3 <br />
-                u00c7ankaya, Ankara
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Hemen Projenizi Konuşalım</h2>
+              <p className="text-xl mb-8 text-blue-100">
+                Karakucak Group'un 25 yıllık sektör deneyimi ile projelerinizi hayata geçirelim. 
+                Otomotiv, tekstil, madencilik ve mimarlık alanlarındaki uzmanlığımızla yanınızdayız.
               </p>
-              <p className="text-gray-600 dark:text-gray-300">
-                <span className="font-medium">Tel:</span> +90 312 456 78 90
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md"
-            >
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">u0130zmir Ofisi</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Alsancak Mah. Kordon Blv. No: 25 <br />
-                Konak, u0130zmir
-              </p>
-              <p className="text-gray-600 dark:text-gray-300">
-                <span className="font-medium">Tel:</span> +90 232 345 67 89
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-md"
-            >
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Almanya Ofisi</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Unter den Linden 78 <br />
-                10117 Berlin, Almanya
-              </p>
-              <p className="text-gray-600 dark:text-gray-300">
-                <span className="font-medium">Tel:</span> +49 30 1234 5678
-              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Button 
+                  href="mailto:info@karakucakgroup.com" 
+                  variant="outline"
+                  size="lg"
+                  className="bg-white text-blue-700 hover:bg-gray-100"
+                >
+                  E-posta Gönder
+                </Button>
+                <Button 
+                  href="tel:+902121234567" 
+                  variant="outline"
+                  size="lg"
+                >
+                  Şimdi Arayın
+                </Button>
+              </div>
             </motion.div>
           </div>
         </div>
