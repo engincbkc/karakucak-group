@@ -17,6 +17,15 @@ export type Project = {
   location: string
   year: string
   detailsLink?: string
+  slug?: string
+  content?: {
+    overview?: string
+    challenge?: string
+    solution?: string
+    results?: string
+    gallery?: Array<{url: string, alt: string}>
+    testimonials?: Array<{quote: string, author: string, position: string}>
+  }
 }
 
 interface ProjectCardProps {

@@ -1,62 +1,29 @@
 "use client"
 
-import React, { createContext, useState, useContext, useEffect } from "react"
-import { useTheme } from "next-themes"
+// Bu küpane yeni tema sistemiyle geriye dönük uyumluluk sağlamak için var
+// /lib/theme-context.tsx'i kullanarak eski tema kullanan bileşenlerle uyumu korur
 
-type ThemeContextType = {
-  isDarkTheme: boolean
-  toggleTheme: () => void
-}
+import React from "react"
+import { useTheme } from "@/lib/theme-context"
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
-
+// Eskiye uyumluluk için aynı isimli provider ve hook'u yeniden dışa aktar
+// Bu bileşen aslında yeni tema sistemimizi kullanarak eski arayüze uyumluluk sağlıyor
 export function ThemeContextProvider({ children }: { children: React.ReactNode }) {
-  const { theme, setTheme } = useTheme()
-  const [isDarkTheme, setIsDarkTheme] = useState(false)
-
-  useEffect(() => {
-    // İlk render'da tarayıcı ortamında değilsek (SSR) erken dönüş yap
-    if (typeof window === "undefined") return
-    
-    // Mevcut tema dark'sa veya sistem teması dark ve tema system ise
-    const isDark = 
-      theme === "dark" || 
-      (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches)
-    
-    setIsDarkTheme(isDark)
-  }, [theme])
-
-  // Sistem teması değişikliklerini dinle
-  useEffect(() => {
-    if (typeof window === "undefined") return
-
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
-    
-    const handleChange = (e: MediaQueryListEvent) => {
-      if (theme === "system") {
-        setIsDarkTheme(e.matches)
-      }
-    }
-    
-    mediaQuery.addEventListener("change", handleChange)
-    return () => mediaQuery.removeEventListener("change", handleChange)
-  }, [theme])
-
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark")
-  }
-
   return (
-    <ThemeContext.Provider value={{ isDarkTheme, toggleTheme }}>
+    <>
       {children}
-    </ThemeContext.Provider>
+    </>
   )
 }
 
+// Eski arayüz ile yeni temamız arasında uyumluluk katmanı
 export function useThemeContext() {
-  const context = useContext(ThemeContext)
-  if (context === undefined) {
-    throw new Error("useThemeContext must be used within a ThemeContextProvider")
+  // Yeni tema sistemimizi kullan
+  const themeInstance = useTheme()
+  
+  // Eski arayüze uygun şekilde değerleri döndür
+  return {
+    isDarkTheme: themeInstance.isDarkTheme,
+    toggleTheme: themeInstance.toggleTheme
   }
-  return context
 }

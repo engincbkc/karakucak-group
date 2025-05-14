@@ -2,11 +2,11 @@
 
 import React, { useState, useEffect, useMemo } from "react"
 import { motion } from "framer-motion"
-import { useThemeContext } from "@/components/theme-context"
+import { useTheme } from "@/lib/theme-context"
 import { ProjectFilter, type ProjectTag } from "@/components/ui/project-filter"
 import { ViewToggle, type ViewMode } from "@/components/ui/view-toggle"
 import { ProjectCard } from "@/components/ui/project-card"
-import { projectsData, projectTags } from "@/data/projects-data"
+import { getProjectsData } from "@/data/projects-data"
 import { ChevronLeft, ChevronRight, Search, Filter, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -37,8 +37,8 @@ export function ProjectsShowcase({
   defaultViewMode = "grid"
 }: ProjectsShowcaseProps) {
   // Tema context'inden dark tema durumunu al
-  const themeContext = useThemeContext()
-  const isDarkTheme = propIsDarkTheme !== undefined ? propIsDarkTheme : themeContext.isDarkTheme
+  const { isDarkTheme: contextIsDarkTheme, themeClasses } = useTheme()
+  const isDarkTheme = propIsDarkTheme !== undefined ? propIsDarkTheme : contextIsDarkTheme
   
   // Filtre ve görünüm modu state'leri
   const [viewMode, setViewMode] = useState<ViewMode>(defaultViewMode)
@@ -57,10 +57,15 @@ export function ProjectsShowcase({
     }
   }
   
+  // Proje verilerini ve etiketleri yükle
+  const { projects: projectsData, tags: projectTags } = useMemo(() => {
+    return getProjectsData()
+  }, [])
+  
   // Filtrelenmiş projeleri hesapla
   const filteredProjects = useMemo(() => {
     // Önce arama sorgusuyla filtrele
-    let filtered = projectsData.filter(project => {
+    let filtered = projectsData.filter((project) => {
       if (!searchQuery) return true
       
       const query = searchQuery.toLowerCase()
@@ -68,20 +73,20 @@ export function ProjectsShowcase({
         project.title.toLowerCase().includes(query) || 
         project.description.toLowerCase().includes(query) || 
         project.location.toLowerCase().includes(query) || 
-        project.tags.some(tag => projectTags[tag]?.label.toLowerCase().includes(query))
+        (projectTags && project.tags.some((tag) => projectTags[tag]?.label.toLowerCase().includes(query)))
       )
     })
     
     // Sonra seçili etiketlere göre filtrele
     if (selectedTags.length > 0) {
-      filtered = filtered.filter(project => 
-        selectedTags.every(tag => project.tags.includes(tag))
+      filtered = filtered.filter((project) => 
+        selectedTags.every((tag) => project.tags.includes(tag))
       )
     }
     
     // Limitlendirilmiş projeleri döndür (eğer limit belirtilmişse)
     return limitProjects > 0 ? filtered.slice(0, limitProjects) : filtered
-  }, [searchQuery, selectedTags, limitProjects])
+  }, [searchQuery, selectedTags, limitProjects, projectsData, projectTags])
 
   // Sayfalama için gerekli hesaplamalar
   const projectsPerPage = getPageSize()
@@ -124,20 +129,23 @@ export function ProjectsShowcase({
   
   // Benzersiz etiketleri çıkar ve tag listeleri oluştur
   const availableTags = useMemo(() => {
+    // projectTags null veya undefined olabilir, bu duruma karşı kontrol yap
+    if (!projectTags) return [];
+    
     // projectTags nesnesini bir dizi etiket nesnesine dönüştür
     return Object.entries(projectTags).map(([id, tag]) => ({
       id,
       label: tag.label,
       color: tag.color
     }))
-  }, [])
+  }, [projectTags])
   
   // Etiket başına proje sayısını hesapla
   const tagProjectCounts = useMemo(() => {
     const counts: Record<string, number> = {}
     
     // Arama sorgusuna göre filtrelenmiş projeler için etiket sayılarını hesapla
-    const searchFiltered = projectsData.filter(project => {
+    const searchFiltered = projectsData.filter((project) => {
       if (!searchQuery) return true
       
       const query = searchQuery.toLowerCase()
@@ -149,19 +157,19 @@ export function ProjectsShowcase({
     })
     
     // Her etiket için kaç projede kullanıldığını bul
-    searchFiltered.forEach(project => {
-      project.tags.forEach(tagId => {
+    searchFiltered.forEach((project) => {
+      project.tags.forEach((tagId) => {
         if (!counts[tagId]) counts[tagId] = 0
         counts[tagId]++
       })
     })
     
     return counts
-  }, [searchQuery])
+  }, [searchQuery, projectsData])
 
   return (
     <section className={cn(
-      "py-16 bg-gray-50 dark:bg-gray-800", 
+      `py-16 ${themeClasses("bg-gray-50", "bg-gray-800")}`, 
       className
     )}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -175,12 +183,12 @@ export function ProjectsShowcase({
             className="text-center mb-8"
           >
             {title && (
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              <h2 className={`text-3xl font-bold ${themeClasses("text-gray-900", "text-white")} mb-4`}>
                 {title}
               </h2>
             )}
             {subtitle && (
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              <p className={`text-lg ${themeClasses("text-gray-600", "text-gray-300")} max-w-3xl mx-auto`}>
                 {subtitle}
               </p>
             )}
@@ -285,13 +293,14 @@ export function ProjectsShowcase({
             viewMode === "list" && "flex flex-col space-y-6"
           )}>
             {paginatedProjects.map((project) => (
-              <ProjectCard 
-                key={project.id} 
-                project={project} 
-                viewMode={viewMode} 
-                isDarkTheme={isDarkTheme} 
+              <ProjectCard
+                key={project.id}
+                project={project}
+                viewMode={viewMode}
+                isDarkTheme={isDarkTheme}
                 allTags={projectTags}
                 onTagClick={handleTagSelect}
+                className="h-full"
               />
             ))}
           </div>

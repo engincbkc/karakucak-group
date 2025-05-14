@@ -3,11 +3,10 @@
 import React, { useState, useEffect } from "react"
 import Link from "next/link"
 // Image import removed as it's not being used
-import { useTheme } from "next-themes"
 import { cn } from "@/lib/utils"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { ThemeSwitcher } from "../ui/theme-switcher"
-import { useThemeContext } from "../theme-context"
+import { useTheme } from "@/lib/theme-context"
 
 const navigation = [
   { name: "Ana Sayfa", href: "/" },
@@ -29,7 +28,7 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [openDropdown, setOpenDropdown] = useState("")
-  const { isDarkTheme } = useThemeContext()
+  const { isDarkTheme } = useTheme()
 
   useEffect(() => {
     const handleScroll = () => {

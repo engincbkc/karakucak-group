@@ -4,11 +4,11 @@ import React from "react";
 import Image from "next/image";
 import { motion, useInView, useAnimation, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { useThemeContext } from "@/components/theme-context";
+import { useTheme } from "@/lib/theme-context";
 import { ProjectsShowcase } from "@/components/sections/projects-showcase";
 
 export default function MnkMimarlikPage() {
-  const { isDarkTheme } = useThemeContext();
+  const { isDarkTheme, themeClasses } = useTheme();
   return (
     <div className="pt-16">
       {/* Hero Section */}
