@@ -11,47 +11,79 @@ export default function IletisimPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-gray-900 to-blue-900 text-white">
-        <div className="absolute inset-0 z-0 overflow-hidden">
+      <section className="relative bg-gradient-to-b from-gray-900 via-blue-950 to-gray-900 text-white overflow-hidden">
+        {/* Background elements */}
+        <div className="absolute inset-0 z-0">
+          {/* Decorative elements */}
+          <div className="absolute top-0 -right-20 w-96 h-96 bg-blue-600/20 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-20 left-0 w-80 h-80 bg-indigo-700/20 rounded-full filter blur-3xl"></div>
+          
+          {/* Background image with enhanced parallax */}
           <motion.div
             className="w-full h-full"
-            initial={{ scale: 1.1 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 1.5 }}
+            initial={{ scale: 1.05, opacity: 0.8 }}
+            animate={{ scale: 1, opacity: 0.3 }}
+            transition={{ duration: 1.8, ease: 'easeOut' }}
           >
             <Image
               src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3"
               alt="İletişim"
               fill
-              className="object-cover opacity-40"
+              className="object-cover object-center"
               priority
               sizes="100vw"
               quality={90}
             />
           </motion.div>
+          
+          {/* Subtle overlay patterns */}
+          <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-40"></div>
         </div>
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-36 lg:py-44">
+        
+        <div className="relative z-10 container mx-auto px-5 sm:px-10 py-28 md:py-36">
+          {/* Hero Content */}
           <motion.div
-            className="max-w-3xl"
+            className="max-w-3xl mx-auto md:mx-0"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">İletişim</h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-100">
+            {/* Tag/badge */}
+            <div className="inline-block px-4 py-1 mb-6 bg-blue-700/30 backdrop-blur-sm rounded-full border border-blue-500/20">
+              <span className="text-sm font-medium text-blue-200">Bizimle İletişime Geçin</span>
+            </div>
+            
+            {/* Main title with gradient */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200">
+                İletişim
+              </span>
+            </h1>
+            
+            {/* Subtitle with optimized typography */}
+            <p className="text-lg md:text-xl mb-8 text-blue-50/90 max-w-2xl leading-relaxed">
               Sorularınız, önerileriniz veya işbirliği fırsatları için{" "}
               <span className="text-blue-300 font-semibold">Karakucak Group</span> ile iletişime geçin.
               Size en kısa sürede dönüş yapacağız.
             </p>
-            <div className="flex flex-wrap gap-4 mt-8">
+            
+            {/* CTA buttons */}
+            <div className="flex flex-wrap gap-4 mt-10">
               <Button
                 href="#iletisim-bilgileri"
                 variant="primary"
                 size="lg"
+                className="bg-blue-600 hover:bg-blue-700 border-blue-700/50 shadow-lg shadow-blue-700/20"
               >
                 Hemen İletişime Geçin
               </Button>
-              <Button href="/hakkimizda" variant="outline" size="lg">
+              <Button
+                href="/hakkimizda"
+                variant="outline"
+                size="lg"
+                className="border-white/20 backdrop-blur-sm hover:bg-white/10"
+              >
                 Hakkımızda Daha Fazla Bilgi Alın
               </Button>
             </div>

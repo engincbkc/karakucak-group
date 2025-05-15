@@ -6,8 +6,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
-import { ManagementCard } from "@/components/sections/management-card";
 import { OrganizationChart } from "@/components/sections/organization-chart";
+import { BoardOfDirectors } from "@/components/sections/board-of-directors";
 import { ChevronRight } from "lucide-react";
 
 // Yönetici verileri - Türkçe karakterler düzeltildi
@@ -75,44 +75,63 @@ export default function YonetimPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-gray-900 to-blue-900 text-white">
-        <div className="absolute inset-0 z-0 overflow-hidden">
+      <section className="relative bg-gradient-to-b from-gray-900 via-blue-950 to-gray-900 text-white overflow-hidden">
+        {/* Background elements */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute -top-40 right-0 w-96 h-96 bg-blue-500/20 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-0 left-20 w-80 h-80 bg-blue-700/20 rounded-full filter blur-3xl"></div>
+          
           <motion.div
             className="w-full h-full"
-            initial={{ scale: 1.1 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 1.5 }}
+            initial={{ scale: 1.05, opacity: 0.8 }}
+            animate={{ scale: 1, opacity: 0.4 }}
+            transition={{ duration: 1.8, ease: 'easeOut' }}
           >
             <Image
               src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3"
               alt="Yönetim Ekibimiz"
               fill
-              className="object-cover opacity-40"
+              className="object-cover object-center"
               priority
               sizes="100vw"
               quality={90}
             />
           </motion.div>
+          
+          {/* Subtle grid overlay */}
+          <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         </div>
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-36 lg:py-44">
+        
+        <div className="relative z-10 container mx-auto px-5 sm:px-10 py-28 md:py-36">
           <motion.div
-            className="max-w-3xl"
+            className="max-w-3xl mx-auto md:mx-0"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">Yönetim Kadromuz</h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-100">
+            <div className="inline-block px-4 py-1 mb-5 bg-blue-700/30 backdrop-blur-sm rounded-full border border-blue-500/20">
+              <span className="text-sm font-medium text-blue-200">Karakucak Grup Yönetimi</span>
+            </div>
+            
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200">
+                Yönetim Kadromuz
+              </span>
+            </h1>
+            
+            <p className="text-lg md:text-xl mb-8 text-blue-50/90 max-w-2xl">
               Karakucak Group'un başarısının arkasındaki <span className="text-blue-300 font-semibold">deneyimli liderlik ekibimizle</span> tanışın.
               Vizyoner yaklaşımları ve derin sektör bilgileriyle şirketimizi geleceğe taşıyorlar.
             </p>
+            
             <div className="flex flex-wrap gap-4 mt-8">
               <Button 
                 href="#yonetim-ekibi" 
                 variant="primary" 
                 size="lg"
                 iconPosition="right"
-                icon={<ChevronRight />}
+                icon={<ChevronRight className="w-5 h-5" />}
+                className="bg-blue-600 hover:bg-blue-700 border-blue-700/50 shadow-lg shadow-blue-700/20"
               >
                 Ekibimizi Tanıyın
               </Button>
@@ -120,6 +139,7 @@ export default function YonetimPage() {
                 href="/iletisim" 
                 variant="outline" 
                 size="lg"
+                className="border-white/20 backdrop-blur-sm hover:bg-white/10"
               >
                 İletişime Geçin
               </Button>
@@ -129,34 +149,19 @@ export default function YonetimPage() {
       </section>
 
       {/* Yönetim Ekibi */}
-      <section id="yonetim-ekibi" className="py-24 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            title="Profesyonel Yönetim Ekibimiz"
-            subtitle="Deneyim, uzmanlık ve vizyon sahibi ekibimizle tanışın. Her biri kendi alanında uzmanlaşmış liderlerimiz, Karakucak Group'un başarısının arkasındaki itici güçtür."
-            alignment="center"
-            className="mb-16"
-          />
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {executives.map((executive, index) => (
-              <ManagementCard
-                key={executive.name}
-                name={executive.name}
-                position={executive.position}
-                image={executive.image}
-                bio={executive.bio}
-                linkedin={executive.linkedin}
-                index={index}
-              />
-            ))}
-          </div>
-        </div>
+      <section id="yonetim-ekibi">
+        <BoardOfDirectors />
       </section>
 
       {/* Organizasyon Yapımız */}
-      <section id="organizasyon-yapisi" className="py-24 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="organizasyon-yapisi" className="py-24 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+          <div className="absolute top-0 left-1/4 w-72 h-72 bg-blue-100 dark:bg-blue-900/20 rounded-full filter blur-3xl opacity-50"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-100 dark:bg-purple-900/20 rounded-full filter blur-3xl opacity-50"></div>
+        </div>
+        
+        <div className="container mx-auto px-5 sm:px-10 relative z-10">
           <SectionHeader
             title="Organizasyon Yapımız"
             subtitle="Karakucak Group'un kurumsal organizasyon yapısı, her biri alanında uzman profesyonellerden oluşan güçlü bir ekiple desteklenmektedir."
@@ -165,16 +170,19 @@ export default function YonetimPage() {
             showLine
           />
           
-          <OrganizationChart />
+          <div className="max-w-7xl mx-auto">
+            <OrganizationChart />
+          </div>
           
           <motion.div 
-            className="mt-16 text-center"
+            className="mt-20 text-center bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm border border-gray-200 dark:border-gray-700/30 rounded-2xl p-8 sm:p-10 max-w-4xl mx-auto shadow-lg"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.7 }}
           >
-            <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Sürdürülebilir Büyüme</h3>
+            <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Organizasyon yapımız, çağın gereksinimlerine uygun olarak dinamik bir şekilde gelişmeye devam etmektedir. 
               Her departmanımız, alanında uzmanlaşmış profesyonellerden oluşur ve şirketimizin stratejik hedeflerine 
               ulaşmasında kritik rol oynar.
@@ -184,7 +192,8 @@ export default function YonetimPage() {
               variant="secondary"
               size="lg"
               iconPosition="right"
-              icon={<ChevronRight />}
+              icon={<ChevronRight className="w-5 h-5" />}
+              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 shadow-lg shadow-blue-700/20 border-0"
             >
               Kariyer Fırsatlarını İnceleyin
             </Button>
