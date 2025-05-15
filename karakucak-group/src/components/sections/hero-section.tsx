@@ -23,7 +23,7 @@ const sectors = [
     subtitle: "Yenilikçi Teknolojiler",
     description: "Otomotiv sektöründe yenilikçi teknolojiler ve sürdürülebilir çözümlerle sektöre yön veriyoruz.",
     image: "https://images.unsplash.com/photo-1537041373723-53e55d254ada?q=80&w=2070&auto=format", 
-    link: "/otomotiv",
+    link: "/sektor/otomotiv",
     btnText: "Detayları Görüntüle"
   },
   {
@@ -32,7 +32,7 @@ const sectors = [
     subtitle: "Güçlü Yapılar",
     description: "Modern mimari anlayışımız ve yüksek mühendislik standartlarımızla inşaat sektöründe güvenilir çözümler sunuyoruz.",
     image: "https://images.unsplash.com/photo-1448630360428-65456885c650?q=80&w=2070&auto=format",
-    link: "/insaat-taahhut",
+    link: "/sektor/insaat-taahhut",
     btnText: "Projelerimizi İnceleyin"
   },
   {
@@ -41,7 +41,7 @@ const sectors = [
     subtitle: "Kaliteli Üretim",
     description: "Sürdürülebilir pamuk üretimi ve işleme teknolojilerimizle tekstil sektörüne değer katıyoruz.",
     image: "https://images.unsplash.com/photo-1605187337001-2356749647e2?q=80&w=2070&auto=format",
-    link: "/pamuk-sanayi",
+    link: "/sektor/pamuk-sanayi",
     btnText: "Üretim Sürecimiz"
   },
   {
@@ -50,7 +50,7 @@ const sectors = [
     subtitle: "Doğal Kaynaklar",
     description: "Çevre dostu madencilik uygulamalarımız ve ileri teknoloji ekipmanlarımızla sürdürülebilir madencilik faaliyetleri yürütüyoruz.",
     image: "https://images.unsplash.com/photo-1565345270904-18a154e34e80?q=80&w=2070&auto=format",
-    link: "/madencilik",
+    link: "/sektor/madencilik",
     btnText: "Madencilik Faaliyetlerimiz"
   },
   {
@@ -59,7 +59,7 @@ const sectors = [
     subtitle: "Verimli Teknolojiler",
     description: "Modern tarım teknolojileri ve sürdürülebilir uygulamalarla tarımsal üretimde verimliliği artırıyoruz.",
     image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=2070&auto=format",
-    link: "/tarim",
+    link: "/sektor/tarim",
     btnText: "Tarımsal Faaliyetlerimiz"
   },
   {

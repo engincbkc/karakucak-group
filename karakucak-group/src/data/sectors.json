@@ -1,0 +1,297 @@
+{
+  "tr": {
+    "sectors": [
+      {
+        "id": "insaat-taahhut",
+        "title": "İnşaat & Taahhüt",
+        "description": "Modern mimari anlayışımız ve yüksek mühendislik standartlarımızla inşaat sektöründe güvenilir çözümler sunuyoruz.",
+        "backgroundImage": "https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3",
+        "primaryButtonText": "Projelerimiz",
+        "primaryButtonLink": "#projeler",
+        "secondaryButtonText": "İletişime Geçin",
+        "secondaryButtonLink": "/iletisim",
+        "overlayColor": "from-gray-900/95 to-blue-900/80",
+        "services": {
+          "title": "Hizmetlerimiz",
+          "description": "Karakucak Group olarak, sürdürülebilir ve yenilikçi mimari tasarımlarla çevresel, ekonomik ve sosyal değer yaratan projeler geliştiriyoruz.",
+          "imageSrc": "https://images.unsplash.com/photo-1631858158643-e4bcbcd7fc0f?ixlib=rb-4.0.3",
+          "imageAlt": "İnşaat Hizmetlerimiz",
+          "items": [
+            { "icon": "home", "title": "Konut Projeleri" },
+            { "icon": "office", "title": "Ticari Yapılar" },
+            { "icon": "building", "title": "Endüstriyel Tesisler" },
+            { "icon": "museum", "title": "Kültür Merkezleri" }
+          ]
+        },
+        "feature": {
+          "title": "MNK Mimarlık",
+          "description1": "MNK Mimarlık, Karakucak Group'un mimari vizyonunu temsil eden inovatif ve sürdürülebilir projelere imza atan mimarlık şirketidir.",
+          "description2": "Modern ve çevre dostu tasarım anlayışımızla her proje için özgün çözümler üretiyoruz.",
+          "featureImage": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3",
+          "buttonText": "MNK Mimarlık'ı Keşfedin",
+          "buttonLink": "/mnk-mimarlik"
+        },
+        "projects": {
+          "showProjects": true,
+          "title": "Öne Çıkan Projelerimiz",
+          "subtitle": "İnşaat ve taahhüt alanında gerçekleştirdiğimiz prestijli projelerimizden bazıları",
+          "viewAllLink": "/projeler",
+          "viewAllText": "Tüm Projeleri Görüntüle",
+          "itemsPerPage": 3,
+          "filter": ["insaat", "mimarlik"]
+        },
+        "cta": {
+          "title": "Projeleriniz İçin Yanınızdayız",
+          "description": "Modern, sürdürülebilir ve fonksiyonel yapı projeleri için bizimle iletişime geçin.",
+          "buttons": [
+            { "text": "Bize Ulaşın", "href": "/iletisim", "isPrimary": true },
+            { "text": "Referansları Görün", "href": "/referanslar" }
+          ]
+        }
+      },
+      {
+        "id": "otomotiv",
+        "title": "Otomotiv",
+        "description": "Yenilikçi teknolojiler ve sürdürülebilir çözümlerle otomotiv sektörüne değer katıyoruz.",
+        "backgroundImage": "/images/otomotiv-bg.jpg",
+        "primaryButtonText": "Projelerimiz",
+        "primaryButtonLink": "#projeler",
+        "secondaryButtonText": "İletişime Geçin",
+        "secondaryButtonLink": "/iletisim",
+        "overlayColor": "from-gray-900/95 to-blue-900/80",
+        "services": {
+          "title": "Hizmetlerimiz",
+          "description": "Karakucak Group olarak otomotiv sektöründe yenilikçi ve sürdürülebilir çözümler sunuyoruz.",
+          "imageSrc": "/images/otomotiv-services.jpg",
+          "imageAlt": "Otomotiv Hizmetlerimiz",
+          "items": [
+            { "icon": "car", "title": "Araç Üretimi" },
+            { "icon": "parts", "title": "Yedek Parça" },
+            { "icon": "tech", "title": "Teknoloji Çözümleri" },
+            { "icon": "logistics", "title": "Lojistik Destek" }
+          ]
+        },
+        "feature": {
+          "title": "Karakucak Otomotiv",
+          "description1": "Karakucak Otomotiv, yenilikçi teknolojilerle sektörün geleceğini şekillendiren çözümler sunar.",
+          "description2": "Sürdürülebilir ve verimli üretim teknikleriyle sektöre öncülük ediyoruz.",
+          "featureImage": "/images/otomotiv-feature.jpg",
+          "buttonText": "Otomotiv Çözümlerimiz",
+          "buttonLink": "/otomotiv/cozumler"
+        },
+        "projects": {
+          "showProjects": true,
+          "title": "Öne Çıkan Projelerimiz",
+          "subtitle": "Otomotiv sektöründe gerçekleştirdiğimiz yenilikçi projelerimizden bazıları",
+          "viewAllLink": "/projeler",
+          "viewAllText": "Tüm Projeleri Görüntüle",
+          "itemsPerPage": 3,
+          "filter": ["otomotiv"]
+        },
+        "cta": {
+          "title": "İşbirliği İçin Yanınızdayız",
+          "description": "Otomotiv sektöründeki çözümlerimizle projelerinize değer katmak için bizimle iletişime geçin.",
+          "buttons": [
+            { "text": "Bize Ulaşın", "href": "/iletisim", "isPrimary": true },
+            { "text": "Referansları Görün", "href": "/referanslar" }
+          ]
+        }
+      },
+      {
+        "id": "madencilik",
+        "title": "Madencilik",
+        "description": "Çevre dostu madencilik uygulamalarımız ve ileri teknoloji ekipmanlarımızla sürdürülebilir madencilik faaliyetleri yürütüyoruz.",
+        "backgroundImage": "/images/madencilik-bg.jpg",
+        "primaryButtonText": "Projelerimiz",
+        "primaryButtonLink": "#projeler",
+        "secondaryButtonText": "İletişime Geçin",
+        "secondaryButtonLink": "/iletisim",
+        "overlayColor": "from-gray-900/95 to-brown-900/80",
+        "services": {
+          "title": "Hizmetlerimiz",
+          "description": "Karakucak Group olarak madencilik sektöründe sürdürülebilir ve çevre dostu çözümler sunuyoruz.",
+          "imageSrc": "/images/madencilik-services.jpg",
+          "imageAlt": "Madencilik Hizmetlerimiz",
+          "items": [
+            { "icon": "mining", "title": "Maden Çıkarma" },
+            { "icon": "processing", "title": "Maden İşleme" },
+            { "icon": "environment", "title": "Çevre Rehabilitasyonu" },
+            { "icon": "consulting", "title": "Danışmanlık" }
+          ]
+        },
+        "feature": {
+          "title": "Sürdürülebilir Madencilik",
+          "description1": "Karakucak Madencilik, sürdürülebilir madencilik uygulamalarıyla sektörde öncü rol oynamaktadır.",
+          "description2": "İleri teknoloji kullanımı ve çevre dostu yaklaşımlarla, kaynakları verimli kullanırken doğayı koruyoruz.",
+          "featureImage": "/images/madencilik-feature.jpg",
+          "buttonText": "Yaklaşımımızı Keşfedin",
+          "buttonLink": "/madencilik/yaklasim"
+        },
+        "projects": {
+          "showProjects": true,
+          "title": "Öne Çıkan Projelerimiz",
+          "subtitle": "Madencilik alanında gerçekleştirdiğimiz başarılı projelerimizden bazıları",
+          "viewAllLink": "/projeler",
+          "viewAllText": "Tüm Projeleri Görüntüle",
+          "itemsPerPage": 3,
+          "filter": ["madencilik"]
+        },
+        "cta": {
+          "title": "Sürdürülebilir Madencilik İçin",
+          "description": "Çevre dostu ve yenilikçi madencilik çözümlerimiz için bizimle iletişime geçin.",
+          "buttons": [
+            { "text": "Bize Ulaşın", "href": "/iletisim", "isPrimary": true },
+            { "text": "Referansları Görün", "href": "/referanslar" }
+          ]
+        }
+      },
+      {
+        "id": "tarim",
+        "title": "Tarım",
+        "description": "Modern tarım teknolojileri ve sürdürülebilir uygulamalarla tarımsal üretimde verimliliği artırıyoruz.",
+        "backgroundImage": "/images/tarim-bg.jpg",
+        "primaryButtonText": "Projelerimiz",
+        "primaryButtonLink": "#projeler",
+        "secondaryButtonText": "İletişime Geçin",
+        "secondaryButtonLink": "/iletisim",
+        "overlayColor": "from-gray-900/95 to-green-900/80",
+        "services": {
+          "title": "Hizmetlerimiz",
+          "description": "Karakucak Group olarak tarım sektöründe yenilikçi ve sürdürülebilir çözümler sunuyoruz.",
+          "imageSrc": "/images/tarim-services.jpg",
+          "imageAlt": "Tarım Hizmetlerimiz",
+          "items": [
+            { "icon": "crop", "title": "Tarla Bitkileri" },
+            { "icon": "organic", "title": "Organik Tarım" },
+            { "icon": "tech", "title": "Tarım Teknolojileri" },
+            { "icon": "irrigation", "title": "Modern Sulama" }
+          ]
+        },
+        "feature": {
+          "title": "Sürdürülebilir Tarım",
+          "description1": "Karakucak Tarım, sürdürülebilir tarım uygulamalarıyla sektörde öncü rol oynamaktadır.",
+          "description2": "Modern tarım teknolojileri ve verimli sulama sistemleriyle kaynak kullanımını optimize ediyoruz.",
+          "featureImage": "/images/tarim-feature.jpg",
+          "buttonText": "Yaklaşımımızı Keşfedin",
+          "buttonLink": "/tarim/yaklasim"
+        },
+        "projects": {
+          "showProjects": true,
+          "title": "Öne Çıkan Projelerimiz",
+          "subtitle": "Tarım alanında gerçekleştirdiğimiz başarılı projelerimizden bazıları",
+          "viewAllLink": "/projeler",
+          "viewAllText": "Tüm Projeleri Görüntüle",
+          "itemsPerPage": 3,
+          "filter": ["tarim"]
+        },
+        "cta": {
+          "title": "Sürdürülebilir Tarım İçin",
+          "description": "Modern ve verimli tarım çözümlerimiz için bizimle iletişime geçin.",
+          "buttons": [
+            { "text": "Bize Ulaşın", "href": "/iletisim", "isPrimary": true },
+            { "text": "Referansları Görün", "href": "/referanslar" }
+          ]
+        }
+      },
+      {
+        "id": "pamuk-sanayi",
+        "title": "Pamuk Sanayi",
+        "description": "Sürdürülebilir pamuk üretimi ve işleme teknolojilerimizle tekstil sektörüne değer katıyoruz.",
+        "backgroundImage": "/images/pamuk-bg.jpg",
+        "primaryButtonText": "Projelerimiz",
+        "primaryButtonLink": "#projeler",
+        "secondaryButtonText": "İletişime Geçin",
+        "secondaryButtonLink": "/iletisim",
+        "overlayColor": "from-gray-900/95 to-indigo-900/80",
+        "services": {
+          "title": "Hizmetlerimiz",
+          "description": "Karakucak Group olarak pamuk ve tekstil sektöründe yenilikçi ve sürdürülebilir çözümler sunuyoruz.",
+          "imageSrc": "/images/pamuk-services.jpg",
+          "imageAlt": "Pamuk Sanayi Hizmetlerimiz",
+          "items": [
+            { "icon": "cotton", "title": "Pamuk Üretimi" },
+            { "icon": "processing", "title": "İşleme Tesisleri" },
+            { "icon": "textile", "title": "Tekstil Ürünleri" },
+            { "icon": "organic", "title": "Organik Pamuk" }
+          ]
+        },
+        "feature": {
+          "title": "Sürdürülebilir Tekstil",
+          "description1": "Karakucak Pamuk Sanayi, sürdürülebilir tekstil üretim uygulamalarıyla sektörde öncü rol oynamaktadır.",
+          "description2": "Çevre dostu yaklaşımlar ve ileri teknoloji kullanımıyla, kaliteli ürünler üretirken doğayı koruyoruz.",
+          "featureImage": "/images/pamuk-feature.jpg",
+          "buttonText": "Yaklaşımımızı Keşfedin",
+          "buttonLink": "/pamuk-sanayi/yaklasim"
+        },
+        "projects": {
+          "showProjects": true,
+          "title": "Öne Çıkan Projelerimiz",
+          "subtitle": "Pamuk ve tekstil alanında gerçekleştirdiğimiz başarılı projelerimizden bazıları",
+          "viewAllLink": "/projeler",
+          "viewAllText": "Tüm Projeleri Görüntüle",
+          "itemsPerPage": 3,
+          "filter": ["tekstil", "pamuk"]
+        },
+        "cta": {
+          "title": "Sürdürülebilir Tekstil İçin",
+          "description": "Çevre dostu ve yenilikçi tekstil çözümlerimiz için bizimle iletişime geçin.",
+          "buttons": [
+            { "text": "Bize Ulaşın", "href": "/iletisim", "isPrimary": true },
+            { "text": "Referansları Görün", "href": "/referanslar" }
+          ]
+        }
+      }
+    ]
+  },
+  "en": {
+    "sectors": [
+      {
+        "id": "insaat-taahhut",
+        "title": "Construction & Contracting",
+        "description": "We provide reliable solutions in the construction industry with our modern architectural approach and high engineering standards.",
+        "backgroundImage": "/images/insaat-bg.jpg",
+        "primaryButtonText": "Our Projects",
+        "primaryButtonLink": "#projeler",
+        "secondaryButtonText": "Contact Us",
+        "secondaryButtonLink": "/contact",
+        "overlayColor": "from-gray-900/95 to-blue-900/80",
+        "services": {
+          "title": "Our Services",
+          "description": "At Karakucak Group, we develop projects that create environmental, economic, and social value with sustainable and innovative architectural designs.",
+          "imageSrc": "/images/insaat-services.jpg",
+          "imageAlt": "Construction Services",
+          "items": [
+            { "icon": "home", "title": "Residential Projects" },
+            { "icon": "office", "title": "Commercial Buildings" },
+            { "icon": "building", "title": "Industrial Facilities" },
+            { "icon": "museum", "title": "Cultural Centers" }
+          ]
+        },
+        "feature": {
+          "title": "MNK Architecture",
+          "description1": "MNK Architecture is an architectural firm that represents Karakucak Group's architectural vision and creates innovative and sustainable projects.",
+          "description2": "We create unique solutions for each project with our modern and environmentally friendly design approach.",
+          "featureImage": "/images/mnk-feature.jpg",
+          "buttonText": "Discover MNK Architecture",
+          "buttonLink": "/en/mnk-architecture"
+        },
+        "projects": {
+          "title": "Featured Projects",
+          "subtitle": "Some of our prestigious projects in the construction and contracting field",
+          "viewAllLink": "/en/projects",
+          "viewAllText": "View All Projects",
+          "itemsPerPage": 3,
+          "filter": ["construction", "architecture"]
+        },
+        "cta": {
+          "title": "We Are Here for Your Projects",
+          "description": "Contact us for modern, sustainable, and functional building projects.",
+          "buttons": [
+            { "text": "Contact Us", "href": "/en/contact", "isPrimary": true },
+            { "text": "View References", "href": "/en/references" }
+          ]
+        }
+      }
+    ]
+  }
+}

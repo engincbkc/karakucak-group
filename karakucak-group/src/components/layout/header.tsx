@@ -14,11 +14,11 @@ const navigation = [
     name: "Sektörlerimiz", 
     href: "#",
     children: [
-      { name: "Otomotiv", href: "/otomotiv" },
-      { name: "İnşaat & Taahhüt", href: "/insaat-taahhut" },
-      { name: "Pamuk Sanayi", href: "/pamuk-sanayi" },
-      { name: "Madencilik", href: "/madencilik" },
-      { name: "Tarım", href: "/tarim" }
+      { name: "Otomotiv", href: "/sektor/otomotiv" },
+      { name: "İnşaat & Taahhüt", href: "/sektor/insaat-taahhut" },
+      { name: "Pamuk Sanayi", href: "/sektor/pamuk-sanayi" },
+      { name: "Madencilik", href: "/sektor/madencilik" },
+      { name: "Tarım", href: "/sektor/tarim" }
     ] 
   },
   { name: "Hakkımızda", href: "/hakkimizda" },
