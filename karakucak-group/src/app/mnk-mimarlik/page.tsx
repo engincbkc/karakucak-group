@@ -178,7 +178,7 @@ export default function MnkMimarlikPage() {
         </div>
       </section>
 
-      {/* u0130letiu015fim CTA */}
+      {/* İletişim CTA */}
       <section className="bg-gray-900 text-white py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -187,10 +187,10 @@ export default function MnkMimarlikPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl font-bold mb-6">Projenizi Hayata Geu00e7irelim</h2>
+            <h2 className="text-3xl font-bold mb-6">Projenizi Hayata Geçirelim</h2>
             <p className="text-lg mb-8 max-w-3xl mx-auto">
-              Mimari ihtiyau00e7laru0131nu0131z iu00e7in MNK Mimarlu0131k'in uzman ekibiyle tanu0131u015fu0131n. 
-              Projenizin her au015famasu0131nda yanu0131nu0131zda olacak u00e7u00f6zu00fcm ortau011fu0131nu0131z.
+              Mimari ihtiyaçlarınız için MNK Mimarlık'in uzman ekibiyle tanışın. 
+              Projenizin her aşamasında yanınızda olacak çözüm ortağınız.
             </p>
             <Link 
               href="/iletisim" 

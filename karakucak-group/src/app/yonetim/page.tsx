@@ -1,75 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { OrganizationChart } from "@/components/sections/organization-chart";
 import { BoardOfDirectors } from "@/components/sections/board-of-directors";
+import { CollaborationCTA } from "@/components/sections/collaboration-cta";
 import { ChevronRight } from "lucide-react";
-
-// Yönetici verileri - Türkçe karakterler düzeltildi
-const executives = [
-  {
-    name: "Ahmet Karakucak",
-    position: "Yönetim Kurulu Başkanı",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3",
-    bio: "25 yılı aşkın iş deneyimi ile Ahmet Karakucak, grubun kurucusu ve vizyoneridir. Otomotiv ve madencilik sektöründeki yatırımlarla başlayan kariyeri, tekstil ve mimarlık alanındaki girişimlerle genişlemiştir.",
-    linkedin: "https://linkedin.com"
-  },
-  {
-    name: "Ayşe Karakucak",
-    position: "Başkan Yardımcısı",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3",
-    bio: "Tekstil sektöründe uzmanlaşmış olan Ayşe Karakucak, grubun pamuk ve tekstil bölümünün gelişiminde önemli rol oynamıştır. Sürdürülebilir üretim ve yenilikçi tasarım konularında liderlik etmektedir.",
-    linkedin: "https://linkedin.com"
-  },
-  {
-    name: "Mehmet Yılmaz",
-    position: "CEO",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3",
-    bio: "20 yıllık yönetim deneyimi ile Mehmet Yılmaz, grubun tüm faaliyetlerini yönetmekte ve stratejik büyümeyi sağlamaktadır. Öncü liderlik yaklaşımı ve vizyon sahibi perspektifi ile şirketi geleceğe taşımaktadır.",
-    linkedin: "https://linkedin.com"
-  },
-  {
-    name: "Ali Kaya",
-    position: "MNK Mimarlık Direktörü",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3",
-    bio: "Ödüllü mimar Ali Kaya, MNK Mimarlık bölümünün kurucusudur. Sürdürülebilir ve yenilikçi mimari tasarımlarıyla tanınmaktadır."
-  },
-  {
-    name: "Fatma Demir",
-    position: "Finans Direktörü",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3",
-    bio: "Uluslararası finans yönetimi konusunda uzmanlaşmış olan Fatma Demir, grubun finansal stratejilerini yönetmekte ve sürdürülebilir büyümeyi sağlamaktadır."
-  },
-  {
-    name: "Zeynep Toprak",
-    position: "AR-GE Direktörü",
-    image: "https://images.unsplash.com/photo-1619895862022-09114b41f16f?ixlib=rb-4.0.3",
-    bio: "Yenilikçi teknolojiler ve sürdürülebilir çözümler konusunda uzmanlaşmış olan Zeynep Toprak, grubun tüm sektörlerindeki araştırma ve geliştirme faaliyetlerini yönetmektedir."
-  },
-  {
-    name: "Mustafa Yazar",
-    position: "Otomotiv Bölüm Başkanı",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3",
-    bio: "Otomotiv sektöründe 18 yıllık deneyime sahip olan Mustafa Yazar, grubun otomotiv faaliyetlerini yönetmekte ve yeni teknolojilerin entegrasyonunda öncülük etmektedir."
-  },
-  {
-    name: "Aylin Koru",
-    position: "İnsan Kaynakları Direktörü",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3",
-    bio: "İnsan kaynakları ve organizasyonel gelişim konularında uzmanlaşmış olan Aylin Koru, yetenek yönetimi ve kurumsal kültür stratejileriyle, grubun insan sermayesini güçlendirmektedir."
-  },
-  {
-    name: "Kemal Aksoy",
-    position: "Madencilik Bölüm Başkanı",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3",
-    bio: "Maden mühendisliği alanında uzman olan Kemal Aksoy, grubun madencilik operasyonlarını yönetmekte ve sürdürülebilir madencilik uygulamalarını hayata geçirmektedir."
-  }
-];
 
 export default function YonetimPage() {
   return (
@@ -149,8 +88,10 @@ export default function YonetimPage() {
       </section>
 
       {/* Yönetim Ekibi */}
-      <section id="yonetim-ekibi">
-        <BoardOfDirectors />
+      <section id="yonetim-ekibi" className="py-24">
+        <div className="container mx-auto px-5 sm:px-10">
+          <BoardOfDirectors />
+        </div>
       </section>
 
       {/* Organizasyon Yapımız */}
@@ -173,83 +114,38 @@ export default function YonetimPage() {
           <div className="max-w-7xl mx-auto">
             <OrganizationChart />
           </div>
-          
-          <motion.div 
-            className="mt-20 text-center bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm border border-gray-200 dark:border-gray-700/30 rounded-2xl p-8 sm:p-10 max-w-4xl mx-auto shadow-lg"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.7 }}
-          >
-            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Sürdürülebilir Büyüme</h3>
-            <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Organizasyon yapımız, çağın gereksinimlerine uygun olarak dinamik bir şekilde gelişmeye devam etmektedir. 
-              Her departmanımız, alanında uzmanlaşmış profesyonellerden oluşur ve şirketimizin stratejik hedeflerine 
-              ulaşmasında kritik rol oynar.
-            </p>
-            <Button 
-              href="/kurumsal/kariyer" 
-              variant="secondary"
-              size="lg"
-              iconPosition="right"
-              icon={<ChevronRight className="w-5 h-5" />}
-              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 shadow-lg shadow-blue-700/20 border-0"
-            >
-              Kariyer Fırsatlarını İnceleyin
-            </Button>
-          </motion.div>
         </div>
       </section>
 
-      {/* Kariyer Fırsatları */}
-      <section className="py-20 bg-blue-700 text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-3xl font-bold mb-6">Kariyer Fırsatları</h2>
-              <p className="text-lg mb-6">
-                Karakucak Group, yetenekli profesyonellere gelişme ve kariyer fırsatları sunmaktadır. 
-                Dinamik, yenilikçi ve çeşitliliğe değer veren bir ortamda, geleceğin liderlerini 
-                yetiştiriyoruz.
-              </p>
-              <ul className="list-disc pl-6 mb-6">
-                <li className="mb-2">Profesyonel gelişim ve eğitim programları</li>
-                <li className="mb-2">Uluslararası kariyer fırsatları</li>
-                <li className="mb-2">Yenilikçi projeler ve teknolojiler</li>
-                <li>Güçlü takım kültürü ve değerler</li>
-              </ul>
-              <Button
-                href="/kurumsal/kariyer"
-                variant="outline"
-                className="bg-white text-blue-700 hover:bg-blue-50"
-              >
-                Açık Pozisyonları Görüntüleyin
-              </Button>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="rounded-xl overflow-hidden shadow-lg"
-            >
-              <Image 
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3" 
-                alt="Karakucak Group Çalışanları"
-                width={600}
-                height={400}
-                className="w-full h-auto"
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      {/* Kariyer ve İşbirliği Fırsatları */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="w-full"
+      >
+        <CollaborationCTA 
+          title="Kariyer Fırsatları" 
+          subtitle="Ekibimize Katılın" 
+          description="Karakucak Group bünyesinde kariyer yapmak ve profesyonel gelişiminizi hızlandırmak için, açık pozisyonlarımızı inceleyin veya özgeçmişinizi gönderin. Grubumuzun dört ana sektöründe uzmanlaşma fırsatları sizleri bekliyor."
+          primaryCTA={{
+            text: 'Açık Pozisyonları İnceleyin',
+            href: '/kurumsal/kariyer'
+          }}
+          secondaryCTA={{
+            text: 'Özgeçmiş Gönderin',
+            href: '/iletisim?subject=İş Başvurusu'
+          }}
+          phone="+90 212 123 45 67"
+          stats={{
+            experience: 25,
+            projects: 500,
+            network: 100,
+            sectors: 4
+          }}
+        />
+      </motion.div>
 
       {/* Değerlerimiz CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-indigo-800 text-white">
