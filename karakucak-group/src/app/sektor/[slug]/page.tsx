@@ -91,38 +91,47 @@ export default function SectorPage({ params }: { params: { slug: string } }) {
   }));
 
   return (
-    <div className="pt-16">
-      <SectorHero 
-        title={sector.title}
-        description={sector.description}
-        backgroundImage={sector.backgroundImage}
-        primaryButtonText={sector.primaryButtonText}
-        primaryButtonLink={sector.primaryButtonLink}
-        secondaryButtonText={sector.secondaryButtonText}
-        secondaryButtonLink={sector.secondaryButtonLink}
-        overlayColor={sector.overlayColor}
-      />
+    <div className="pt-16 overflow-hidden">
+      {/* Hero Section - Ekranın tamamını kaplayacak u015fekilde */}
+      <section className="relative w-full">
+        <SectorHero 
+          title={sector.title}
+          description={sector.description}
+          backgroundImage={sector.backgroundImage}
+          primaryButtonText={sector.primaryButtonText}
+          primaryButtonLink={sector.primaryButtonLink}
+          secondaryButtonText={sector.secondaryButtonText}
+          secondaryButtonLink={sector.secondaryButtonLink}
+          overlayColor={sector.overlayColor}
+        />
+      </section>
       
-      <SectorServices 
-        title={sector.services.title}
-        description={sector.services.description}
-        services={servicesWithIcons}
-        imageSrc={sector.services.imageSrc}
-        imageAlt={sector.services.imageAlt}
-      />
+      {/* Hizmetler - Modern kaydırma animasyonu ile */}
+      <section className="py-8 sm:py-10 md:py-16 px-4 md:px-8 bg-gray-50">
+        <SectorServices 
+          title={sector.services.title}
+          description={sector.services.description}
+          services={servicesWithIcons}
+          imageSrc={sector.services.imageSrc}
+          imageAlt={sector.services.imageAlt}
+        />
+      </section>
       
-      <MnkArchitectureFeature 
-        title={sector.feature.title}
-        description1={sector.feature.description1}
-        description2={sector.feature.description2}
-        featureImage={sector.feature.featureImage}
-        buttonText={sector.feature.buttonText}
-        buttonLink={sector.feature.buttonLink}
-      />
+      {/* Mimarlık Özelliği - Parallax efekti ile */}
+      <section className="py-8 sm:py-12 md:py-16 px-4 md:px-8 mt-0">
+        <MnkArchitectureFeature 
+          title={sector.feature.title}
+          description1={sector.feature.description1}
+          description2={sector.feature.description2}
+          featureImage={sector.feature.featureImage}
+          buttonText={sector.feature.buttonText}
+          buttonLink={sector.feature.buttonLink}
+        />
+      </section>
       
       {/* Projeler bölümü - showProjects true ise göster */}
       {sector.projects.showProjects && (
-        <div id="projeler" className="mb-20">
+        <section className="py-8 sm:py-12 md:py-16 px-4 md:px-8 bg-gray-50" id="projeler">
           <GalleryShowcase
             title={sector.projects.title}
             subtitle={sector.projects.subtitle}
@@ -130,16 +139,19 @@ export default function SectorPage({ params }: { params: { slug: string } }) {
             viewAllLink={sector.projects.viewAllLink}
             viewAllText={sector.projects.viewAllText}
             itemsPerPage={sector.projects.itemsPerPage}
-            className="bg-gray-50"
+            className=""
           />
-        </div>
+        </section>
       )}
       
-      <SectorCta 
-        title={sector.cta.title}
-        description={sector.cta.description}
-        buttons={sector.cta.buttons}
-      />
+      {/* CTA - Modern gradient arka plan ile */}
+      <section className="py-10 sm:py-14 md:py-16 px-4 md:px-8 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <SectorCta 
+          title={sector.cta.title}
+          description={sector.cta.description}
+          buttons={sector.cta.buttons}
+        />
+      </section>
     </div>
   );
 }

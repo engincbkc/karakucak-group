@@ -85,28 +85,30 @@ export default function GalleryShowcase({
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white rounded-xl overflow-hidden shadow-md group hover:shadow-xl transition-all duration-300"
             >
-              <div className="flex flex-col md:flex-row overflow-hidden h-[450px] md:h-96">
-                <div className="md:w-3/5 h-64 md:h-full relative overflow-hidden">
+              <div className="flex flex-col md:flex-row overflow-hidden h-auto md:h-96">
+                {/* Mobil görünümde daha yüksek görsel için h-64 yerine h-80 kullanıyoruz */}
+                <div className="w-full h-80 md:w-3/5 md:h-full relative overflow-hidden">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 60vw"
+                    priority
                     className="object-cover object-center transform group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 
-                <div className="md:w-2/5 p-6 md:p-8 flex flex-col justify-center">
+                <div className="w-full md:w-2/5 p-5 md:p-8 flex flex-col justify-center">
                   <div className="mb-2 flex items-center text-sm text-gray-500">
                     {project.location && <span className="mr-4">{project.location}</span>}
                     {project.year && <span>{project.year}</span>}
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 md:mb-3 group-hover:text-blue-600 transition-colors leading-tight">
                     {project.title}
                   </h3>
                   
-                  <p className="text-gray-600 mb-6">
+                  <p className="text-gray-600 text-sm sm:text-base mb-4 md:mb-6 line-clamp-3 md:line-clamp-none">
                     {project.description}
                   </p>
                   

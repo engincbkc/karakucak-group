@@ -31,9 +31,14 @@ export default function SectorHero({
   logoImage,
 }: SectorHeroProps) {
   return (
-    <section className="relative overflow-hidden h-[80vh] min-h-[600px] flex items-center">
-      {/* Arka plan görüntüsü */}
-      <div className="absolute inset-0 w-full h-full z-0">
+    <section className="relative overflow-hidden h-[90vh] sm:h-[85vh] md:h-[80vh] min-h-[500px] flex items-center">
+      {/* Arka plan görüntüsü - Parallax efekti ile */}
+      <motion.div 
+        className="absolute inset-0 w-full h-full z-0"
+        initial={{ scale: 1.1 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1.2 }}
+      >
         <Image
           src={backgroundImage}
           alt={`${title} Arkaplan`}
@@ -43,47 +48,70 @@ export default function SectorHero({
           className="object-cover object-center"
         />
         <div className={`absolute inset-0 bg-gradient-to-r ${overlayColor} z-10`}></div>
-      </div>
+      </motion.div>
       
       {/* Öne çıkan içerik */}
-      <div className="container mx-auto px-4 relative z-20 pt-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-white"
           >
             {logoImage && (
-              <div className="mb-8">
-                <MotionImage
+              <motion.div 
+                className="mb-6 md:mb-8"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Image
                   src={logoImage}
                   alt={`${title} Logo`}
                   width={120}
                   height={60}
                   className="object-contain"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
                 />
-              </div>
+              </motion.div>
             )}
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+            <motion.h1 
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 md:mb-6"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
               <span className="inline-block">{title}</span>
-            </h1>
+            </motion.h1>
             
-            <div className="w-32 h-1.5 bg-yellow-500 mb-8"></div>
+            <motion.div 
+              className="w-20 sm:w-24 md:w-32 h-1 sm:h-1.5 bg-yellow-500 mb-6 md:mb-8"
+              initial={{ width: 0 }}
+              animate={{ width: "8rem" }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            ></motion.div>
             
-            <p className="text-lg md:text-xl text-gray-100 leading-relaxed max-w-xl mb-10">{description}</p>
+            <motion.p 
+              className="text-base sm:text-lg md:text-xl text-gray-100 leading-relaxed max-w-xl mb-8 md:mb-10"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+            
+            >{description}</motion.p>
             
             {(primaryButtonText || secondaryButtonText) && (
-              <div className="flex flex-wrap gap-5">
+              <motion.div 
+                className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-5"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1 }}
+              >
                 {primaryButtonText && primaryButtonLink && (
                   <motion.a 
                     href={primaryButtonLink} 
-                    className="px-8 py-4 bg-yellow-500 text-gray-900 font-semibold rounded-md hover:bg-yellow-400 transition-colors transform hover:-translate-y-1 hover:shadow-xl shadow-lg flex items-center gap-2"
-                    whileHover={{ scale: 1.03 }}
+                    className="px-6 sm:px-8 py-3 sm:py-4 bg-yellow-500 text-gray-900 font-semibold rounded-md hover:bg-yellow-400 transition-all shadow-lg flex items-center justify-center sm:justify-start gap-2 w-full sm:w-auto"
+                    whileHover={{ scale: 1.03, boxShadow: "0 10px 25px -5px rgba(245, 158, 11, 0.4)" }}
                     whileTap={{ scale: 0.98 }}
                   >
                     {primaryButtonText}
@@ -93,15 +121,15 @@ export default function SectorHero({
                 {secondaryButtonText && secondaryButtonLink && (
                   <motion.a 
                     href={secondaryButtonLink} 
-                    className="px-8 py-4 bg-transparent border-2 border-white text-white font-medium rounded-md hover:bg-white/10 transition-all flex items-center gap-2"
-                    whileHover={{ scale: 1.03 }}
+                    className="px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-white text-white font-medium rounded-md hover:bg-white/10 transition-all flex items-center justify-center sm:justify-start gap-2 w-full sm:w-auto"
+                    whileHover={{ scale: 1.03, backgroundColor: "rgba(255,255,255,0.15)" }}
                     whileTap={{ scale: 0.98 }}
                   >
                     {secondaryButtonText}
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                   </motion.a>
                 )}
-              </div>
+              </motion.div>
             )}
           </motion.div>
           
