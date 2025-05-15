@@ -129,9 +129,10 @@ export default function GalleryShowcase({
           ))}
         </div>
         
-        {/* Sayfalama Kontrolleri */}
-        <div className="flex justify-between items-center mt-10">
-          <div className="flex items-center space-x-4">
+        {/* Sayfalama Kontrolleri ve Tüm Projeleri Görüntüle butonu - Mobilde alt alta, masasüstünde yan yana */}
+        <div className="flex flex-col-reverse sm:flex-row justify-between items-center gap-6 sm:gap-4 mt-8 sm:mt-10">
+          {/* Pagination kontrolleri - Mobilde altta */}
+          <div className="flex items-center justify-center w-full sm:w-auto space-x-4 mt-6 sm:mt-0">
             <button 
               onClick={prevPage}
               disabled={currentPage === 0}
@@ -141,7 +142,7 @@ export default function GalleryShowcase({
               <ChevronLeft className="w-6 h-6 text-gray-700" />
             </button>
             
-            <div className="text-sm text-gray-600">
+            <div className="text-sm text-gray-600 min-w-[60px] text-center">
               {currentPage + 1} / {totalPages}
             </div>
             
@@ -155,12 +156,16 @@ export default function GalleryShowcase({
             </button>
           </div>
           
+          {/* Tüm Projeleri Görüntüle butonu - Mobilde üstte */}
           {viewAllLink && (
             <Link 
               href={viewAllLink}
-              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center justify-center w-full sm:w-auto px-5 py-3 sm:px-4 sm:py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
             >
               {viewAllText}
+              <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
             </Link>
           )}
         </div>
