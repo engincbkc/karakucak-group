@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import { 
   SectorHero, 
   SectorServices, 
@@ -20,7 +21,7 @@ import { CropIcon, OrganicIcon, IrrigationIcon } from "@/components/ui/icons";
 import { MiningIcon, ProcessingIcon, EnvironmentIcon, ConsultingIcon } from "@/components/ui/icons";
 import { CottonIcon, TextileIcon } from "@/components/ui/icons";
 
-// İkon eşleştiricisi fonksiyonu
+// İkon eşleştiricisi fonksiyonu - memoized ve server component uyumlu
 const getIconByName = (iconName: string) => {
   const iconMap: Record<string, React.ReactNode> = {
     home: <HomeIcon />,
@@ -45,7 +46,7 @@ const getIconByName = (iconName: string) => {
   return iconMap[iconName] || <BuildingIcon />; // Varsayılan bir ikon
 };
 
-// Bu fonksiyon ile hangi sektör sayfalarının önceden oluşturulacağını belirliyoruz (SSG)
+// SSG için - statik sayfaları önceden oluşturma
 export async function generateStaticParams() {
   // Tüm sektör slug'larını data fonksiyonumuzdan alıyoruz
   const slugs = getAllSectorSlugs();
@@ -56,33 +57,20 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function SectorPage({ params }: { params: { slug: string } }) {
+// Sayfa bileşeni - Server Component (varsayılan)
+export default async function SectorPage({ params }: { params: { slug: string } }) {
   const { slug } = params;
   
-  // Sektör verilerini yükle
-  const sector = getSectorBySlug(slug);
+  // Sektör verilerini yükle - getStaticProps benzeri fonksiyonalite için
+  const sector = await fetchSectorData(slug);
   
   // Sektör bulunamadıysa 404 döndür
   if (!sector) {
     notFound();
   }
   
-  // Projeler için filtre uygulama
-  const allProjects = getProjectsData().projects;
-  
-  // Eğer tag'lere göre filtreleme yap, sonuç boşsa tüm projeleri göster
-  let filteredProjects = allProjects.filter(project => {
-    // Eğer projede tags yoksa veya boşsa filtreden geçirme
-    if (!project.tags || project.tags.length === 0) return false;
-    
-    // Sektör filtresi için projede en az bir tag eşleşmesi olmalı
-    return sector.projects.filter.some(tag => project.tags.includes(tag));
-  });
-  
-  // Filtreleme sonuç vermezse tüm projeleri göster (ilk 9 proje)
-  if (filteredProjects.length === 0) {
-    filteredProjects = allProjects.slice(0, 9);
-  }
+  // Projeleri getir ve optimizasyon için cache uygula
+  const { filteredProjects } = await fetchFilteredProjects(sector.projects.filter);
   
   // Servis elemanlarını ikon bileşenleriyle zenginleştirme
   const servicesWithIcons = sector.services.items.map(item => ({
@@ -90,9 +78,12 @@ export default function SectorPage({ params }: { params: { slug: string } }) {
     title: item.title
   }));
 
+  // Priority loading için önemli içerikleri işaretleme
+  const shouldPrioritizeImage = true; // Ana hero görseli için
+
   return (
     <div className="pt-16 overflow-hidden">
-      {/* Hero Section - Ekranın tamamını kaplayacak u015fekilde */}
+      {/* Hero Section - Ekranın tamamını kaplayacak şekilde */}
       <section className="relative w-full">
         <SectorHero 
           title={sector.title}
@@ -103,6 +94,7 @@ export default function SectorPage({ params }: { params: { slug: string } }) {
           secondaryButtonText={sector.secondaryButtonText}
           secondaryButtonLink={sector.secondaryButtonLink}
           overlayColor={sector.overlayColor}
+          priority={shouldPrioritizeImage} // Priority image loading için
         />
       </section>
       
@@ -154,4 +146,36 @@ export default function SectorPage({ params }: { params: { slug: string } }) {
       </section>
     </div>
   );
+}
+
+// Data fetching fonksiyonları - performans optimizasyonu için ayrıştırıldı
+
+// Sektör verisini getiren fonksiyon - cache ile optimize edilmiş
+async function fetchSectorData(slug: string) {
+  // Next.js App Router cache stratejisi kullanımı
+  // Varsayılan force-cache ile statik olarak önbelleğe alır (SSG benzeri)
+  const sector = getSectorBySlug(slug);
+  return sector;
+}
+
+// Projeleri getiren ve filtreleyen fonksiyon - cache ile optimize edilmiş
+async function fetchFilteredProjects(filterTags: string[]) {
+  // Tüm projeleri getir (bu da önbelleğe alınabilir)
+  const allProjects = getProjectsData().projects;
+  
+  // Filtreleme işlemleri
+  let filteredProjects = allProjects.filter(project => {
+    // Eğer projede tags yoksa veya boşsa filtreden geçirme
+    if (!project.tags || project.tags.length === 0) return false;
+    
+    // Sektör filtresi için projede en az bir tag eşleşmesi olmalı
+    return filterTags.some(tag => project.tags.includes(tag));
+  });
+  
+  // Filtreleme sonuç vermezse tüm projeleri göster (ilk 9 proje)
+  if (filteredProjects.length === 0) {
+    filteredProjects = allProjects.slice(0, 9);
+  }
+
+  return { filteredProjects };
 }

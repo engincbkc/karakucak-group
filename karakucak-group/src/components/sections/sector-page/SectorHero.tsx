@@ -5,7 +5,7 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-type SectorHeroProps = {
+export type SectorHeroProps = {
   title: string;
   description: string;
   backgroundImage: string;
@@ -15,6 +15,7 @@ type SectorHeroProps = {
   secondaryButtonLink?: string;
   overlayColor?: string;
   logoImage?: string;
+  priority?: boolean; // Added priority flag for image optimization
 };
 
 const MotionImage = motion(Image);
@@ -29,6 +30,7 @@ export default function SectorHero({
   secondaryButtonLink,
   overlayColor = 'from-gray-900/95 to-blue-900/80',
   logoImage,
+  priority = true, // Varsayılan olarak true, performans için
 }: SectorHeroProps) {
   return (
     <section className="relative overflow-hidden h-[90vh] sm:h-[85vh] md:h-[80vh] min-h-[500px] flex items-center">
@@ -43,9 +45,10 @@ export default function SectorHero({
           src={backgroundImage}
           alt={`${title} Arkaplan`}
           fill
-          priority
+          priority={priority} // Dışarıdan geçilen priority değerini kullan
           quality={90}
           className="object-cover object-center"
+          sizes="100vw" // Responsive görsel boyutlandırma için
         />
         <div className={`absolute inset-0 bg-gradient-to-r ${overlayColor} z-10`}></div>
       </motion.div>
