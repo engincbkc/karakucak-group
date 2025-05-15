@@ -24,7 +24,7 @@ interface DirectorProps {
 
 const directors: DirectorProps[] = [
   {
-    name: "Mirza Karakucak",
+    name: "Mirza Karakucak", 
     position: "Geleceğin CEO'su",
     image: "/images/mirzpp.png",
     bio: "25 yılı aşkın iş deneyimi ile Mirza Karakucak, grubun kurucusu ve vizyoneridir. Otomotiv ve madencilik sektöründeki yatırımlarla başlayan kariyeri, tekstil ve mimarlık alanındaki girişimlerle genişlemiştir.",
@@ -36,8 +36,8 @@ const directors: DirectorProps[] = [
       "Sektörler Arası Entegrasyon"
     ],
     achievements: [
-      "Türkiye'nin En Etkili 50 İş İnsanı (2022)",
-      "Sürdürülebilir İş Modeli Ödülü (2020)"
+      "Türkiye'nin En Etkili 50 İş İnsanı (2026)",
+      "Sürdürülebilir İş Modeli Ödülü (2026)"
     ],
     socialLinks: {
       linkedin: "https://linkedin.com/in/ahmetkarakucak",
