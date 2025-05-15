@@ -9,10 +9,13 @@ import {
   MnkArchitectureFeature, 
   MnkCollaboration
 } from "@/components/sections/sector-page";
-import { ProjectsShowcase } from "@/components/sections/projects-showcase";
+import GalleryShowcase from "@/components/sections/GalleryShowcase";
 
 // Icon bileşenleri
 import { HomeIcon, OfficeIcon, BuildingIcon, MuseumIcon } from "@/components/ui/icons"
+
+// Projeler verisi
+import { getProjectsData } from "@/data/projects-data"
 
 export default function InsaatTaahhutPage() {
   return (
@@ -50,15 +53,14 @@ export default function InsaatTaahhutPage() {
       />
       
       <div id="projeler" className="mb-20">
-        <ProjectsShowcase
+        <GalleryShowcase
           title="Öne Çıkan Projelerimiz"
           subtitle="İnşaat ve taahhüt alanında gerçekleştirdiğimiz prestijli projelerimizden bazıları"
-          limitProjects={9} // Daha fazla proje gösterimi için
-          showViewAllButton={true}
-          showFilters={true}
+          projects={getProjectsData().projects.slice(0, 9)}
           viewAllLink="/projeler"
-          defaultViewMode="gallery" // Başlangıçta galeri görünümü
-          className="py-12"
+          viewAllText="Tüm Projeleri Görüntüle"
+          itemsPerPage={3}
+          className="bg-gray-50"
         />
       </div>
       
