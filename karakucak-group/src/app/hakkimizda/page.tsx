@@ -146,7 +146,7 @@ export default function HakkimizdaPage() {
                 Vizyon Sahibi Bir Başlangıç
               </h3>
               <p className="text-lg mb-6 text-gray-700 dark:text-gray-300">
-                Karakucak Group, 1998 yılında Ahmet Karakucak tarafından madencilik sektöründeki fırsatları değerlendirmek üzere kuruldu. Kısa sürede büyüyen şirketimiz, otomotiv sektöründe yatırımlar yaparak faaliyet alanlarını genişletti.
+                Karakucak Group, 1998 yılında Mirza Karakucak tarafından madencilik sektöründeki fırsatları değerlendirmek üzere kuruldu. Kısa sürede büyüyen şirketimiz, otomotiv sektöründe yatırımlar yaparak faaliyet alanlarını genişletti.
               </p>
               <p className="text-lg mb-8 text-gray-700 dark:text-gray-300">
                 2005 yılında pamuk ve tekstil sektörüne adım atan grubumuz, 2012 yılında MNK Mimarlık şirketini bünyesine katarak inşaat ve tasarım alanında da faaliyet göstermeye başladı. Bugün, dört ana sektörde yürüttüğümüz faaliyetler ile Türkiye ekonomisine değer katmaya devam ediyoruz.

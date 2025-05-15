@@ -24,11 +24,11 @@ interface DirectorProps {
 
 const directors: DirectorProps[] = [
   {
-    name: "Ahmet Karakucak",
-    position: "Yönetim Kurulu Başkanı",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3",
-    bio: "25 yılı aşkın iş deneyimi ile Ahmet Karakucak, grubun kurucusu ve vizyoneridir. Otomotiv ve madencilik sektöründeki yatırımlarla başlayan kariyeri, tekstil ve mimarlık alanındaki girişimlerle genişlemiştir.",
-    education: "Yıldız Teknik Üniversitesi, İşletme ve Ekonomi, 1991",
+    name: "Mirza Karakucak",
+    position: "Geleceğin CEO'su",
+    image: "/images/mirzpp.png",
+    bio: "25 yılı aşkın iş deneyimi ile Mirza Karakucak, grubun kurucusu ve vizyoneridir. Otomotiv ve madencilik sektöründeki yatırımlarla başlayan kariyeri, tekstil ve mimarlık alanındaki girişimlerle genişlemiştir.",
+    education: "ISTE",
     experience: "25+ yıl",
     expertise: [
       "Stratejik Yönetim",
@@ -43,114 +43,6 @@ const directors: DirectorProps[] = [
       linkedin: "https://linkedin.com/in/ahmetkarakucak",
       twitter: "https://twitter.com/ahmetkarakucak",
       email: "ahmet.karakucak@karakucakgroup.com"
-    }
-  },
-  {
-    name: "Ayşe Karakucak",
-    position: "Başkan Yardımcısı",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3",
-    bio: "Tekstil sektöründe uzmanlaşmış olan Ayşe Karakucak, grubun pamuk ve tekstil bölümünün gelişiminde önemli rol oynamıştır. Sürdürülebilir üretim ve yenilikçi tasarım konularında liderlik etmektedir.",
-    education: "Marmara Üniversitesi, Tekstil Mühendisliği, 1994",
-    experience: "22+ yıl",
-    expertise: [
-      "Tekstil Yönetimi",
-      "Sürdürülebilir Üretim",
-      "İnovatif Tasarım"
-    ],
-    achievements: [
-      "Tekstil Sektöründe Kadın Liderlik Ödülü (2023)",
-      "Yenilikçi İş Kadını (2019)"
-    ],
-    socialLinks: {
-      linkedin: "https://linkedin.com/in/aysekarakucak",
-      email: "ayse.karakucak@karakucakgroup.com"
-    }
-  },
-  {
-    name: "Mehmet Yılmaz",
-    position: "Otomotiv Bölüm Başkanı",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3",
-    bio: "20 yıllık otomotiv sektörü deneyimi ile Mehmet Yılmaz, grubun otomotiv segmentini yönetmektedir. Elektrifikasyon ve yeni mobilite çözümleri konusunda uzmanlaşmıştır.",
-    education: "Orta Doğu Teknik Üniversitesi, Makine Mühendisliği, 1998",
-    experience: "20+ yıl",
-    expertise: [
-      "Otomotiv Mühendisliği",
-      "Elektrikli Araç Teknolojileri",
-      "Akıllı Mobilite"
-    ],
-    achievements: [
-      "Yılın Otomotiv Yöneticisi (2021)",
-      "Teknolojik İnovasyon Liderliği (2020)"
-    ],
-    socialLinks: {
-      linkedin: "https://linkedin.com/in/mehmetyilmaz",
-      twitter: "https://twitter.com/mehmetyilmaz",
-      email: "mehmet.yilmaz@karakucakgroup.com"
-    }
-  },
-  {
-    name: "Fatma Demir",
-    position: "Finans Direktörü",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3",
-    bio: "Uluslararası finans yönetimi konusunda uzmanlaşmış olan Fatma Demir, grubun finansal stratejilerini yönetmekte ve sürdürülebilir büyümeyi sağlamaktadır.",
-    education: "Boğaziçi Üniversitesi, Ekonomi, 1999 | Harvard Business School, MBA, 2005",
-    experience: "18+ yıl",
-    expertise: [
-      "Finansal Strateji",
-      "Risk Yönetimi",
-      "Uluslararası Yatırımlar"
-    ],
-    achievements: [
-      "Türkiye'nin En Başarılı CFO'ları Listesi (2022)",
-      "Finans Dünyasında Kadın Liderler (2021)"
-    ],
-    socialLinks: {
-      linkedin: "https://linkedin.com/in/fatmademir",
-      email: "fatma.demir@karakucakgroup.com"
-    }
-  },
-  {
-    name: "Ali Kaya",
-    position: "MNK Mimarlık Direktörü",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3",
-    bio: "Ödüllü mimar Ali Kaya, MNK Mimarlık bölümünün kurucusudur. Sürdürülebilir ve yenilikçi mimari tasarımlarıyla tanınmaktadır.",
-    education: "İstanbul Teknik Üniversitesi, Mimarlık, 2001",
-    experience: "15+ yıl",
-    expertise: [
-      "Sürdürülebilir Mimarlık",
-      "Yeşil Binalar",
-      "Çağdaş Tasarım"
-    ],
-    achievements: [
-      "Avrupa Mimarlık Ödülü (2019)",
-      "Türkiye'nin En İyi 10 Mimarı (2018)"
-    ],
-    socialLinks: {
-      linkedin: "https://linkedin.com/in/alikaya",
-      twitter: "https://twitter.com/alikaya",
-      email: "ali.kaya@mnkmimarlik.com"
-    }
-  },
-  {
-    name: "Zeynep Toprak",
-    position: "AR-GE Direktörü",
-    image: "https://images.unsplash.com/photo-1619895862022-09114b41f16f?ixlib=rb-4.0.3",
-    bio: "Yenilikçi teknolojiler ve sürdürülebilir çözümler konusunda uzmanlaşmış olan Zeynep Toprak, grubun tüm sektörlerindeki araştırma ve geliştirme faaliyetlerini yönetmektedir.",
-    education: "Bilkent Üniversitesi, Bilgisayar Mühendisliği, 2004 | Kaliforniya Üniversitesi, İnovasyon Yönetimi, 2008",
-    experience: "12+ yıl",
-    expertise: [
-      "Teknoloji Yönetimi",
-      "İnovasyon Stratejileri",
-      "Yapay Zeka"
-    ],
-    achievements: [
-      "Türkiye'nin 40 Yaş Altı 40 İnovasyon Lideri (2023)",
-      "Ar-Ge Yönetiminde Mükemmellik Ödülü (2021)"
-    ],
-    socialLinks: {
-      linkedin: "https://linkedin.com/in/zeyneptoprak",
-      twitter: "https://twitter.com/zeyneptoprak",
-      email: "zeynep.toprak@karakucakgroup.com"
     }
   }
 ]

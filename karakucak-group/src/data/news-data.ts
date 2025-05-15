@@ -1,4 +1,4 @@
-import newsData from './news.json';
+import newsData from '@/data/news.json';
 
 export interface NewsCategory {
   label: string;
