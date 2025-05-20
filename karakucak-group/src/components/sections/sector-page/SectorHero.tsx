@@ -36,7 +36,7 @@ export default function SectorHero({
   primaryButtonLink,
   secondaryButtonText,
   secondaryButtonLink,
-  overlayColor = 'from-gray-900/95 to-amber-900/80', // Default rengi amber tonuna değiştirdim
+  overlayColor = 'from-gray-800/70 to-amber-700/60', // Daha açık ve modern kurumsal renkler
   logoImage,
   priority = true, // Varsayılan olarak true, performans için
   stats,
@@ -50,7 +50,7 @@ export default function SectorHero({
         animate={{ scale: 1 }}
         transition={{ duration: 1.2 }}
       >
-        <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-gray-900/90 to-amber-900/80" />
+        <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-gray-800/60 to-amber-700/50" />
         
         <Image
           src="https://images.pexels.com/photos/1117452/pexels-photo-1117452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -62,7 +62,7 @@ export default function SectorHero({
           sizes="100vw"
           unoptimized
         />
-        <div className={`absolute inset-0 bg-gradient-to-r ${overlayColor || 'from-gray-900/80 to-amber-900/80'} z-10`}></div>
+        <div className={`absolute inset-0 bg-gradient-to-r ${overlayColor || 'from-gray-800/60 to-amber-700/50'} z-10`}></div>
       </motion.div>
 
       {/* Öne çıkan içerik */}

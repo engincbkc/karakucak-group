@@ -179,10 +179,10 @@ export function HeroSection() {
                 alt={sector.title}
                 fill
                 priority
-                className="object-cover brightness-[0.55] filter"
+                className="object-cover brightness-[0.65] filter"
               />
-              {/* Geliştirilmiş gradient overlay - içeriğin daha iyi ve kurumsal görünmesi için */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30 z-10"></div>
+              {/* Geliştirilmiş gradient overlay - içeriğin daha modern ve kurumsal görünmesi için */}
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-800/60 via-gray-700/50 to-gray-600/40 z-10"></div>
             </div>
             
             {/* İçerik alanı - Her slayt için zenginleştirilmiş içerik katmanı */}
