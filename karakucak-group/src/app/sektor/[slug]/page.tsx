@@ -10,16 +10,17 @@ import {
   SectorCta, 
   MnkArchitectureFeature 
 } from "@/components/sections/sector-page";
-import GalleryShowcase from "@/components/sections/GalleryShowcase";
+import { ProjectsShowcase } from "@/components/sections/projects-showcase";
 
 // Data ve ikonlar
 import { getSectorBySlug, getAllSectorSlugs } from "@/data/sectors-data";
 import { getProjectsData } from "@/data/projects-data";
-import { HomeIcon, OfficeIcon, BuildingIcon, MuseumIcon } from "@/components/ui/icons";
-import { CarIcon, PartsIcon, TechIcon, LogisticsIcon } from "@/components/ui/icons";
-import { CropIcon, OrganicIcon, IrrigationIcon } from "@/components/ui/icons";
-import { MiningIcon, ProcessingIcon, EnvironmentIcon, ConsultingIcon } from "@/components/ui/icons";
-import { CottonIcon, TextileIcon } from "@/components/ui/icons";
+import { 
+  HomeIcon, OfficeIcon, BuildingIcon, MuseumIcon,
+  MiningIcon, ProcessingIcon, EnvironmentIcon, ConsultingIcon,
+  CottonIcon, TextileIcon, CarIcon, PartsIcon, TechIcon, LogisticsIcon,
+  CropIcon, OrganicIcon, IrrigationIcon
+} from "@/components/ui/icons";
 
 // İkon eşleştiricisi fonksiyonu - memoized ve server component uyumlu
 const getIconByName = (iconName: string) => {
@@ -127,16 +128,17 @@ export default async function SectorPage({ params }: { params: { slug: string } 
         />
       </section>
       
-      {/* Projeler bölümü - showProjects true ise göster */}
+      {/* Projeler bölümü - ProjectsShowcase bilesen kullanu0131lu0131yor */}
       {sector.projects.showProjects && (
-        <section className="py-8 sm:py-12 md:py-16 px-4 md:px-8 bg-gray-50" id="projeler">
-          <GalleryShowcase
+        <section id="projeler">
+          <ProjectsShowcase
             title={sector.projects.title}
             subtitle={sector.projects.subtitle}
-            projects={filteredProjects.slice(0, 9)}
+            limitProjects={9}
+            showFilters={true}
+            showViewAllButton={true}
             viewAllLink={sector.projects.viewAllLink}
-            viewAllText={sector.projects.viewAllText}
-            itemsPerPage={sector.projects.itemsPerPage}
+            defaultViewMode="grid"
             className=""
           />
         </section>
