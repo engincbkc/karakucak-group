@@ -42,7 +42,7 @@
           "description2": "Şirketimiz, üstlendiği tüm projelerde ekstra çalışma hızı, kaliteli malzeme kullanımı ve zamanında teslim ilkelerini benimsemektedir. İleri düzeyde proje yönetim teknikleri kullanarak, her aşamada proje takibini en yüksek hassasiyetle yapmaktayız.",
           "featureImage": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3",
           "buttonText": "MNK Mimarlık'ı Keşfedin",
-          "buttonLink": "/mnk-mimarlik"
+          "buttonLink": "#projeler"
         },
         "projects": {
           "showProjects": true,
@@ -103,7 +103,7 @@
           "description2": "Karakucak Otomotiv olarak, SsangYong'un Torres, Korando, Tivoli, Musso ve Rexton gibi her biri kendi sınıfında lider modellerini, şık tasarımı, yüksek performans ve üstün güvenliği bir arada sunan araçlarla temsil etmekteyiz. SsangYong araçları, gelişmiş motor teknolojileri, şık tasarımları ve çevre dostu yenilikleri ile sektördeki farkını ortaya koymaktadır.",
           "featureImage": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3",
           "buttonText": "Araçlarımızı Keşfedin",
-          "buttonLink": "/otomotiv/araclar"
+          "buttonLink": "#"
         },
         "projects": {
           "showProjects": true,
@@ -164,7 +164,7 @@
           "description2": "İşletmemiz, inşaat ve altyapı projelerinde büyük öneme sahip olan kum üretimi başta olmak üzere; yapı kumu, beton kumu, kalker, mıcır ve yol dolgu malzemeleri gibi çeşitli ürünlerin çıkarımı ve işlenmesi konusunda uzmanlaşmıştır. Kum ve taş ocaklarımızdan elde edilen hammaddeler, modern ekipmanlarla yıkanıp elenerek, ihtiyaca uygun biçimde kullanıma hazır hale getirilmektedir.",
           "featureImage": "https://images.unsplash.com/photo-1595876749987-0ad314c6fde3?ixlib=rb-4.0.3",
           "buttonText": "Hizmetlerimizi Keşfedin",
-          "buttonLink": "/madencilik/hizmetler"
+          "buttonLink": "#"
         },
         "projects": {
           "showProjects": true,
@@ -224,7 +224,7 @@
           "description2": "Modern tarım teknolojileri ve verimli sulama sistemleriyle kaynak kullanımını optimize ediyoruz.",
           "featureImage": "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?ixlib=rb-4.0.3",
           "buttonText": "Yaklaşımımızı Keşfedin",
-          "buttonLink": "/tarim/yaklasim"
+          "buttonLink": "#"
         },
         "projects": {
           "showProjects": true,
@@ -284,7 +284,7 @@
           "description2": "Çevre dostu yaklaşımlar ve ileri teknoloji kullanımıyla, kaliteli ürünler üretirken doğayı koruyoruz.",
           "featureImage": "https://images.unsplash.com/photo-1567922045116-2a00fae2ed03?ixlib=rb-4.0.3",
           "buttonText": "Yaklaşımımızı Keşfedin",
-          "buttonLink": "/pamuk-sanayi/yaklasim"
+          "buttonLink": "#"
         },
         "projects": {
           "showProjects": true,
