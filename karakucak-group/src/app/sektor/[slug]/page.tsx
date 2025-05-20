@@ -104,15 +104,17 @@ export default async function SectorPage({ params }: { params: { slug: string } 
       </section>
  
       
-      {/* Mimarlık Özelliği - Parallax efekti ile */}
+      {/* Sektöre özel özellik bölümü - Parallax efekti ile */}
       <section className="py-8 sm:py-12 md:py-16 px-4 md:px-8 mt-0">
         <MnkArchitectureFeature 
           title={sector.feature.title}
-          description1={sector.about }
+          description1={sector.about}
           description2=""
           featureImage={sector.feature.featureImage}
           buttonText={sector.feature.buttonText}
           buttonLink={sector.feature.buttonLink}
+          imageTag={sector.title} /* Sektör başlığını imageTag olarak kullanıyoruz */
+          imageCaption={sector.companyDetail} /* Şirket detaylarını imageCaption olarak kullanıyoruz */
         />
       </section>
 
@@ -128,8 +130,8 @@ export default async function SectorPage({ params }: { params: { slug: string } 
         />
       </section>
       
-      {/* Projeler bölümü - ProjectsShowcase bilesen kullanu0131lu0131yor */}
-      {sector.projects.showProjects && (
+      {/* Projeler bölümü - ProjectsShowcase bilesen kullanılıyor, sadece /sektor/insaat-taahhut sayfasında görünür */}
+      {sector.projects.showProjects && slug === 'insaat-taahhut' && (
         <section id="projeler">
           <ProjectsShowcase
             title={sector.projects.title}
