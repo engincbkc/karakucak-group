@@ -54,14 +54,14 @@ export default function SectorServices({
         {/* Başlık ve Açıklama Alanı */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           className="text-center mb-10 sm:mb-14 md:mb-16 max-w-4xl mx-auto"
         >
           <motion.h2 
             className="text-3xl sm:text-4xl font-bold mb-3"
             initial={{ opacity: 0, y: -10 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
             {title}
@@ -70,14 +70,14 @@ export default function SectorServices({
           <motion.div 
             className="w-24 h-1.5 bg-amber-500 mx-auto mb-6"
             initial={{ width: 0 }}
-            whileInView={{ width: "6rem" }}
+            animate={{ width: "6rem" }}
             transition={{ duration: 0.8, delay: 0.3 }}
           ></motion.div>
           
           <motion.p 
             className="text-gray-700 text-lg max-w-3xl mx-auto px-4"
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             {description}
@@ -90,14 +90,14 @@ export default function SectorServices({
           <motion.div 
             className="w-full lg:w-5/12 relative"
             initial={{ opacity: 0, x: reversed ? 50 : -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="relative rounded-xl overflow-hidden shadow-2xl w-full h-80 sm:h-96 md:h-[450px]">
               {/* Görsel Animasyonu */}
               <motion.div
                 initial={{ scale: 1.1 }}
-                whileInView={{ scale: 1 }}
+                animate={{ scale: 1 }}
                 transition={{ duration: 1.2 }}
                 className="w-full h-full"
               >
@@ -118,7 +118,7 @@ export default function SectorServices({
             {/* Dekoratif Arka Plan Elementi */}
             <motion.div
               initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.6 }}
               className="absolute -z-10 w-full h-full rounded-xl bg-amber-100/50 -bottom-4 -right-4"
             />
@@ -127,7 +127,7 @@ export default function SectorServices({
           {/* Sağ Taraf - Hizmetler */}
           <motion.div
             initial={{ opacity: 0, x: reversed ? -50 : 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="w-full lg:w-7/12 mt-10 lg:mt-0"
           >
@@ -140,7 +140,7 @@ export default function SectorServices({
                   initial={{ opacity: 0, y: 20 }}
                   whileHover="hover"
                   variants={cardVariants}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 * index }}
                 >
                   <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4">

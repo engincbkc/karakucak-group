@@ -44,7 +44,7 @@ export default function MnkArchitectureFeature({
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-8 lg:gap-10">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="w-full md:w-1/2 text-left"
           >
@@ -64,7 +64,7 @@ export default function MnkArchitectureFeature({
           
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
             className="w-full md:w-5/12 mt-6 md:mt-0"
           >
