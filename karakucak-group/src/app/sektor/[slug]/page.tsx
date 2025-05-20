@@ -63,6 +63,8 @@ export default async function SectorPage({ params }: { params: { slug: string } 
   
   // Sektör verilerini yükle - getStaticProps benzeri fonksiyonalite için
   const sector = await fetchSectorData(slug);
+
+  console.log(sector);
   
   // Sektör bulunamadıysa 404 döndür
   if (!sector) {
@@ -86,8 +88,9 @@ export default async function SectorPage({ params }: { params: { slug: string } 
       {/* Hero Section - Ekranın tamamını kaplayacak şekilde */}
       <section className="relative w-full">
         <SectorHero 
-          title={sector.title}
-          description={sector.description}
+          title={sector.companyName} // Şirket adını ana başlık olarak geçiyoruz
+          subtitle={sector.title} // Sektör adını alt başlık olarak geçiyoruz
+          description={sector.description} // About alabiliyorsak onu, yoksa descriptionı kullan
           backgroundImage={sector.backgroundImage}
           primaryButtonText={sector.primaryButtonText}
           primaryButtonLink={sector.primaryButtonLink}
@@ -95,9 +98,24 @@ export default async function SectorPage({ params }: { params: { slug: string } 
           secondaryButtonLink={sector.secondaryButtonLink}
           overlayColor={sector.overlayColor}
           priority={shouldPrioritizeImage} // Priority image loading için
+          stats={sector.stats} // İstatistik bilgilerini geçiyoruz
         />
       </section>
+ 
       
+      {/* Mimarlık Özelliği - Parallax efekti ile */}
+      <section className="py-8 sm:py-12 md:py-16 px-4 md:px-8 mt-0">
+        <MnkArchitectureFeature 
+          title={sector.feature.title}
+          description1={sector.about }
+          description2=""
+          featureImage={sector.feature.featureImage}
+          buttonText={sector.feature.buttonText}
+          buttonLink={sector.feature.buttonLink}
+        />
+      </section>
+
+           
       {/* Hizmetler - Modern kaydırma animasyonu ile */}
       <section className="py-8 sm:py-10 md:py-16 px-4 md:px-8 bg-gray-50">
         <SectorServices 
@@ -106,18 +124,6 @@ export default async function SectorPage({ params }: { params: { slug: string } 
           services={servicesWithIcons}
           imageSrc={sector.services.imageSrc}
           imageAlt={sector.services.imageAlt}
-        />
-      </section>
-      
-      {/* Mimarlık Özelliği - Parallax efekti ile */}
-      <section className="py-8 sm:py-12 md:py-16 px-4 md:px-8 mt-0">
-        <MnkArchitectureFeature 
-          title={sector.feature.title}
-          description1={sector.feature.description1}
-          description2={sector.feature.description2}
-          featureImage={sector.feature.featureImage}
-          buttonText={sector.feature.buttonText}
-          buttonLink={sector.feature.buttonLink}
         />
       </section>
       

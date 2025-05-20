@@ -41,10 +41,21 @@ export interface SectorCta {
   }>;
 }
 
+export interface SectorStat {
+  value: string;
+  label: string;
+}
+
 export interface Sector {
   id: string;
   title: string;
+  companyName: string;
+  companyDetail: string;
+  icon: string;
+  keyPoints: string[];
+  stats: SectorStat[];
   description: string;
+  about: string; // Detaylı açıklama için about alanı eklendi
   backgroundImage: string;
   primaryButtonText?: string;
   primaryButtonLink?: string;
@@ -73,12 +84,36 @@ export function getSectorData(locale: string = 'tr'): {
 
 export function getSectorBySlug(slug: string, locale: string = 'tr'): Sector | null {
   try {
+    // Veriyi alıyoruz
     const data = getSectorData(locale);
     const sector = data.sectors.find(sector => sector.id === slug);
     
     if (!sector) {
       return null;
     }
+
+    // JSON'dan doğrudan erişim
+    const rawData = sectorsData as any;
+    const rawSector = rawData[locale || 'tr'].sectors.find((s: any) => s.id === slug);
+    
+    if (rawSector && rawSector.about) {
+      // about alanını doğrudan alıyoruz
+      console.log('Raw about field exists:', rawSector.about.substring(0, 50) + '...');
+      
+      // Manual olarak about alanını ekliyoruz
+      (sector as any).about = rawSector.about;
+    } else {
+      console.log('Raw about field not found for sector:', slug);
+    }
+    
+    // Kontrol loglaması
+    console.log('Final sector data:', {
+      id: sector.id,
+      title: sector.title,
+      companyName: sector.companyName,
+      description: sector.description,
+      about: (sector as any).about || 'No about field found'
+    });
     
     return sector;
   } catch (error) {

@@ -2,6 +2,116 @@
     "tr": {
       "projects": [
         {
+          "id": "mezbahane-hilvan",
+          "title": "Şanlıurfa ili Hilvan ilçesi Mezbahane Yapım İşi",
+          "description": "MNK Mimarlık tarafından gerçekleştirilen Hilvan ilçesi Mezbahane yapım projesi.",
+          "image": "https://images.unsplash.com/photo-1621847468516-1ed5d0df65d6?ixlib=rb-4.0.3",
+          "tags": ["kamu", "insaat", "mimarlik"],
+          "location": "Şanlıurfa, Hilvan",
+          "year": "2021",
+          "slug": "mezbahane-hilvan"
+        },
+        {
+          "id": "mezbahane-bozova",
+          "title": "Şanlıurfa ili Bozova ilçesi Mezbahane Yapım İşi",
+          "description": "MNK Mimarlık tarafından gerçekleştirilen Bozova ilçesi Mezbahane yapım projesi.",
+          "image": "https://images.unsplash.com/photo-1619421883258-b1ace3b6ec1c?ixlib=rb-4.0.3",
+          "tags": ["kamu", "insaat", "mimarlik"],
+          "location": "Şanlıurfa, Bozova",
+          "year": "2021",
+          "slug": "mezbahane-bozova"
+        },
+        {
+          "id": "mezbahane-halfeti",
+          "title": "Şanlıurfa ili Halfeti ilçesi Mezbahane Yapım İşi",
+          "description": "MNK Mimarlık tarafından gerçekleştirilen Halfeti ilçesi Mezbahane yapım projesi.",
+          "image": "https://images.unsplash.com/photo-1541183663531-26005f896482?ixlib=rb-4.0.3",
+          "tags": ["kamu", "insaat", "mimarlik"],
+          "location": "Şanlıurfa, Halfeti",
+          "year": "2021",
+          "slug": "mezbahane-halfeti"
+        },
+        {
+          "id": "mezbahane-ceylanpinar",
+          "title": "Şanlıurfa ili Ceylanpınar ilçesi Mezbahane Yapım İşi",
+          "description": "MNK Mimarlık tarafından gerçekleştirilen Ceylanpınar ilçesi Mezbahane yapım projesi.",
+          "image": "https://images.unsplash.com/photo-1521311394770-4cbf8c2508bb?ixlib=rb-4.0.3",
+          "tags": ["kamu", "insaat", "mimarlik"],
+          "location": "Şanlıurfa, Ceylanpınar",
+          "year": "2022",
+          "slug": "mezbahane-ceylanpinar"
+        },
+        {
+          "id": "mezbahane-suruc",
+          "title": "Şanlıurfa ili Suruç ilçesi Mezbahane Yapım İşi",
+          "description": "MNK Mimarlık tarafından gerçekleştirilen Suruç ilçesi Mezbahane yapım projesi.",
+          "image": "https://images.unsplash.com/photo-1540753874-cd8a95390d21?ixlib=rb-4.0.3",
+          "tags": ["kamu", "insaat", "mimarlik"],
+          "location": "Şanlıurfa, Suruç",
+          "year": "2022",
+          "slug": "mezbahane-suruc"
+        },
+        {
+          "id": "mezbahane-viransehir",
+          "title": "Şanlıurfa ili Viranşehir ilçesi Mezbahane Yapım İşi",
+          "description": "MNK Mimarlık tarafından gerçekleştirilen Viranşehir ilçesi Mezbahane yapım projesi.",
+          "image": "https://images.unsplash.com/photo-1585944496672-5f9daed96cdf?ixlib=rb-4.0.3",
+          "tags": ["kamu", "insaat", "mimarlik"],
+          "location": "Şanlıurfa, Viranşehir",
+          "year": "2023",
+          "slug": "mezbahane-viransehir"
+        },
+        {
+          "id": "transfer-istasyonu-halfeti",
+          "title": "Şanlıurfa ili Halfeti ilçesi Katı Atık Transfer İstasyonu Yapım işi",
+          "description": "MNK Mimarlık tarafından gerçekleştirilen Halfeti ilçesi Katı Atık Transfer İstasyonu yapım projesi.",
+          "image": "https://images.unsplash.com/photo-1613685703305-fba7a6181d86?ixlib=rb-4.0.3",
+          "tags": ["kamu", "insaat", "mimarlik", "altyapi"],
+          "location": "Şanlıurfa, Halfeti",
+          "year": "2023",
+          "slug": "transfer-istasyonu-halfeti"
+        },
+        {
+          "id": "semt-pazari-hilvan",
+          "title": "Şanlıurfa ili Hilvan ilçesi Semt Pazarı Yapım İşi",
+          "description": "MNK Mimarlık tarafından gerçekleştirilen Hilvan ilçesi Semt Pazarı yapım projesi.",
+          "image": "https://images.unsplash.com/photo-1533900298318-6b8da08a523e?ixlib=rb-4.0.3",
+          "tags": ["kamu", "insaat", "mimarlik", "ticari"],
+          "location": "Şanlıurfa, Hilvan",
+          "year": "2023",
+          "slug": "semt-pazari-hilvan"
+        },
+        {
+          "id": "yaya-ust-gecidi-eyyubiye",
+          "title": "Şanlıurfa ili Eyyübiye ilçesi Yaya Üst Geçidi Yapım İşi",
+          "description": "MNK Mimarlık tarafından gerçekleştirilen Eyyübiye ilçesi Yaya Üst Geçidi yapım projesi.",
+          "image": "https://images.unsplash.com/photo-1571036604619-67738db33971?ixlib=rb-4.0.3",
+          "tags": ["kamu", "insaat", "mimarlik", "altyapi"],
+          "location": "Şanlıurfa, Eyyübiye",
+          "year": "2024",
+          "slug": "yaya-ust-gecidi-eyyubiye"
+        },
+        {
+          "id": "tarim-mudur-binasi-akcakale",
+          "title": "Şanlıurfa ili Akçakale ilçesi Tarım ve Orman Müdürlüğü Binası Yapım İşi",
+          "description": "MNK Mimarlık tarafından gerçekleştirilen Akçakale ilçesi Tarım ve Orman Müdürlüğü Binası yapım projesi.",
+          "image": "https://images.unsplash.com/photo-1542744095-d88ed9f595fe?ixlib=rb-4.0.3",
+          "tags": ["kamu", "insaat", "mimarlik", "ofis"],
+          "location": "Şanlıurfa, Akçakale",
+          "year": "2024",
+          "slug": "tarim-mudur-binasi-akcakale"
+        },
+        {
+          "id": "mezbahane-hayvanpazari-adiyaman",
+          "title": "Adıyaman İli Mezbahane ve Hayvan Pazarı Yapım İşi",
+          "description": "MNK Mimarlık tarafından gerçekleştirilecek Adıyaman ili Mezbahane ve Hayvan Pazarı yapım projesi.",
+          "image": "https://images.unsplash.com/photo-1584438876752-bd9d8d947b22?ixlib=rb-4.0.3",
+          "tags": ["kamu", "insaat", "mimarlik", "ticari"],
+          "location": "Adıyaman",
+          "year": "2025",
+          "slug": "mezbahane-hayvanpazari-adiyaman"
+        },
+        {
           "id": "eco-tower",
           "title": "Eco Tower Office Complex",
           "description": "İstanbul'da LEED Platinum sertifikalı, sürdürülebilir ofis kompleksi. Yenilenebilir enerji kaynakları, yağmur suyu hasadı ve doğal aydınlatma ile %60 enerji tasarrufu sağlıyor.",
