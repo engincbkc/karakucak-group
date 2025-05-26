@@ -1,0 +1,126 @@
+{
+  "tr": {
+    "companyName": "Karakucak Group",
+    "foundedYear": "1997",
+    "theme": {
+      "primary": "amber-600",
+      "secondary": "amber-700",
+      "accent": "orange-500",
+      "background": "gray-50"
+    },
+    "companies": [
+      {
+        "id": "mnk-mimarlik",
+        "name": "MNK Mimarlık",
+        "sector": "insaat-taahhut",
+        "sectorName": "İnşaat & Taahhüt",
+        "slogan": "Modern mimari anlayışımız ve yüksek mühendislik standartlarımızla inşaat sektöründe güvenilir çözümler sunuyoruz.",
+        "foundedYear": "2020",
+        "description": "MNK Mimarlık, 2020 yılında inşaat ve taahhüt sektöründe faaliyet göstermeye başlamış, kısa sürede sektördeki güvenilirliğini ve başarısını kanıtlamıştır. Firma, özellikle kamu müteahhitliği alanında faaliyet göstererek, kamu projelerinin inşaat, yenileme ve taahhüt hizmetlerini titizlikle yerine getirmektedir.\n\nŞirketimiz, üstlendiği tüm projelerde ekstra çalışma hızı, kaliteli malzeme kullanımı ve zamanında teslim ilkelerini benimsemektedir. İleri düzeyde proje yönetim teknikleri kullanarak, her aşamada proje takibini en yüksek hassasiyetle yapmaktayız. Bütçe kontrolü, zaman yönetimi ve kaynak planlaması gibi temel unsurlara odaklanarak, projeleri en uygun fiyatlarla ve yüksek kaliteyle tamamlamaktayız.\n\nMNK Mimarlık, güçlü teknolojik altyapısı ve deneyimli mühendislik ekibiyle projelerdeki tüm süreçleri titizlikle yönetmektedir. İnşaat malzeme tedarik zinciri, iş sağlığı ve güvenliği önlemleri, yapı denetimi ve yasal uyumluluk konularında yüksek standartlar sağlanmakta, her aşamada mükemmellik hedeflenmektedir.\n\nProjelerimizde; modern tasarım anlayışı, mühendislik bilgi birikimi ve sektördeki en son yenilikler ışığında sürdürülebilir ve çevre dostu inşaat çözümleri sunuyoruz. Her bir projeye özel çözümler üreterek, hem inşaat süreçlerinde verimlilik hem de müşteri memnuniyetini ön planda tutuyoruz.",
+        "featured": true
+      },
+      {
+        "id": "kgm-otomotiv",
+        "name": "KGM SsangYong Karakucak Otomotiv Bayii",
+        "sector": "otomotiv",
+        "sectorName": "Otomotiv",
+        "slogan": "SsangYong markasının güvenilir, konforlu ve ileri teknolojiye sahip araçlarını Şanlıurfa'daki yetkili bayimizde sizlerle buluşturuyoruz.",
+        "foundedYear": "2024",
+        "description": "Karakucak Otomotiv, 2024 yılından bu yana Şanlıurfa'da SsangYong markasının yetkili bayisi olarak, otomotiv sektöründe kalitenin ve müşteri odaklı hizmet anlayışının öncüsü olmuştur. SsangYong, dünya çapında prestijli bir marka olarak, dayanıklılığı, inovatif tasarımı ve üstün teknolojisiyle tanınırken, Karakucak Otomotiv de bu mirası benimseyerek, müşterilerine güvenli, konforlu ve ileri teknolojilere sahip araçlar sunmaktadır.\n\nKarakucak Otomotiv olarak, SsangYong'un Torres, Korando, Tivoli, Musso ve Rexton gibi her biri kendi sınıfında lider modellerini, şık tasarımı, yüksek performans ve üstün güvenliği bir arada sunan araçlarla temsil etmekteyiz. SsangYong araçları, gelişmiş motor teknolojileri, şık tasarımları ve çevre dostu yenilikleri ile sektördeki farkını ortaya koymaktadır. Biz de bu güçlü mirası, sizlere en yüksek standartlarda araç satışı ve servis hizmetleri sunarak devam ettiriyoruz.\n\nMüşteri memnuniyeti, faaliyetlerimizin temeline oturur ve her müşterimizin özel gereksinimlerini en iyi şekilde karşılamayı hedefleriz.\n\nSatış sonrası hizmetlerimiz, Karakucak Otomotiv'in sektördeki farkını bir kez daha ortaya koymaktadır. Bakım, onarım, yedek parça temini ve garanti hizmetleri alanlarında, uzman teknisyenlerimiz ve modern ekipmanlarımız ile her zaman en yüksek hizmeti sunmayı taahhüt ederiz. SsangYong araçlarının her bir parçası için sunduğumuz üstün hizmet, sadece aracınızın ömrünü uzatmakla kalmaz, aynı zamanda sizin güvenliğiniz ve konforunuz için de en yüksek standartları sağlar.\n\nTorres EVX gibi elektrikli araç modelleriyle, SsangYong markası, otomotivdeki geleceği bugünden şekillendirmektedir. Torres EVX, uzun menzil kapasitesi, şık tasarımı ve teknolojik donanımı ile çevre dostu bir seçenek sunmakla beraber yenilikçi teknolojilerle sürüş deneyimini bir adım öteye taşır. Karakucak Otomotiv, SsangYong markasının geleceğini takip ederek, müşterilerine sadece bugünün değil, yarının otomobil deneyimini de sunmaktadır.",
+        "featured": true
+      },
+      {
+        "id": "karakucak-madencilik",
+        "name": "Karakucak Madencilik",
+        "sector": "madencilik",
+        "sectorName": "Madencilik",
+        "slogan": "Taş & Kum Ocağı işletmeciliğinde çevre dostu madencilik uygulamalarımız ve ileri teknoloji ekipmanlarımızla altyapınızı sağlam temellerle buluşturuyoruz.",
+        "foundedYear": "2011",
+        "description": "Karakucak Madencilik, 2011 yılından bu yana Şanlıurfa'nın Akçakale ilçesinde faaliyet gösteren, sektöre kalite ve güven kazandıran köklü bir kuruluştur.\n\nİşletmemiz, inşaat ve altyapı projelerinde büyük öneme sahip olan kum üretimi başta olmak üzere; yapı kumu, beton kumu, kalker, mıcır ve yol dolgu malzemeleri gibi çeşitli ürünlerin çıkarımı ve işlenmesi konusunda uzmanlaşmıştır. Kum ve taş ocaklarımızdan elde edilen hammaddeler, modern ekipmanlarla yıkanıp elenerek, ihtiyaca uygun biçimde kullanıma hazır hale getirilmektedir.\n\nKarakucak Madencilik olarak, müşterilerimize sadece malzeme değil; zamanında, güvenilir ve sürdürülebilir bir hizmet sunmayı amaçlıyoruz. Bu doğrultuda, son teknoloji makineler ve alanında tecrübeli uzmanlarla çalışarak, projelerinize en yüksek standartlarda katkı sağlamayı ilke ediniyoruz.\n\nYılların getirdiği deneyim ve bölgeye olan bağlılığımızla, güçlü adımlarla yolumuza devam ediyor; altyapınızı sağlam temellerle buluşturuyoruz.",
+        "featured": true
+      },
+      {
+        "id": "karakucak-tarim",
+        "name": "Karakucak Tarım",
+        "sector": "tarim",
+        "sectorName": "Tarım",
+        "slogan": "Modern tarım teknolojileri ve sürdürülebilir uygulamalarla tarımsal üretimde verimliliği artırıyoruz.",
+        "foundedYear": "2015",
+        "description": "Karakucak Tarım, sürdürülebilir tarım uygulamalarıyla sektörde öncü rol oynamaktadır. Modern tarım teknolojileri ve verimli sulama sistemleriyle kaynak kullanımını optimize ediyoruz.",
+        "featured": true
+      },
+      {
+        "id": "karakucak-tekstil",
+        "name": "Karakucak Tekstil",
+        "sector": "pamuk-sanayi",
+        "sectorName": "Tekstil",
+        "slogan": "Çırçır & Prese Fabrikası ile sürdürülebilir pamuk üretimi ve işleme teknolojilerimizle tekstil sektörüne değer katıyoruz.",
+        "foundedYear": "2010",
+        "description": "Karakucak Tekstil, sürdürülebilir tekstil üretim uygulamalarıyla sektörde öncü rol oynamaktadır. Çevre dostu yaklaşımlar ve ileri teknoloji kullanımıyla, kaliteli ürünler üretirken doğayı koruyoruz.",
+        "featured": true
+      }
+    ]
+  },
+  "en": {
+    "companyName": "Karakucak Group",
+    "foundedYear": "1997",
+    "theme": {
+      "primary": "amber-600",
+      "secondary": "amber-700",
+      "accent": "orange-500",
+      "background": "gray-50"
+    },
+    "companies": [
+      {
+        "id": "mnk-mimarlik",
+        "name": "MNK Architecture",
+        "sector": "insaat-taahhut",
+        "sectorName": "Construction & Contracting",
+        "slogan": "We provide reliable solutions in the construction industry with our modern architectural approach and high engineering standards.",
+        "foundedYear": "2020",
+        "description": "MNK Architecture started its operations in the construction and contracting sector in 2020, quickly proving its reliability and success in the industry. The company operates particularly in the field of public contracting, meticulously performing construction, renovation, and contracting services for public projects.\n\nOur company adopts the principles of extra working speed, quality material use, and timely delivery in all the projects it undertakes. Using advanced project management techniques, we follow up on projects with the highest sensitivity at every stage. Focusing on basic elements such as budget control, time management, and resource planning, we complete projects at the most affordable prices and with high quality.\n\nMNK Architecture meticulously manages all processes in projects with its strong technological infrastructure and experienced engineering team. High standards are provided in construction material supply chain, occupational health and safety measures, building inspection, and legal compliance, and excellence is targeted at every stage.\n\nIn our projects, we offer sustainable and environmentally friendly construction solutions in light of modern design understanding, engineering know-how, and the latest innovations in the sector. By producing special solutions for each project, we prioritize both efficiency in construction processes and customer satisfaction.",
+        "featured": true
+      },
+      {
+        "id": "kgm-otomotiv",
+        "name": "KGM SsangYong Karakucak Automotive Dealership",
+        "sector": "otomotiv",
+        "sectorName": "Automotive",
+        "slogan": "We bring you the reliable, comfortable, and technologically advanced vehicles of the SsangYong brand at our authorized dealership in Şanlıurfa.",
+        "foundedYear": "2024",
+        "description": "Karakucak Automotive has been the pioneer of quality and customer-oriented service understanding in the automotive sector as the authorized dealer of SsangYong brand in Şanlıurfa since 2024. While SsangYong is recognized as a prestigious brand worldwide for its durability, innovative design, and superior technology, Karakucak Automotive embraces this heritage and offers its customers safe, comfortable, and technologically advanced vehicles.\n\nAs Karakucak Automotive, we represent SsangYong's models such as Torres, Korando, Tivoli, Musso, and Rexton, each a leader in its class, with vehicles that combine elegant design, high performance, and superior safety. SsangYong vehicles stand out in the sector with their advanced engine technologies, elegant designs, and environmentally friendly innovations. We continue this powerful heritage by offering you the highest standards of vehicle sales and service.\n\nCustomer satisfaction forms the basis of our activities, and we aim to meet the special needs of each of our customers in the best way.\n\nOur after-sales services once again demonstrate the difference of Karakucak Automotive in the sector. In the areas of maintenance, repair, spare parts supply, and warranty services, we commit to always providing the highest service with our expert technicians and modern equipment. The superior service we provide for each part of SsangYong vehicles not only extends the life of your vehicle but also provides the highest standards for your safety and comfort.\n\nWith electric vehicle models like Torres EVX, the SsangYong brand is shaping the future of automotive today. Torres EVX not only offers an environmentally friendly option with its long-range capacity, elegant design, and technological equipment but also takes the driving experience one step further with innovative technologies. Karakucak Automotive, by following the future of the SsangYong brand, offers its customers not only today's but also tomorrow's automobile experience.",
+        "featured": true
+      },
+      {
+        "id": "karakucak-madencilik",
+        "name": "Karakucak Mining",
+        "sector": "madencilik",
+        "sectorName": "Mining",
+        "slogan": "We bring your infrastructure together with solid foundations with our environmentally friendly mining practices and advanced technology equipment in Stone & Sand Quarry management.",
+        "foundedYear": "2011",
+        "description": "Karakucak Mining is a well-established organization that has been operating in the Akçakale district of Şanlıurfa since 2011, bringing quality and trust to the sector.\n\nOur enterprise specializes in the extraction and processing of various products, primarily sand production, which is of great importance in construction and infrastructure projects; building sand, concrete sand, limestone, crushed stone, and road filling materials. Raw materials obtained from our sand and stone quarries are washed and sieved with modern equipment, making them ready for use in accordance with needs.\n\nAs Karakucak Mining, we aim to provide our customers not only with materials but also timely, reliable, and sustainable service. In this direction, we adopt the principle of contributing to your projects at the highest standards by working with state-of-the-art machines and experienced experts in the field.\n\nWith the experience of years and our commitment to the region, we continue on our way with strong steps; we bring your infrastructure together with solid foundations.",
+        "featured": true
+      },
+      {
+        "id": "karakucak-tarim",
+        "name": "Karakucak Agriculture",
+        "sector": "tarim",
+        "sectorName": "Agriculture",
+        "slogan": "We increase productivity in agricultural production with modern agricultural technologies and sustainable practices.",
+        "foundedYear": "2015",
+        "description": "Karakucak Agriculture plays a pioneering role in the sector with sustainable agricultural practices. We optimize resource use with modern agricultural technologies and efficient irrigation systems.",
+        "featured": true
+      },
+      {
+        "id": "karakucak-tekstil",
+        "name": "Karakucak Textile",
+        "sector": "pamuk-sanayi",
+        "sectorName": "Textile",
+        "slogan": "We add value to the textile sector with our sustainable cotton production and processing technologies with our Ginning & Press Factory.",
+        "foundedYear": "2010",
+        "description": "Karakucak Textile plays a pioneering role in the sector with sustainable textile production practices. We protect nature while producing quality products with environmentally friendly approaches and the use of advanced technology.",
+        "featured": true
+      }
+    ]
+  }
+}

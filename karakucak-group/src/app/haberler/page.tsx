@@ -1,22 +1,35 @@
-import React from 'react'
+'use client';
+
+import React, { useState, useEffect, useMemo } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { getNewsData } from '@/data/news-data'
-
-// News page için meta veriler
-export const metadata = {
-  title: 'Haberler | Karakucak Group',
-  description: 'Karakucak Group ve şirketlerimizin son haberleri, duyuruları ve etkinlikleri.',
-}
+import { getNewsData, NewsItem } from '@/data/news-data'
 
 export default function NewsPage() {
   // Haberleri ve kategorileri yükle
   const { news, categories } = getNewsData()
   
-  // Haberleri tarihe göre sırala (en yeniden eskiye)
-  const sortedNews = [...news].sort((a, b) => 
-    new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
-  )
+  // Aktif kategori state'i
+  const [activeCategory, setActiveCategory] = useState('all')
+  
+  // Haberleri tarihe göre sırala (en yeniden eskiye) - useMemo ile önbelleğe al
+  const sortedNews = useMemo(() => {
+    return [...news].sort((a, b) => 
+      new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
+    );
+  }, [news]); // Sadece news değiştiğinde yeniden hesapla
+  
+  // Filtrelenmiş haberler için state - kategoriye göre filtrelenmiş haberler
+  const [filteredNews, setFilteredNews] = useState<NewsItem[]>(sortedNews)
+  
+  // Kategori veya sortedNews değiştiğinde haberleri filtrele
+  useEffect(() => {
+    if (activeCategory === 'all') {
+      setFilteredNews(sortedNews)
+    } else {
+      setFilteredNews(sortedNews.filter(item => item.category === activeCategory))
+    }
+  }, [activeCategory, sortedNews]) // Şimdi güvenli, çünkü sortedNews sadece news değiştiğinde değişir
   
   return (
     <div className="bg-white dark:bg-gray-900">
@@ -44,7 +57,12 @@ export default function NewsPage() {
         {/* Kategori Filtreleri */}
         <div className="flex flex-wrap gap-3 mb-12 justify-center">
           <button 
-            className="px-4 py-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition"
+            onClick={() => setActiveCategory('all')}
+            className={`px-4 py-2 rounded-full transition ${
+              activeCategory === 'all' 
+                ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700'
+            }`}
           >
             Tümü
           </button>
@@ -52,7 +70,12 @@ export default function NewsPage() {
           {Object.entries(categories).map(([id, category]) => (
             <button 
               key={id}
-              className="px-4 py-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700 transition"
+              onClick={() => setActiveCategory(id)}
+              className={`px-4 py-2 rounded-full transition ${
+                activeCategory === id 
+                  ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700'
+              }`}
             >
               {category.label}
             </button>
@@ -61,7 +84,7 @@ export default function NewsPage() {
       
         {/* Haberler Listesi */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {sortedNews.map((newsItem) => {
+          {filteredNews.map((newsItem) => {
             // Tarih formatı
             const date = new Date(newsItem.publishDate)
             const formattedDate = date.toLocaleDateString('tr-TR', {

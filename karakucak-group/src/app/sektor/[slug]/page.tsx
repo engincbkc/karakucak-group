@@ -10,16 +10,17 @@ import {
   SectorCta, 
   MnkArchitectureFeature 
 } from "@/components/sections/sector-page";
-import GalleryShowcase from "@/components/sections/GalleryShowcase";
+import { ProjectsShowcase } from "@/components/sections/projects-showcase";
 
 // Data ve ikonlar
 import { getSectorBySlug, getAllSectorSlugs } from "@/data/sectors-data";
 import { getProjectsData } from "@/data/projects-data";
-import { HomeIcon, OfficeIcon, BuildingIcon, MuseumIcon } from "@/components/ui/icons";
-import { CarIcon, PartsIcon, TechIcon, LogisticsIcon } from "@/components/ui/icons";
-import { CropIcon, OrganicIcon, IrrigationIcon } from "@/components/ui/icons";
-import { MiningIcon, ProcessingIcon, EnvironmentIcon, ConsultingIcon } from "@/components/ui/icons";
-import { CottonIcon, TextileIcon } from "@/components/ui/icons";
+import { 
+  HomeIcon, OfficeIcon, BuildingIcon, MuseumIcon,
+  MiningIcon, ProcessingIcon, EnvironmentIcon, ConsultingIcon,
+  CottonIcon, TextileIcon, CarIcon, PartsIcon, TechIcon, LogisticsIcon,
+  CropIcon, OrganicIcon, IrrigationIcon
+} from "@/components/ui/icons";
 
 // İkon eşleştiricisi fonksiyonu - memoized ve server component uyumlu
 const getIconByName = (iconName: string) => {
@@ -63,6 +64,8 @@ export default async function SectorPage({ params }: { params: { slug: string } 
   
   // Sektör verilerini yükle - getStaticProps benzeri fonksiyonalite için
   const sector = await fetchSectorData(slug);
+
+  console.log(sector);
   
   // Sektör bulunamadıysa 404 döndür
   if (!sector) {
@@ -86,8 +89,9 @@ export default async function SectorPage({ params }: { params: { slug: string } 
       {/* Hero Section - Ekranın tamamını kaplayacak şekilde */}
       <section className="relative w-full">
         <SectorHero 
-          title={sector.title}
-          description={sector.description}
+          title={sector.companyName} // Şirket adını ana başlık olarak geçiyoruz
+          subtitle={sector.title} // Sektör adını alt başlık olarak geçiyoruz
+          description={sector.description} // About alabiliyorsak onu, yoksa descriptionı kullan
           backgroundImage={sector.backgroundImage}
           primaryButtonText={sector.primaryButtonText}
           primaryButtonLink={sector.primaryButtonLink}
@@ -95,9 +99,26 @@ export default async function SectorPage({ params }: { params: { slug: string } 
           secondaryButtonLink={sector.secondaryButtonLink}
           overlayColor={sector.overlayColor}
           priority={shouldPrioritizeImage} // Priority image loading için
+          stats={sector.stats} // İstatistik bilgilerini geçiyoruz
         />
       </section>
+ 
       
+      {/* Sektöre özel özellik bölümü - Parallax efekti ile */}
+      <section className="py-8 sm:py-12 md:py-16 px-4 md:px-8 mt-0">
+        <MnkArchitectureFeature 
+          title={sector.feature.title}
+          description1={sector.about}
+          description2=""
+          featureImage={sector.feature.featureImage}
+          buttonText={sector.feature.buttonText}
+          buttonLink={sector.feature.buttonLink}
+          imageTag={sector.title} /* Sektör başlığını imageTag olarak kullanıyoruz */
+          imageCaption={sector.companyDetail} /* Şirket detaylarını imageCaption olarak kullanıyoruz */
+        />
+      </section>
+
+           
       {/* Hizmetler - Modern kaydırma animasyonu ile */}
       <section className="py-8 sm:py-10 md:py-16 px-4 md:px-8 bg-gray-50">
         <SectorServices 
@@ -109,28 +130,17 @@ export default async function SectorPage({ params }: { params: { slug: string } 
         />
       </section>
       
-      {/* Mimarlık Özelliği - Parallax efekti ile */}
-      <section className="py-8 sm:py-12 md:py-16 px-4 md:px-8 mt-0">
-        <MnkArchitectureFeature 
-          title={sector.feature.title}
-          description1={sector.feature.description1}
-          description2={sector.feature.description2}
-          featureImage={sector.feature.featureImage}
-          buttonText={sector.feature.buttonText}
-          buttonLink={sector.feature.buttonLink}
-        />
-      </section>
-      
-      {/* Projeler bölümü - showProjects true ise göster */}
-      {sector.projects.showProjects && (
-        <section className="py-8 sm:py-12 md:py-16 px-4 md:px-8 bg-gray-50" id="projeler">
-          <GalleryShowcase
+      {/* Projeler bölümü - ProjectsShowcase bilesen kullanılıyor, sadece /sektor/insaat-taahhut sayfasında görünür */}
+      {sector.projects.showProjects && slug === 'insaat-taahhut' && (
+        <section id="projeler">
+          <ProjectsShowcase
             title={sector.projects.title}
             subtitle={sector.projects.subtitle}
-            projects={filteredProjects.slice(0, 9)}
+            limitProjects={9}
+            showFilters={true}
+            showViewAllButton={true}
             viewAllLink={sector.projects.viewAllLink}
-            viewAllText={sector.projects.viewAllText}
-            itemsPerPage={sector.projects.itemsPerPage}
+            defaultViewMode="grid"
             className=""
           />
         </section>

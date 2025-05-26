@@ -15,128 +15,36 @@ import "swiper/css/effect-fade"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
 
-// Zenginleştirilmiş sektör bilgileri
-const sectors = [
-  {
-    id: 1,
-    title: "Otomotiv",
-    subtitle: "Yenilikçi Teknolojiler",
-    description: "Otomotiv sektöründe yenilikçi teknolojiler ve sürdürülebilir çözümlerle değer yaratıyoruz. Mühendislik mükemmelliği ve ileri üretim teknolojileriyle sektörde etkin bir oyuncu olarak faaliyet gösteriyoruz.",
-    image: "https://images.unsplash.com/photo-1537041373723-53e55d254ada?q=80&w=2070&auto=format", 
-    link: "/sektor/otomotiv",
-    btnText: "Otomotiv Çözümlerimiz",
-    icon: <Cpu className="w-10 h-10" />,
-    keyPoints: [
-      "Yenilikçi Üretim Teknolojileri",
-      "Sürdürülebilir Tedarik Zinciri",
-      "Kalite Kontrol Sistemleri"
-    ],
-    stats: [
-      { value: "25+", label: "Yıllık Tecrübe" },
-      { value: "150+", label: "Uzman Ekip" }
-    ]
-  },
-  {
-    id: 2,
-    title: "İnşaat & Taahhüt",
-    subtitle: "Mühendislik Çözümleri",
-    description: "Modern mimari anlayışımız ve yüksek mühendislik standartlarıyla inşaat sektöründe güvenilir çözümler sunuyoruz. Sürdürülebilir ve yenilikçi projelerimizle sektörün standartlarını belirliyoruz.",
-    image: "https://images.unsplash.com/photo-1448630360428-65456885c650?q=80&w=2070&auto=format",
-    link: "/sektor/insaat-taahhut",
-    btnText: "Projelerimizi İnceleyin",
-    icon: <Building className="w-10 h-10" />,
-    keyPoints: [
-      "Modern Mimari Tasarımlar",
-      "Yüksek Mühendislik Standartları",
-      "Sürdürülebilir Yapı Çözümleri"
-    ],
-    stats: [
-      { value: "100+", label: "Tamamlanan Proje" },
-      { value: "35+", label: "Devam Eden Proje" }
-    ]
-  },
-  {
-    id: 3,
-    title: "Pamuk Sanayi",
-    subtitle: "Kaliteli Tekstil Üretimi",
-    description: "Sürdürülebilir pamuk üretimi ve ileri işleme teknolojilerimizle tekstil sektörüne katma değer sağlıyoruz. Global standartlarda, çevreye duyarlı üretim prensiplerimizle sektörde ön plana çıkıyoruz.",
-    image: "https://images.unsplash.com/photo-1605187337001-2356749647e2?q=80&w=2070&auto=format",
-    link: "/sektor/pamuk-sanayi",
-    btnText: "Üretim Sürecimiz",
-    icon: <Globe className="w-10 h-10" />,
-    keyPoints: [
-      "Çevre Dostu Üretim Prosesleri",
-      "Küresel Tekstil Standartları",
-      "Yüksek Kalite Kontrolü"
-    ],
-    stats: [
-      { value: "120.000", label: "Ton Yıllık Üretim" },
-      { value: "40+", label: "Küresel Pazar" }
-    ]
-  },
-  {
-    id: 4,
-    title: "Madencilik",
-    subtitle: "Sürdürülebilir Kaynaklar",
-    description: "Çevre dostu madencilik uygulamalarımız ve ileri teknoloji ekipmanlarımızla sürdürülebilir madencilik faaliyetleri yürütüyoruz. Doğal kaynakları korurken verimli ve sorumlu madencilik anlayışıyla çalışıyoruz.",
-    image: "https://images.unsplash.com/photo-1565345270904-18a154e34e80?q=80&w=2070&auto=format",
-    link: "/sektor/madencilik",
-    btnText: "Madencilik Operasyonlarımız",
-    icon: <Award className="w-10 h-10" />,
-    keyPoints: [
-      "Çevre Dostu Teknolojiler",
-      "Sürdürülebilir Maden Yönetimi",
-      "Yüksek Güvenlik Standartları"
-    ],
-    stats: [
-      { value: "18+", label: "Maden Lokasyonu" },
-      { value: "500+", label: "Çalışan" }
-    ]
-  },
-  {
-    id: 5,
-    title: "Tarım",
-    subtitle: "İnovatif Tarım Çözümleri",
-    description: "Modern tarım teknolojileri ve sürdürülebilir uygulamalarla tarımsal üretimde verimliliği artırıyoruz. Akıllı tarım sistemleri ve optimizasyon teknikleriyle kaynak kullanımını en verimli hale getiriyoruz.",
-    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=2070&auto=format",
-    link: "/sektor/tarim",
-    btnText: "Tarımsal Çözümlerimiz",
-    icon: <Leaf className="w-10 h-10" />,
-    keyPoints: [
-      "Akıllı Tarım Teknolojileri",
-      "Sürdürülebilir Tarım Uygulamaları",
-      "Optimum Kaynak Kullanımı"
-    ],
-    stats: [
-      { value: "75.000", label: "Hektar Arazi" },
-      { value: "15+", label: "Tarımsal Ürün" }
-    ]
-  },
-  {
-    id: 6,
-    title: "Karakucak Group",
-    subtitle: "Kurumsal Mükemmelliyet",
-    description: "1998'den beri kalite, güven ve yenilikçilik ilkelerimizle Türkiye'nin önde gelen şirketler grubuyuz. Farklı sektörlerdeki entegre yapımız ve uzman kadromuzla sürdürülebilir büyüme odaklı çalışıyoruz.",
-    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2070&auto=format",
-    link: "/hakkimizda",
-    btnText: "Kurumsal Vizyonumuz",
-    icon: <TrendingUp className="w-10 h-10" />,
-    keyPoints: [
-      "Entegre İş Modeli",
-      "Uluslararası Standartlar",
-      "Sürdürülebilir Büyüme"
-    ],
-    stats: [
-      { value: "25", label: "Yıllık Tecrübe" },
-      { value: "5", label: "Farklı Sektör" }
-    ]
+// Import data
+import { getSectorData } from "@/data/sectors-data"
+
+// Icon bileşenini sektör icon string'ine göre dinamik olarak döndüren fonksiyon
+const renderIcon = (iconName: string) => {
+  switch(iconName) {
+    case 'cpu':
+      return <Cpu className="w-10 h-10" />;
+    case 'building':
+      return <Building className="w-10 h-10" />;
+    case 'globe':
+      return <Globe className="w-10 h-10" />;
+    case 'award':
+      return <Award className="w-10 h-10" />;
+    case 'leaf':
+      return <Leaf className="w-10 h-10" />;
+    default:
+      return <TrendingUp className="w-10 h-10" />;
   }
-];
+}
+
+// CSS and animation related objects
 
 // CSS styles are injected directly through useEffect
 
 export function HeroSection() {
   const [isLoaded, setIsLoaded] = useState(false);
+  
+  // JSON verilerini alma
+  const sectorsData = getSectorData();
 
   // Sayfanın yüklenmesini bekleyip CSS animasyonlarını çalıştırmak için
   useEffect(() => {
@@ -214,7 +122,7 @@ export function HeroSection() {
       
       .swiper-pagination-bullet-active {
         opacity: 1;
-        background: #60a5fa;
+        background: #d97706; /* amber-600 */
         width: 12px;
         height: 12px;
       }
@@ -262,19 +170,19 @@ export function HeroSection() {
           crossFade: true
         }}
       >
-        {sectors.map((sector) => (
+        {sectorsData.sectors.map((sector) => (
           <SwiperSlide key={sector.id} className="relative h-full w-full overflow-hidden">
             {/* Her sektör için özel arkaplan görüntüsü */}
             <div className="absolute inset-0 z-0">
               <Image
-                src={sector.image}
+                src={sector.backgroundImage}
                 alt={sector.title}
                 fill
                 priority
-                className="object-cover brightness-[0.55] filter"
+                className="object-cover brightness-[0.65] filter"
               />
-              {/* Geliştirilmiş gradient overlay - içeriğin daha iyi ve kurumsal görünmesi için */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30 z-10"></div>
+              {/* Geliştirilmiş gradient overlay - içeriğin daha modern ve kurumsal görünmesi için */}
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-800/60 via-gray-700/50 to-gray-600/40 z-10"></div>
             </div>
             
             {/* İçerik alanı - Her slayt için zenginleştirilmiş içerik katmanı */}
@@ -289,11 +197,11 @@ export function HeroSection() {
                   >
                     {/* Sector Icon ve Badge */}
                     <div className="flex items-center space-x-4 mb-4">
-                      <div className="bg-blue-600/20 backdrop-blur-sm p-3 rounded-xl text-blue-400 hidden sm:block">
-                        {sector.icon}
+                      <div className="bg-amber-600/20 backdrop-blur-sm p-3 rounded-xl text-amber-400 hidden sm:block">
+                        {renderIcon(sector.icon)}
                       </div>
-                      <div className="bg-blue-600/20 backdrop-blur-sm px-4 py-2 rounded-md border border-blue-500/20">
-                        <p className="text-blue-400 font-medium text-sm md:text-base tracking-wide">{sector.subtitle}</p>
+                      <div className="bg-amber-600/20 backdrop-blur-sm px-4 py-2 rounded-md border border-amber-500/20">
+                        <p className="text-amber-400 font-medium text-sm md:text-base tracking-wide">{`${sector.title} Sektörü`}</p>
                       </div>
                     </div>
                     
@@ -307,9 +215,9 @@ export function HeroSection() {
                     
                     {/* Anahtar Noktalar */}
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
-                      {sector.keyPoints.map((point, index) => (
+                      {sector.keyPoints.map((point: string, index: number) => (
                         <div key={index} className="flex items-center space-x-2 bg-white/5 backdrop-blur-sm p-2 sm:p-3 rounded-lg border border-white/10">
-                          <div className="h-2 w-2 rounded-full bg-blue-500"></div>
+                          <div className="h-2 w-2 rounded-full bg-amber-500"></div>
                           <p className="text-sm text-white font-medium">{point}</p>
                         </div>
                       ))}
@@ -317,7 +225,7 @@ export function HeroSection() {
                     
                     {/* İstatistikler */}
                     <div className="flex space-x-6 mb-8">
-                      {sector.stats.map((stat, index) => (
+                      {sector.stats.map((stat: {value: string, label: string}, index: number) => (
                         <div key={index} className="flex flex-col">
                           <span className="text-2xl md:text-3xl font-bold text-white">{stat.value}</span>
                           <span className="text-xs md:text-sm text-gray-400">{stat.label}</span>
@@ -328,10 +236,10 @@ export function HeroSection() {
                     {/* CTA Butonları */}
                     <div className="flex flex-wrap gap-4 mt-2">
                       <Link
-                        href={sector.link}
-                        className="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm md:text-base font-medium transition-all hover:shadow-lg hover:-translate-y-1 flex items-center space-x-2 group"
+                        href={`/sektor/${sector.id}`}
+                        className="px-6 py-3 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-sm md:text-base font-medium transition-all hover:shadow-lg hover:-translate-y-1 flex items-center space-x-2 group"
                       >
-                        <span>{sector.btnText}</span>
+                        <span>Detayları Görüntüle</span>
                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                       </Link>
                       <Link
@@ -352,13 +260,13 @@ export function HeroSection() {
                   >
                     <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-full max-w-md">
                       <div className="relative w-full aspect-square rounded-2xl overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-transparent backdrop-blur-sm border border-white/10 rounded-2xl z-10"></div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-amber-600/20 to-transparent backdrop-blur-sm border border-white/10 rounded-2xl z-10"></div>
                         <div className="absolute inset-10 z-20 flex flex-col justify-center items-center text-center space-y-4">
-                          <div className="h-16 w-16 rounded-xl bg-blue-600/30 backdrop-blur-md text-white flex items-center justify-center border border-blue-500/30">
-                            {sector.icon}
+                          <div className="h-16 w-16 rounded-xl bg-amber-600/30 backdrop-blur-md text-white flex items-center justify-center border border-amber-500/30">
+                            {renderIcon(sector.icon)}
                           </div>
                           <h3 className="font-bold text-xl text-white">{sector.title}</h3>
-                          <p className="text-sm text-gray-300">Karakucak Group</p>
+                          <p className="text-sm text-gray-300">{sector.companyDetail || sector.companyName}</p>
                         </div>
                       </div>
                     </div>
@@ -379,16 +287,16 @@ export function HeroSection() {
       >
         <div className="flex flex-col items-center">
           <span className="text-gray-300 text-sm mb-2 font-medium">Keşfedin</span>
-          <ChevronDown className="h-6 w-6 text-blue-400 animate-bounce" />
+          <ChevronDown className="h-6 w-6 text-amber-400 animate-bounce" />
         </div>
       </motion.div>
       
       {/* Kurumsal rozet - Geliştirilmiş */}
       <div className="absolute top-6 right-6 z-30 hidden md:block">
         <div className="bg-black/30 backdrop-blur-md px-5 py-2.5 rounded-full border border-white/10 flex items-center space-x-2">
-          <Clock className="h-4 w-4 text-blue-400" />
+          <Clock className="h-4 w-4 text-amber-400" />
           <p className="text-white text-sm">
-            <span className="font-bold">1998'den beri</span> hizmetinizdeyiz
+            <span className="font-bold">1997'den beri</span> hizmetinizdeyiz
           </p>
         </div>
       </div>
