@@ -5,8 +5,7 @@ import Link from "next/link"
 // Image import removed as it's not being used
 import { cn } from "@/lib/utils"
 import { Menu, X, ChevronDown } from "lucide-react"
-import { ThemeSwitcher } from "../ui/theme-switcher"
-import { useTheme } from "@/lib/theme-context"
+// Theme imports removed
 
 const navigation = [
   { name: "Ana Sayfa", href: "/" },
@@ -30,7 +29,7 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [openDropdown, setOpenDropdown] = useState("")
-  const { isDarkTheme } = useTheme()
+  // Theme context removed
 
   useEffect(() => {
     const handleScroll = () => {
@@ -106,10 +105,7 @@ export function Header() {
               </div>
             </div>
 
-            {/* Theme Toggle Button */}
-            <div className="flex items-center">
-              <ThemeSwitcher variant="icon" className="ml-4" />
-            </div>
+            {/* Theme Toggle Button Removed */}
           </div>
 
           {/* Mobile Menu Button */}
