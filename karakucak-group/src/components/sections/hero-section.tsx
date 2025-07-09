@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react"
 // Using named imports instead of general import to avoid "export *" error
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -223,14 +223,14 @@ export function HeroSection() {
                       ))}
                     </div>
                     
-                    {/* İstatistikler */}
+                    {/* İstatistikler - Sadece ilk istatistik gösteriliyor */}
                     <div className="flex space-x-6 mb-8">
-                      {sector.stats.map((stat: {value: string, label: string}, index: number) => (
-                        <div key={index} className="flex flex-col">
-                          <span className="text-2xl md:text-3xl font-bold text-white">{stat.value}</span>
-                          <span className="text-xs md:text-sm text-gray-400">{stat.label}</span>
+                      {sector.stats.length > 0 && (
+                        <div className="flex flex-col">
+                          <span className="text-2xl md:text-3xl font-bold text-white">{sector.stats[0].value}</span>
+                          <span className="text-xs md:text-sm text-gray-400">{sector.stats[0].label}</span>
                         </div>
-                      ))}
+                      )}
                     </div>
                     
                     {/* CTA Butonları */}

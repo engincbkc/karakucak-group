@@ -7,28 +7,18 @@ import { Users, TrendingUp, Building2, GlobeLock } from "lucide-react"
 const stats = [
   {
     label: "Çalışan Sayısı",
-    value: "2,500+",
+    value: "1000+",
     icon: Users,
-    description: "3 sektörde faaliyet gösteren dünya çapında çalışanlar"
+    description: "5 sektörde faaliyet gösteren dünya çapında çalışanlar"
   },
-  {
-    label: "Yıllık Büyüme",
-    value: "%15",
-    icon: TrendingUp,
-    description: "Son 5 yılda istikrarlı büyüme performansı"
-  },
+ 
   {
     label: "Şirket Sayısı",
-    value: "12",
+    value: "5",
     icon: Building2,
     description: "Grup çatısı altındaki şirketler"
   },
-  {
-    label: "Ülke Varlığı",
-    value: "8",
-    icon: GlobeLock,
-    description: "Global operasyonlar ve müşteri ağı"
-  }
+  
 ]
 
 export function StatsSection() {
@@ -48,7 +38,8 @@ export function StatsSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="flex justify-center items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -66,6 +57,7 @@ export function StatsSection() {
               <p className="text-sm text-gray-500 dark:text-gray-400">{stat.description}</p>
             </motion.div>
           ))}
+          </div>
         </div>
       </div>
     </section>

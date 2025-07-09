@@ -73,7 +73,6 @@ export default async function SectorPage({ params }: { params: { slug: string } 
   }
   
   // Projeleri getir ve optimizasyon için cache uygula
-  const { filteredProjects } = await fetchFilteredProjects(sector.projects.filter);
   
   // Servis elemanlarını ikon bileşenleriyle zenginleştirme
   const servicesWithIcons = sector.services.items.map(item => ({

@@ -50,11 +50,7 @@ export function Footer() {
                   Hakkımızda
                 </Link>
               </li>
-              <li>
-                <Link href="/yonetim" className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
-                  Yönetim
-                </Link>
-              </li>
+              
               <li>
                 <Link href="/kariyer" className="text-sm text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">
                   Kariyer
