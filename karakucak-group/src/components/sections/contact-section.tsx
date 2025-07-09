@@ -62,8 +62,8 @@ export function ContactSection() {
               <div className="ml-4">
                 <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">Adres</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Barbaros Mah. Begonya Sok. No: 3, <br />
-                  Ataşehir, İstanbul, 34746
+                  Atakent Mahallesi, 6052. Sokak NO:1 <br />
+                  Karaköprü/Şanlıurfa
                 </p>
               </div>
             </div>
@@ -75,10 +75,7 @@ export function ContactSection() {
               <div className="ml-4">
                 <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">Telefon</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  +90 212 123 45 67
-                </p>
-                <p className="text-gray-600 dark:text-gray-300">
-                  +90 212 123 45 68
+                  0850 281 63 11
                 </p>
               </div>
             </div>

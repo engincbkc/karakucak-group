@@ -108,7 +108,7 @@ export default function IletisimPage() {
                   <MapPin className="h-6 w-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mr-4 mt-1" />
                   <div>
                     <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">Merkez Ofis</h3>
-                    <p className="text-gray-600 dark:text-gray-300">Barbaros Mah. Begonya Sok. No: 3, Ataşehir, İstanbul, 34746</p>
+                    <p className="text-gray-600 dark:text-gray-300">Atakent Mahallesi, 6052. Sokak NO:1 Karaköprü/Şanlıurfa</p>
                   </div>
                 </div>
 
@@ -116,8 +116,7 @@ export default function IletisimPage() {
                   <Phone className="h-6 w-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mr-4 mt-1" />
                   <div>
                     <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">Telefon</h3>
-                    <p className="text-gray-600 dark:text-gray-300">+90 212 123 45 67</p>
-                    <p className="text-gray-600 dark:text-gray-300">+90 212 987 65 43</p>
+                    <p className="text-gray-600 dark:text-gray-300">0850 281 63 11</p>
                   </div>
                 </div>
 
@@ -130,14 +129,7 @@ export default function IletisimPage() {
                   </div>
                 </div>
 
-                <div className="rounded-xl bg-gray-50 dark:bg-gray-800 p-6 flex items-start">
-                  <Clock className="h-6 w-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mr-4 mt-1" />
-                  <div>
-                    <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">Çalışma Saatleri</h3>
-                    <p className="text-gray-600 dark:text-gray-300">Pazartesi - Cuma: 09:00 - 18:00</p>
-                    <p className="text-gray-600 dark:text-gray-300">Cumartesi - Pazar: Kapalı</p>
-                  </div>
-                </div>
+
               </div>
             </div>
 
@@ -253,11 +245,11 @@ export default function IletisimPage() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">İstanbul Merkez Ofis</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">Barbaros Mah. Begonya Sok. No: 3, Ataşehir, İstanbul, 34746</p>
+                <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">Şanlıurfa Merkez Ofis</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">Atakent Mahallesi, 6052. Sokak NO:1 Karaköprü/Şanlıurfa</p>
                 <div className="flex items-center text-gray-600 dark:text-gray-400 mb-2">
                   <Phone className="w-4 h-4 mr-2" />
-                  <span>+90 212 123 45 67</span>
+                  <span>0850 281 63 11</span>
                 </div>
                 <div className="flex items-center text-gray-600 dark:text-gray-400">
                   <Mail className="w-4 h-4 mr-2" />
@@ -342,7 +334,7 @@ export default function IletisimPage() {
                   E-posta Gönder
                 </Button>
                 <Button 
-                  href="tel:+902121234567" 
+                  href="tel:08502816311" 
                   variant="outline"
                   size="lg"
                 >

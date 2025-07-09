@@ -143,7 +143,7 @@ export function Footer() {
                   <Globe className="h-5 w-5 text-amber-500" />
                 </div>
                 <span className="text-gray-300">
-                  Barbaros Mah. Begonya Sok. No: 3, Ataşehir, İstanbul
+                  Atakent Mahallesi, 6052. Sokak NO:1 Karaköprü/Şanlıurfa
                 </span>
               </li>
               <li className="flex items-start">
@@ -151,7 +151,7 @@ export function Footer() {
                   <Phone className="h-5 w-5 text-amber-500" />
                 </div>
                 <span className="text-gray-300">
-                  +90 216 555 44 33
+                  0850 281 63 11
                 </span>
               </li>
               <li className="flex items-start">

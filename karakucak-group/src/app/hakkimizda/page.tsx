@@ -121,7 +121,7 @@ export default function HakkimizdaPage() {
               <Card title="" className="p-0 overflow-hidden">
                 <div className="relative aspect-video bg-blue-100">
                   <Image
-                    src="https://images.unsplash.com/photo-1573164713712-03790a178651?ixlib=rb-4.0.3"
+                    src="/images/mimarlik/binalar.jpg"
                     alt="Karakucak Group Kurucu Ofisi"
                     width={600}
                     height={800}
@@ -129,7 +129,6 @@ export default function HakkimizdaPage() {
                   />
                   <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-gray-900 to-transparent">
                     <p className="text-white font-medium">Kurucu Ofis</p>
-                    <p className="text-sm text-gray-300">İstanbul</p>
                   </div>
                 </div>
               </Card>
@@ -183,17 +182,17 @@ export default function HakkimizdaPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <Card title="Otomotiv ve Madencilik" className="h-full">
+              <Card title="Otomotiv" className="h-full">
                 <div className="p-6 flex flex-col h-full">
                   <div className="mb-5 rounded-full bg-blue-100 dark:bg-blue-900/30 p-3 w-12 h-12 flex items-center justify-center">
                     <Building2 className="w-6 h-6 text-blue-700 dark:text-blue-400" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">Otomotiv ve Madencilik</h3>
+                  <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">Otomotiv</h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow">
                     Geniş araç filomuz ve madencilik alanındaki yatırımlarımızla sektörün öncü kuruluşları arasında yer alıyoruz. Yenilikçi çözümler ve çevre dostu yaklaşımlar ile fark yaratıyoruz.
                   </p>
                   <Button 
-                    href="/sektorler/otomotiv-madencilik" 
+                    href="/sektor/otomotiv" 
                     variant="ghost" 
                     size="sm"
                     iconPosition="right"
@@ -222,7 +221,7 @@ export default function HakkimizdaPage() {
                     Sürdürülebilir üretim prensipleriyle pamuk ve tekstil sektöründe kalite standartlarını yükseltiyoruz. Müşteri odaklı üretim anlayışımızla yerel ve global pazarda güçlü bir varlık gösteriyoruz.
                   </p>
                   <Button 
-                    href="/sektorler/pamuk-tekstil" 
+                    href="/sektor/pamuk-sanayi" 
                     variant="ghost" 
                     size="sm"
                     iconPosition="right"
@@ -251,7 +250,7 @@ export default function HakkimizdaPage() {
                     Modern ve yenilikçi tasarım çözümleriyle mimarlık sektöründe fark yaratan projeler geliştiriyoruz. Ticari, konut ve kurumsal projelerinizde estetik ve işlevsellik odaklı yaklaşımımızı deneyimleyin.
                   </p>
                   <Button 
-                    href="/sektorler/mnk-mimarlik" 
+                    href="/sektor/insaat-taahhut" 
                     variant="ghost" 
                     size="sm"
                     iconPosition="right"
@@ -280,7 +279,7 @@ export default function HakkimizdaPage() {
                     Karakucak Group olarak kurumsal danışmanlık, yatırım ve stratejik planlama hizmetlerimizle iş ortaklarımıza değer katıyoruz. 25 yıllık tecrübemizle iş dünyanızın gelişimini destekliyoruz.
                   </p>
                   <Button 
-                    href="/kurumsal" 
+                    href="/sektor/madencilik" 
                     variant="ghost" 
                     size="sm"
                     iconPosition="right"
@@ -410,17 +409,7 @@ export default function HakkimizdaPage() {
             </motion.div>
           </div>
           
-          <div className="mt-16 text-center">
-            <Button 
-              href="/kurumsal/vizyonumuz" 
-              variant="primary"
-              size="lg"
-              iconPosition="right"
-              icon={<ChevronRight />}
-            >
-              Vizyon ve Misyonumuzu Keşfedin
-            </Button>
-          </div>
+    
         </div>
       </section>
       
@@ -428,16 +417,11 @@ export default function HakkimizdaPage() {
       <CollaborationCTA 
         title="İşbirliği Yapalım" 
         subtitle="Karakucak Group ile" 
-        description="25 yıllık tecrübemiz ve uzman ekibimizle projelerinizde yanınızdayız. Daha detaylı bilgi için bizimle iletişime geçin veya projelerimizi inceleyerek kalitemizi keşfedin."
+        description="25 yıllık tecrübemiz ve uzman ekibimizle projelerinizde yanınızdayız. Daha detaylı bilgi için bizimle iletişime geçin."
         primaryCTA={{
           text: 'İletişime Geçin',
           href: '/iletisim'
         }}
-        secondaryCTA={{
-          text: 'Projelerimizi İnceleyin',
-          href: '/projelerimiz'
-        }}
-        phone="+90 212 123 45 67"
         stats={{
           experience: 25,
           projects: 500,

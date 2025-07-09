@@ -25,7 +25,7 @@ export const ContactInfoItem = ({
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
     >
-      <Card className="border-none shadow-md hover:shadow-lg transition-shadow duration-300">
+      <Card className="border-none shadow-md hover:shadow-lg transition-shadow duration-300" title={title}>
         <div className="p-6 flex items-start gap-4">
           <div className="h-12 w-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center flex-shrink-0">
             {icon}
@@ -53,8 +53,8 @@ export function ContactInfo() {
         delay={0.1}
       >
         <p>
-          Barbaros Mah. Begonya Sok. No: 3, <br />
-          Ataşehir, İstanbul, 34746
+          Atakent Mahallesi, 6052. Sokak NO:1 <br />
+          Karaköprü/Şanlıurfa
         </p>
         <p className="pt-2">
           <a 
@@ -74,8 +74,7 @@ export function ContactInfo() {
         title="Telefon"
         delay={0.2}
       >
-        <p>+90 212 123 45 67</p>
-        <p>+90 212 123 45 68</p>
+        <p>0850 281 63 11</p>
       </ContactInfoItem>
 
       <ContactInfoItem 
@@ -95,14 +94,7 @@ export function ContactInfo() {
         </p>
       </ContactInfoItem>
 
-      <ContactInfoItem 
-        icon={<Clock className="h-6 w-6 text-blue-600 dark:text-blue-400" />} 
-        title="Çalışma Saatleri"
-        delay={0.4}
-      >
-        <p>Pazartesi - Cuma: 09:00 - 18:00</p>
-        <p>Cumartesi - Pazar: Kapalı</p>
-      </ContactInfoItem>
+
     </div>
   );
 }

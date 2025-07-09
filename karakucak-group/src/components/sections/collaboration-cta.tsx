@@ -42,8 +42,8 @@ export const CollaborationCTA: React.FC<CollaborationCTAProps> = ({
   stats = {
     experience: 25,
     projects: 500,
-    network: 100,
-    sectors: 4
+    network: "100+",
+    sectors: "5+"
   }
 }) => {
   return (
@@ -125,27 +125,7 @@ export const CollaborationCTA: React.FC<CollaborationCTAProps> = ({
                       </div>
                     )}
                     
-                    {secondaryCTA && (
-                      <div className="flex flex-wrap md:flex-nowrap gap-4">
-                        <Button 
-                          href={secondaryCTA.href} 
-                          variant="secondary"
-                          size="lg"
-                          className="w-full bg-white text-blue-900 hover:bg-gray-100 shadow-lg font-medium"
-                        >
-                          {secondaryCTA.text}
-                        </Button>
-                      </div>
-                    )}
                     
-                    {phone && (
-                      <div className="pt-4 mt-2 border-t border-white/10">
-                        <div className="flex items-center justify-center">
-                          <Phone className="w-4 h-4 text-blue-200 mr-2" />
-                          <span className="text-sm text-blue-200">{phone}</span>
-                        </div>
-                      </div>
-                    )}
                   </div>
                 </div>
               </div>
