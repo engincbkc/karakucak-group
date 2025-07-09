@@ -116,7 +116,9 @@ export default function IletisimPage() {
                   <Phone className="h-6 w-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mr-4 mt-1" />
                   <div>
                     <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">Telefon</h3>
-                    <p className="text-gray-600 dark:text-gray-300">0850 281 63 11</p>
+                    <p className="text-gray-600 dark:text-gray-300">
+                      <a href="tel:+908502816311" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">0850 281 63 11</a>
+                    </p>
                   </div>
                 </div>
 
@@ -124,8 +126,12 @@ export default function IletisimPage() {
                   <Mail className="h-6 w-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mr-4 mt-1" />
                   <div>
                     <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">E-posta</h3>
-                    <p className="text-gray-600 dark:text-gray-300">info@karakucakgroup.com</p>
-                    <p className="text-gray-600 dark:text-gray-300">satis@karakucakgroup.com</p>
+                    <p className="text-gray-600 dark:text-gray-300">
+                      <a href="mailto:info@karakucakgroup.com" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">info@karakucakgroup.com</a>
+                    </p>
+                    <p className="text-gray-600 dark:text-gray-300">
+                      <a href="mailto:satis@karakucakgroup.com" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">satis@karakucakgroup.com</a>
+                    </p>
                   </div>
                 </div>
 
@@ -223,128 +229,9 @@ export default function IletisimPage() {
         </div>
       </section>
       
-      {/* Şubelerimiz */}
-      <section className="py-20 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            title="Şubelerimiz"
-            subtitle="Karakucak Group olarak farklı lokasyonlardaki şubelerimizle hizmetinizdeyiz."
-            alignment="center"
-            className="mb-16"
-          />
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
-              <div className="h-48 relative">
-                <Image
-                  src="https://images.unsplash.com/photo-1472157510526-64a67e847582?ixlib=rb-4.0.3"
-                  alt="İstanbul Ofisi"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">Şanlıurfa Merkez Ofis</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">Atakent Mahallesi, 6052. Sokak NO:1 Karaköprü/Şanlıurfa</p>
-                <div className="flex items-center text-gray-600 dark:text-gray-400 mb-2">
-                  <Phone className="w-4 h-4 mr-2" />
-                  <span>0850 281 63 11</span>
-                </div>
-                <div className="flex items-center text-gray-600 dark:text-gray-400">
-                  <Mail className="w-4 h-4 mr-2" />
-                  <span>istanbul@karakucakgroup.com</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
-              <div className="h-48 relative">
-                <Image
-                  src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?ixlib=rb-4.0.3"
-                  alt="Ankara Ofisi"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">Ankara Ofis</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">Kızılay Mah. Atatürk Bulvarı No: 55, Çankaya, Ankara, 06420</p>
-                <div className="flex items-center text-gray-600 dark:text-gray-400 mb-2">
-                  <Phone className="w-4 h-4 mr-2" />
-                  <span>+90 312 987 65 43</span>
-                </div>
-                <div className="flex items-center text-gray-600 dark:text-gray-400">
-                  <Mail className="w-4 h-4 mr-2" />
-                  <span>ankara@karakucakgroup.com</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
-              <div className="h-48 relative">
-                <Image
-                  src="https://images.unsplash.com/photo-1589912187435-81282611f4ba?ixlib=rb-4.0.3"
-                  alt="İzmir Ofisi"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">İzmir Ofis</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">Alsancak Mah. Kordon Cad. No: 32, Konak, İzmir, 35220</p>
-                <div className="flex items-center text-gray-600 dark:text-gray-400 mb-2">
-                  <Phone className="w-4 h-4 mr-2" />
-                  <span>+90 232 345 67 89</span>
-                </div>
-                <div className="flex items-center text-gray-600 dark:text-gray-400">
-                  <Mail className="w-4 h-4 mr-2" />
-                  <span>izmir@karakucakgroup.com</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       
-      {/* CTA Section */}
-      <section className="py-20 bg-blue-700 text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Hemen Projenizi Konuşalım</h2>
-              <p className="text-xl mb-8 text-blue-100">
-                Karakucak Group'un 25 yıllık sektör deneyimi ile projelerinizi hayata geçirelim. 
-                Otomotiv, tekstil, madencilik ve mimarlık alanlarındaki uzmanlığımızla yanınızdayız.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Button 
-                  href="mailto:info@karakucakgroup.com" 
-                  variant="outline"
-                  size="lg"
-                  className="bg-white text-blue-700 hover:bg-gray-100"
-                >
-                  E-posta Gönder
-                </Button>
-                <Button 
-                  href="tel:08502816311" 
-                  variant="outline"
-                  size="lg"
-                >
-                  Şimdi Arayın
-                </Button>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      
+    
     </div>
   );
 }

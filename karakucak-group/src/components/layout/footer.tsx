@@ -150,17 +150,17 @@ export function Footer() {
                 <div className="min-w-[24px] mr-3 mt-1 flex-shrink-0">
                   <Phone className="h-5 w-5 text-amber-500" />
                 </div>
-                <span className="text-gray-300">
+                <a href="tel:+908502816311" className="text-gray-300 hover:text-amber-500 transition-colors">
                   0850 281 63 11
-                </span>
+                </a>
               </li>
               <li className="flex items-start">
                 <div className="min-w-[24px] mr-3 mt-1 flex-shrink-0">
                   <Mail className="h-5 w-5 text-amber-500" />
                 </div>
-                <span className="text-gray-300">
+                <a href="mailto:info@karakucakgroup.com" className="text-gray-300 hover:text-amber-500 transition-colors">
                   info@karakucakgroup.com
-                </span>
+                </a>
               </li>
             </ul>
           </div>
