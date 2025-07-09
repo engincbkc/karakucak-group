@@ -21,7 +21,6 @@ const navigation = [
     ] 
   },
   { name: "Hakkımızda", href: "/hakkimizda" },
-  { name: "Yönetim", href: "/yonetim" },
   { name: "İletişim", href: "/iletisim" },
 ]
 

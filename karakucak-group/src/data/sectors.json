@@ -36,6 +36,7 @@
             { "icon": "museum", "title": "Kültür Merkezleri" }
           ]
         },
+        "detailBgImage": "/images/mimarlik/mimarlik_2.jpg",
         "feature": {
           "title": "MNK Mimarlık",
           "description1": "MNK Mimarlık, 1997 yılından bu yana inşaat ve taahhüt sektöründe faaliyet göstermeye başlamış, kısa sürede sektördeki güvenilirliğini ve başarısını kanıtlamıştır. Firma, özellikle kamu müteahhitliği alanında faaliyet göstererek, kamu projelerinin inşaat, yenileme ve taahhüt hizmetlerini titizlikle yerine getirmektedir.",
@@ -57,8 +58,7 @@
           "title": "Projeleriniz İçin Yanınızdayız",
           "description": "Modern, sürdürülebilir ve fonksiyonel yapı projeleri için bizimle iletişime geçin.",
           "buttons": [
-            { "text": "Bize Ulaşın", "href": "/iletisim", "isPrimary": true },
-            { "text": "Referansları Görün", "href": "/referanslar" }
+            { "text": "Bize Ulaşın", "href": "/iletisim", "isPrimary": true }
           ]
         }
       },
@@ -81,14 +81,14 @@
         "description": "Yenilikçi teknolojiler ve sürdürülebilir çözümlerle otomotiv sektörüne değer katıyoruz.",
         "backgroundImage": "/images/otomotiv/korando.jpg",
         "primaryButtonText": "Projelerimiz",
-        "primaryButtonLink": "#projeler",
+        "primaryButtonLink": "  ",
         "secondaryButtonText": "İletişime Geçin",
         "secondaryButtonLink": "/iletisim",
         "overlayColor": "from-gray-900/95 to-amber-600/80",
         "services": {
           "title": "Hizmetlerimiz",
           "description": "Karakucak Group olarak otomotiv sektöründe yenilikçi ve sürdürülebilir çözümler sunuyoruz.",
-          "imageSrc": "https://images.unsplash.com/photo-1625047509252-6a9626538881?ixlib=rb-4.0.3",
+          "imageSrc": "/images/otomotiv/kgm_arac.jpg",
           "imageAlt": "Otomotiv Hizmetlerimiz",
           "items": [
             { "icon": "car", "title": "SsangYong Araç Satışı" },
@@ -97,11 +97,12 @@
             { "icon": "logistics", "title": "Garanti Hizmetleri" }
           ]
         },
+        "detailBgImage": "/images/otomotiv/kgm_bayii_magaza.jpg",
         "feature": {
           "title": "KGM SsangYong Yetkili Bayii",
           "description1": "Karakucak Otomotiv, 2024 yılından bu yana Şanlıurfa'da SsangYong markasının yetkili bayisi olarak, otomotiv sektöründe kalitenin ve müşteri odaklı hizmet anlayışının öncüsü olmuştur. SsangYong, dünya çapında prestijli bir marka olarak, dayanıklılığı, inovatif tasarımı ve üstün teknolojisiyle tanınırken, Karakucak Otomotiv de bu mirası benimseyerek, müşterilerine güvenli, konforlu ve ileri teknolojilere sahip araçlar sunmaktadır.",
           "description2": "Karakucak Otomotiv olarak, SsangYong'un Torres, Korando, Tivoli, Musso ve Rexton gibi her biri kendi sınıfında lider modellerini, şık tasarımı, yüksek performans ve üstün güvenliği bir arada sunan araçlarla temsil etmekteyiz. SsangYong araçları, gelişmiş motor teknolojileri, şık tasarımları ve çevre dostu yenilikleri ile sektördeki farkını ortaya koymaktadır.",
-          "featureImage": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3",
+          "featureImage": "/images/otomotiv/kgm_korea.jpg",
           "buttonText": "Araçlarımızı Keşfedin",
           "buttonLink": "#"
         },
@@ -118,8 +119,7 @@
           "title": "İşbirliği İçin Yanınızdayız",
           "description": "Otomotiv sektöründeki çözümlerimizle projelerinize değer katmak için bizimle iletişime geçin.",
           "buttons": [
-            { "text": "Bize Ulaşın", "href": "/iletisim", "isPrimary": true },
-            { "text": "Referansları Görün", "href": "/referanslar" }
+            { "text": "Bize Ulaşın", "href": "/iletisim", "isPrimary": true }
           ]
         }
       },
@@ -142,14 +142,14 @@
         "description": "Taş & Kum Ocağı işletmeciliğinde çevre dostu madencilik uygulamalarımız ve ileri teknoloji ekipmanlarımızla sürdürülebilir madencilik faaliyetleri yürütüyoruz.",
         "backgroundImage": "https://images.pexels.com/photos/2101140/pexels-photo-2101140.jpeg",
         "primaryButtonText": "Projelerimiz",
-        "primaryButtonLink": "#projeler",
+        "primaryButtonLink": "",
         "secondaryButtonText": "İletişime Geçin",
         "secondaryButtonLink": "/iletisim",
         "overlayColor": "from-gray-900/95 to-amber-600/80",
         "services": {
           "title": "Hizmetlerimiz",
           "description": "Karakucak Group olarak madencilik sektöründe sürdürülebilir ve çevre dostu çözümler sunuyoruz.",
-          "imageSrc": "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-4.0.3",
+          "imageSrc": "/images/madencilik/madencilik.jpg",
           "imageAlt": "Madencilik Hizmetlerimiz",
           "items": [
             { "icon": "mining", "title": "Kum Üretimi" },
@@ -158,11 +158,12 @@
             { "icon": "consulting", "title": "Yol Dolgu Malzemeleri" }
           ]
         },
+        "detailBgImage": "https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=1200&q=80",
         "feature": {
           "title": "Sürdürülebilir Madencilik",
           "description1": "Karakucak Madencilik, 2011 yılından bu yana Şanlıurfa'nın Akçakale ilçesinde faaliyet gösteren, sektöre kalite ve güven kazandıran köklü bir kuruluştur.",
           "description2": "İşletmemiz, inşaat ve altyapı projelerinde büyük öneme sahip olan kum üretimi başta olmak üzere; yapı kumu, beton kumu, kalker, mıcır ve yol dolgu malzemeleri gibi çeşitli ürünlerin çıkarımı ve işlenmesi konusunda uzmanlaşmıştır. Kum ve taş ocaklarımızdan elde edilen hammaddeler, modern ekipmanlarla yıkanıp elenerek, ihtiyaca uygun biçimde kullanıma hazır hale getirilmektedir.",
-          "featureImage": "https://images.unsplash.com/photo-1595876749987-0ad314c6fde3?ixlib=rb-4.0.3",
+          "featureImage": "/images/madencilik/madencilikhero.webp",
           "buttonText": "Hizmetlerimizi Keşfedin",
           "buttonLink": "#"
         },
@@ -179,8 +180,7 @@
           "title": "Sürdürülebilir Madencilik İçin",
           "description": "Çevre dostu ve yenilikçi madencilik çözümlerimiz için bizimle iletişime geçin.",
           "buttons": [
-            { "text": "Bize Ulaşın", "href": "/iletisim", "isPrimary": true },
-            { "text": "Referansları Görün", "href": "/referanslar" }
+            { "text": "Bize Ulaşın", "href": "/iletisim", "isPrimary": true }
           ]
         }
       },
@@ -202,7 +202,7 @@
         "description": "Modern tarım teknolojileri ve sürdürülebilir uygulamalarla tarımsal üretimde verimliliği artırıyoruz.",
         "backgroundImage": "/images/tarim/tarim.jpg",
         "primaryButtonText": "Projelerimiz",
-        "primaryButtonLink": "#projeler",
+        "primaryButtonLink": "",
         "secondaryButtonText": "İletişime Geçin",
         "secondaryButtonLink": "/iletisim",
         "overlayColor": "from-gray-900/95 to-amber-600/80",
@@ -218,6 +218,7 @@
             { "icon": "irrigation", "title": "Modern Sulama" }
           ]
         },
+        "detailBgImage": "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1200&q=80",
         "feature": {
           "title": "Sürdürülebilir Tarım",
           "description1": "Karakucak Tarım, sürdürülebilir tarım uygulamalarıyla sektörde öncü rol oynamaktadır.",
@@ -239,8 +240,7 @@
           "title": "Sürdürülebilir Tarım İçin",
           "description": "Modern ve verimli tarım çözümlerimiz için bizimle iletişime geçin.",
           "buttons": [
-            { "text": "Bize Ulaşın", "href": "/iletisim", "isPrimary": true },
-            { "text": "Referansları Görün", "href": "/referanslar" }
+            { "text": "Bize Ulaşın", "href": "/iletisim", "isPrimary": true }
           ]
         }
       },
@@ -262,7 +262,7 @@
         "description": "Çırçır & Prese Fabrikası ile sürdürülebilir pamuk üretimi ve işleme teknolojilerimizle tekstil sektörüne değer katıyoruz.",
         "backgroundImage": "/images/pamuk/pamuk.jpg",
         "primaryButtonText": "Projelerimiz",
-        "primaryButtonLink": "#projeler",
+        "primaryButtonLink": "",
         "secondaryButtonText": "İletişime Geçin",
         "secondaryButtonLink": "/iletisim",
         "overlayColor": "from-gray-900/95 to-indigo-900/80",
@@ -278,6 +278,7 @@
             { "icon": "organic", "title": "Organik Pamuk" }
           ]
         },
+        "detailBgImage": "https://images.unsplash.com/photo-1592123143592-c1e5bb3f6c5b?auto=format&fit=crop&w=1200&q=80",
         "feature": {
           "title": "Sürdürülebilir Tekstil",
           "description1": "Karakucak Pamuk Sanayi, sürdürülebilir tekstil üretim uygulamalarıyla sektörde öncü rol oynamaktadır.",
@@ -299,8 +300,7 @@
           "title": "Sürdürülebilir Tekstil İçin",
           "description": "Çevre dostu ve yenilikçi tekstil çözümlerimiz için bizimle iletişime geçin.",
           "buttons": [
-            { "text": "Bize Ulaşın", "href": "/iletisim", "isPrimary": true },
-            { "text": "Referansları Görün", "href": "/referanslar" }
+            { "text": "Bize Ulaşın", "href": "/iletisim", "isPrimary": true }
           ]
         }
       }

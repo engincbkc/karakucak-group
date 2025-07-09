@@ -16,6 +16,7 @@ type MnkArchitectureFeatureProps = {
   buttonLink: string;
   imageTag?: string;
   imageCaption?: string;
+  showButton?: boolean; // İsteğe bağlı, butonu gösterip göstermemeyi kontrol eder
 };
 
 export default function MnkArchitectureFeature({
@@ -28,6 +29,7 @@ export default function MnkArchitectureFeature({
   buttonLink,
   imageTag = 'Ödüllü Proje',
   imageCaption = 'Modern Mimari Yaklaşım',
+  showButton = false, // Varsayılan olarak buton gizlenir
 }: MnkArchitectureFeatureProps) {
   return (
     <section className="py-10 sm:py-14 md:py-16 bg-gradient-to-r from-slate-900 to-gray-800 text-white overflow-hidden relative">
@@ -51,15 +53,17 @@ export default function MnkArchitectureFeature({
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-5 inline-block border-b-3 sm:border-b-4 border-yellow-500 pb-1 sm:pb-2">{title}</h2>
             <p className="text-base sm:text-lg mb-3 sm:mb-4 md:mb-5">{description1}</p>
             <p className="text-base sm:text-lg mb-5 sm:mb-6 md:mb-7">{description2}</p>
-            <Link 
-              href={buttonLink} 
-              className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-yellow-500 text-gray-900 font-semibold rounded-lg hover:bg-yellow-400 transition-all duration-300 shadow-lg"
-            >
-              <span>{buttonText}</span>
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-            </Link>
+            {showButton && (
+              <Link 
+                href={buttonLink} 
+                className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-yellow-500 text-gray-900 font-semibold rounded-lg hover:bg-yellow-400 transition-all duration-300 shadow-lg"
+              >
+                <span>{buttonText}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </Link>
+            )}
           </motion.div>
           
           <motion.div

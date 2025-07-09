@@ -42,7 +42,7 @@ export default function SectorHero({
   stats,
 }: SectorHeroProps) {
   return (
-    <section className="relative overflow-hidden min-h-[600px] py-16 sm:py-20 flex items-center">
+    <section className="relative overflow-hidden min-h-[550px] pt-8 pb-16 flex items-center">
       {/* Arka plan görüntüsü - Parallax efekti ile */}
       <motion.div
         className="absolute inset-0 w-full h-full z-0"
@@ -53,7 +53,7 @@ export default function SectorHero({
         <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-gray-800/60 to-amber-700/50" />
         
         <Image
-          src="https://images.pexels.com/photos/1117452/pexels-photo-1117452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src={backgroundImage}
           alt={`${title} Arkaplan`}
           fill
           priority={priority}

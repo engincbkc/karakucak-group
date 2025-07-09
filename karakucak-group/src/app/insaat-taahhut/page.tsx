@@ -23,7 +23,7 @@ export default function InsaatTaahhutPage() {
       <SectorHero 
         title="İnşaat & Taahhüt" 
         description="Modern mimari anlayışımız ve yüksek mühendislik standartlarımızla inşaat sektöründe güvenilir çözümler sunuyoruz."
-        backgroundImage="/images/insaat-bg.jpg"
+        backgroundImage="/images/mimarlik/binalar.jpg"
         primaryButtonText="Projelerimiz"
         primaryButtonLink="#projeler"
         secondaryButtonText="İletişime Geçin"
@@ -50,6 +50,7 @@ export default function InsaatTaahhutPage() {
         featureImage="/images/mnk-feature.jpg"
         buttonText="MNK Mimarlık'ı Keşfedin"
         buttonLink="/mnk-mimarlik"
+        showButton={true} // Sadece İnşaat & Taahhüt sayfasında buton görünsün
       />
       
       <div id="projeler" className="mb-20">
@@ -69,7 +70,6 @@ export default function InsaatTaahhutPage() {
         description="Modern, sürdürülebilir ve fonksiyonel yapı projeleri için bizimle iletişime geçin."
         buttons={[
           { text: "Bize Ulaşın", href: "/iletisim", isPrimary: true },
-          { text: "Referansları Görün", href: "/referanslar" }
         ]}
       />
     </div>

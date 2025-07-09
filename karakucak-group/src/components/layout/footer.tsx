@@ -70,11 +70,7 @@ export function Footer() {
                   <ChevronRight className="mr-2 h-4 w-4 text-amber-500" /> Haberler
                 </Link>
               </li>
-              <li>
-                <Link href="/kariyer" className="text-gray-300 hover:text-amber-500 transition-colors flex items-center">
-                  <ChevronRight className="mr-2 h-4 w-4 text-amber-500" /> Kariyer
-                </Link>
-              </li>
+              
             </ul>
           </div>
 

@@ -28,7 +28,7 @@ export default function OtomotivPage() {
           
           <div className="my-8">
             <Image
-              src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3"
+              src="/images/otomotiv/kgm_korea.jpg"
               alt="Otomotiv Üretim Tesisimiz"
               width={600}
               height={400}

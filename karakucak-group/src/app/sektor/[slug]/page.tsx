@@ -92,8 +92,8 @@ export default async function SectorPage({ params }: { params: { slug: string } 
           subtitle={sector.title} // Sektör adını alt başlık olarak geçiyoruz
           description={sector.description} // About alabiliyorsak onu, yoksa descriptionı kullan
           backgroundImage={sector.backgroundImage}
-          primaryButtonText={sector.primaryButtonText}
-          primaryButtonLink={sector.primaryButtonLink}
+          primaryButtonText={slug === 'insaat-taahhut' ? sector.primaryButtonText : undefined}
+          primaryButtonLink={slug === 'insaat-taahhut' ? sector.primaryButtonLink : undefined}
           secondaryButtonText={sector.secondaryButtonText}
           secondaryButtonLink={sector.secondaryButtonLink}
           overlayColor={sector.overlayColor}
@@ -108,6 +108,7 @@ export default async function SectorPage({ params }: { params: { slug: string } 
         <MnkArchitectureFeature 
           title={sector.feature.title}
           description1={sector.about}
+          backgroundImage={sector.detailBgImage} /* Hero görselinden farklı arkaplan görseli kullanıyoruz */
           description2=""
           featureImage={sector.feature.featureImage}
           buttonText={sector.feature.buttonText}
@@ -129,8 +130,9 @@ export default async function SectorPage({ params }: { params: { slug: string } 
         />
       </section>
       
-      {/* Projeler bölümü - ProjectsShowcase bilesen kullanılıyor, sadece /sektor/insaat-taahhut sayfasında görünür */}
-      {sector.projects.showProjects && slug === 'insaat-taahhut' && (
+      {/* Projeler bölümü - ProjectsShowcase bileşeni, filtreler ve daha görsel bir düzen sağlayan gelişmiş bir bileşen */}
+      {/* Sadece insaat-taahhut sektöründe gösterilecek */}
+      {sector.projects.showProjects && sector.feature.buttonLink === '#projeler' && (
         <section id="projeler">
           <ProjectsShowcase
             title={sector.projects.title}

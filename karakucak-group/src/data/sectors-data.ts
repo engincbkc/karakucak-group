@@ -57,6 +57,7 @@ export interface Sector {
   description: string;
   about: string; // Detaylı açıklama için about alanı eklendi
   backgroundImage: string;
+  detailBgImage?: string; // Sektör detay sayfasındaki MnkArchitectureFeature için arka plan görüntüsü
   primaryButtonText?: string;
   primaryButtonLink?: string;
   secondaryButtonText?: string;
