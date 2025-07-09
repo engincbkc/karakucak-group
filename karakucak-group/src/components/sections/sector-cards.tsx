@@ -53,7 +53,7 @@ const SectorCard = ({ id, title, subtitle, description, image, href, iconName, k
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.7, delay: index * 0.1 }}
-      className="group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800/90 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700/30 flex flex-col h-full transform hover:-translate-y-2"
+      className="group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800/90 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700/30 flex flex-col h-full transform hover:-translate-y-2 w-full md:w-[calc(50%-1rem)] xl:w-[calc(33.333%-1rem)] max-w-md"
     >
       {/* Card Header with Image */}
       <div className="relative h-56 md:h-64 w-full overflow-hidden">
@@ -192,7 +192,7 @@ export function SectorCards() {
               <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-xl bg-amber-100 dark:bg-amber-900/30">
                 <Users className="w-6 h-6 text-amber-600 dark:text-amber-400" />
               </div>
-              <div className="text-3xl font-bold text-gray-900 dark:text-white">1.200+</div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white">1.000+</div>
               <div className="text-sm text-gray-500 dark:text-gray-400">Toplam Çalışan</div>
             </div>
             
@@ -200,13 +200,13 @@ export function SectorCards() {
               <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-xl bg-amber-100 dark:bg-amber-900/30">
                 <TrendingUp className="w-6 h-6 text-amber-600 dark:text-amber-400" />
               </div>
-              <div className="text-3xl font-bold text-gray-900 dark:text-white">25+</div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white">15+</div>
               <div className="text-sm text-gray-500 dark:text-gray-400">Yıllık Tecrübe</div>
             </div>
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
+        <div className="flex flex-wrap justify-center gap-6 md:gap-8">
           {sectorCardsData.map((sector, index) => (
             <SectorCard
               key={sector.id}

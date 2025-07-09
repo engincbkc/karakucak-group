@@ -11,9 +11,7 @@ export default function Home() {
       <HeroSection />
       <SectorCards />
       <StatsSection />
-      <BoardOfDirectors />
       <NewsSection />
-      <ContactSection />
     </>
   );
 }

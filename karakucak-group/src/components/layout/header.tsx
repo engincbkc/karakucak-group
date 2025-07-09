@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react"
 import Link from "next/link"
-// Image import removed as it's not being used
+import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { Menu, X, ChevronDown } from "lucide-react"
 // Theme imports removed
@@ -57,9 +57,14 @@ export function Header() {
             {/* Logo */}
             <div className="flex flex-shrink-0 items-center">
               <Link href="/" className="flex items-center">
-                <span className="text-xl font-bold text-gray-900 dark:text-white">
-                  Karakucak Group
-                </span>
+                <Image 
+                  src="/images/logo/main_logo-removebg-preview.png" 
+                  alt="Karakucak Group Logo" 
+                  width={500} 
+                  height={100} 
+                  className="object-contain h-35 w-auto" 
+                  priority
+                />
               </Link>
             </div>
             
