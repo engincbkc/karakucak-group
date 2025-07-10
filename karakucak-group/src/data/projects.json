@@ -1,6 +1,49 @@
 {
     "tr": {
       "projects": [
+       
+        {
+          "id": "yaya-ust-gecidi-eyyubiye",
+          "title": "Şanlıurfa ili Eyyübiye ilçesi Yaya Üst Geçidi Yapım İşi",
+          "description": "MNK Mimarlık tarafından gerçekleştirilen Eyyübiye ilçesi Yaya Üst Geçidi yapım projesi.",
+          "image": "https://images.unsplash.com/photo-1571036604619-67738db33971?ixlib=rb-4.0.3",
+          "tags": ["kamu", "insaat", "mimarlik", "altyapi"],
+          "location": "Şanlıurfa, Eyyübiye",
+          "year": "2024",
+          "slug": "yaya-ust-gecidi-eyyubiye"
+        },
+        {
+          "id": "transfer-istasyonu-halfeti",
+          "title": "Şanlıurfa ili Halfeti ilçesi Katı Atık Transfer İstasyonu Yapım işi",
+          "description": "MNK Mimarlık tarafından gerçekleştirilen Halfeti ilçesi Katı Atık Transfer İstasyonu yapım projesi.",
+          "image": "https://images.unsplash.com/photo-1613685703305-fba7a6181d86?ixlib=rb-4.0.3",
+          "tags": ["kamu", "insaat", "mimarlik", "altyapi"],
+          "location": "Şanlıurfa, Halfeti",
+          "year": "2023",
+          "slug": "transfer-istasyonu-halfeti"
+        },
+        {
+          "id": "semt-pazari-hilvan",
+          "title": "Şanlıurfa ili Hilvan ilçesi Semt Pazarı Yapım İşi",
+          "description": "MNK Mimarlık tarafından gerçekleştirilen Hilvan ilçesi Semt Pazarı yapım projesi.",
+          "image": "https://images.unsplash.com/photo-1533900298318-6b8da08a523e?ixlib=rb-4.0.3",
+          "tags": ["kamu", "insaat", "mimarlik", "ticari"],
+          "location": "Şanlıurfa, Hilvan",
+          "year": "2023",
+          "slug": "semt-pazari-hilvan"
+        },
+        {
+          "id": "mezbahane-viransehir",
+          "title": "Şanlıurfa ili Viranşehir ilçesi Mezbahane Yapım İşi",
+          "description": "MNK Mimarlık tarafından gerçekleştirilen Viranşehir ilçesi Mezbahane yapım projesi.",
+          "image": "https://images.unsplash.com/photo-1585944496672-5f9daed96cdf?ixlib=rb-4.0.3",
+          "tags": ["kamu", "insaat", "mimarlik"],
+          "location": "Şanlıurfa, Viranşehir",
+          "year": "2023",
+          "slug": "mezbahane-viransehir"
+        },
+ 
+       
         {
           "id": "mezbahane-hilvan",
           "title": "Şanlıurfa ili Hilvan ilçesi Mezbahane Yapım İşi",
@@ -51,46 +94,8 @@
           "year": "2022",
           "slug": "mezbahane-suruc"
         },
-        {
-          "id": "mezbahane-viransehir",
-          "title": "Şanlıurfa ili Viranşehir ilçesi Mezbahane Yapım İşi",
-          "description": "MNK Mimarlık tarafından gerçekleştirilen Viranşehir ilçesi Mezbahane yapım projesi.",
-          "image": "https://images.unsplash.com/photo-1585944496672-5f9daed96cdf?ixlib=rb-4.0.3",
-          "tags": ["kamu", "insaat", "mimarlik"],
-          "location": "Şanlıurfa, Viranşehir",
-          "year": "2023",
-          "slug": "mezbahane-viransehir"
-        },
-        {
-          "id": "transfer-istasyonu-halfeti",
-          "title": "Şanlıurfa ili Halfeti ilçesi Katı Atık Transfer İstasyonu Yapım işi",
-          "description": "MNK Mimarlık tarafından gerçekleştirilen Halfeti ilçesi Katı Atık Transfer İstasyonu yapım projesi.",
-          "image": "https://images.unsplash.com/photo-1613685703305-fba7a6181d86?ixlib=rb-4.0.3",
-          "tags": ["kamu", "insaat", "mimarlik", "altyapi"],
-          "location": "Şanlıurfa, Halfeti",
-          "year": "2023",
-          "slug": "transfer-istasyonu-halfeti"
-        },
-        {
-          "id": "semt-pazari-hilvan",
-          "title": "Şanlıurfa ili Hilvan ilçesi Semt Pazarı Yapım İşi",
-          "description": "MNK Mimarlık tarafından gerçekleştirilen Hilvan ilçesi Semt Pazarı yapım projesi.",
-          "image": "https://images.unsplash.com/photo-1533900298318-6b8da08a523e?ixlib=rb-4.0.3",
-          "tags": ["kamu", "insaat", "mimarlik", "ticari"],
-          "location": "Şanlıurfa, Hilvan",
-          "year": "2023",
-          "slug": "semt-pazari-hilvan"
-        },
-        {
-          "id": "yaya-ust-gecidi-eyyubiye",
-          "title": "Şanlıurfa ili Eyyübiye ilçesi Yaya Üst Geçidi Yapım İşi",
-          "description": "MNK Mimarlık tarafından gerçekleştirilen Eyyübiye ilçesi Yaya Üst Geçidi yapım projesi.",
-          "image": "https://images.unsplash.com/photo-1571036604619-67738db33971?ixlib=rb-4.0.3",
-          "tags": ["kamu", "insaat", "mimarlik", "altyapi"],
-          "location": "Şanlıurfa, Eyyübiye",
-          "year": "2024",
-          "slug": "yaya-ust-gecidi-eyyubiye"
-        },
+      
+       
         {
           "id": "tarim-mudur-binasi-akcakale",
           "title": "Şanlıurfa ili Akçakale ilçesi Tarım ve Orman Müdürlüğü Binası Yapım İşi",
