@@ -1,8 +1,12 @@
 // src/app/sektor/[slug]/page.tsx
 
 import React from 'react';
+import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
+import { OptimizedImage } from "@/components/ui/optimized-image";
+import { LazyLoad } from "@/components/ui/lazy-load";
+import { PerformanceMonitor } from "@/components/analytics/performance-monitor";
+import dynamic from "next/dynamic";
 import { 
   SectorHero, 
   SectorServices, 
@@ -11,6 +15,7 @@ import {
   MnkArchitectureFeature 
 } from "@/components/sections/sector-page";
 import { ProjectsShowcase } from "@/components/sections/projects-showcase";
+import { generateSectorMetadata } from '@/app/metadata';
 
 // Data ve ikonlar
 import { getSectorBySlug, getAllSectorSlugs } from "@/data/sectors-data";
@@ -58,6 +63,27 @@ export async function generateStaticParams() {
   }));
 }
 
+// Dinamik metadata oluşturucu
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  // Sektör verisini getir
+  const sector = getSectorBySlug(params.slug);
+  
+  // Eğer sektör bulunamazsa, varsayılan metadata kullan
+  if (!sector) {
+    return {
+      title: 'Sektör Bulunamadı | Karakucak Group',
+      description: 'Aradığınız sektör sayfası bulunamadı.',
+    };
+  }
+  
+  // Sektöre özel metadata oluştur
+  return generateSectorMetadata(
+    sector.companyName, 
+    sector.description.substring(0, 160), // İlk 160 karakter açıklama için
+    sector.backgroundImage
+  );
+}
+
 // Sayfa bileşeni - Server Component (varsayılan)
 export default async function SectorPage({ params }: { params: { slug: string } }) {
   const { slug } = params;
@@ -65,7 +91,7 @@ export default async function SectorPage({ params }: { params: { slug: string } 
   // Sektör verilerini yükle - getStaticProps benzeri fonksiyonalite için
   const sector = await fetchSectorData(slug);
 
-  console.log(sector);
+  // Geliştirme logları kaldırıldı
   
   // Sektör bulunamadıysa 404 döndür
   if (!sector) {
@@ -83,10 +109,28 @@ export default async function SectorPage({ params }: { params: { slug: string } 
   // Priority loading için önemli içerikleri işaretleme
   const shouldPrioritizeImage = true; // Ana hero görseli için
 
+  // Use available components from our codebase instead of dynamically importing
+  // a component that doesn't exist yet
+  
   return (
-    <div className="pt-16 overflow-hidden">
-      {/* Hero Section - Ekranın tamamını kaplayacak şekilde */}
-      <section className="relative w-full">
+    <div className="flex flex-col">
+      {/* Performance monitoring devre dışı bırakıldı - web-vitals paketi gerekmez */}
+      
+      {/* Hero Section with header image */}
+      <header className="relative w-full h-[50vh] md:h-[60vh] lg:h-[70vh]">
+        <OptimizedImage
+          src={`/images/sectors/${sector.backgroundImage || 'default.jpg'}`}
+          alt={`${sector.title} Sektör Kapak Görseli`}
+          priority
+          fill
+          type="hero"
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 100vw"
+        />
+      </header>
+      
+      {/* Hero Content Section */}
+      <section className="relative w-full -mt-[50vh] md:-mt-[60vh] lg:-mt-[70vh]">
         <SectorHero 
           title={sector.companyName} // Şirket adını ana başlık olarak geçiyoruz
           subtitle={sector.title} // Sektör adını alt başlık olarak geçiyoruz
@@ -104,19 +148,22 @@ export default async function SectorPage({ params }: { params: { slug: string } 
  
       
       {/* Sektöre özel özellik bölümü - Parallax efekti ile */}
-      <section className="py-8 sm:py-12 md:py-16 px-4 md:px-8 mt-0">
-        <MnkArchitectureFeature 
-          title={sector.feature.title}
-          description1={sector.about}
-          backgroundImage={sector.detailBgImage} /* Hero görselinden farklı arkaplan görseli kullanıyoruz */
-          description2=""
-          featureImage={sector.feature.featureImage}
-          buttonText={sector.feature.buttonText}
-          buttonLink={sector.feature.buttonLink}
-          imageTag={sector.title} /* Sektör başlığını imageTag olarak kullanıyoruz */
-          imageCaption={sector.companyDetail} /* Şirket detaylarını imageCaption olarak kullanıyoruz */
-        />
-      </section>
+      {/* Feature Section with LazyLoad for improved performance */}
+      <LazyLoad rootMargin="100px">
+        <section className="py-8 sm:py-12 md:py-16 px-4 md:px-8 mt-0">
+          <MnkArchitectureFeature 
+            title={sector.feature.title}
+            description1={sector.about}
+            backgroundImage={sector.detailBgImage} /* Hero görselinden farklı arkaplan görseli kullanıyoruz */
+            description2=""
+            featureImage={sector.feature.featureImage}
+            buttonText={sector.feature.buttonText}
+            buttonLink={sector.feature.buttonLink}
+            imageTag={sector.title} /* Sektör başlığını imageTag olarak kullanıyoruz */
+            imageCaption={sector.companyDetail} /* Şirket detaylarını imageCaption olarak kullanıyoruz */
+          />
+        </section>
+      </LazyLoad>
 
            
       {/* Hizmetler - Modern kaydırma animasyonu ile */}
@@ -187,6 +234,6 @@ async function fetchFilteredProjects(filterTags: string[]) {
   if (filteredProjects.length === 0) {
     filteredProjects = allProjects.slice(0, 9);
   }
-
-  return { filteredProjects };
+  
+  return filteredProjects;
 }
