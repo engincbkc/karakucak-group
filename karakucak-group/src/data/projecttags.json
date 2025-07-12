@@ -1,44 +1,12 @@
 {
   "tr": {
-    "ofis": { "label": "Ofis", "color": "bg-blue-50 text-blue-700" },
-    "konut": { "label": "Konut", "color": "bg-green-50 text-green-700" },
-    "kultur": { "label": "Kültür", "color": "bg-purple-50 text-purple-700" },
-    "egitim": { "label": "Eğitim", "color": "bg-amber-50 text-amber-700" },
-    "otel": { "label": "Otel", "color": "bg-rose-50 text-rose-700" },
-    "surdurulebilir": { "label": "Sürdürülebilir", "color": "bg-emerald-50 text-emerald-700" },
-    "yenilenebilir": { "label": "Yenilenebilir Enerji", "color": "bg-lime-50 text-lime-700" },
-    "akilliEv": { "label": "Akıllı Ev", "color": "bg-indigo-50 text-indigo-700" },
-    "leed": { "label": "LEED Platinum", "color": "bg-teal-50 text-teal-700" },
-    "odullu": { "label": "Ödüllü Proje", "color": "bg-yellow-50 text-yellow-700" },
-    "akustik": { "label": "Akustik", "color": "bg-cyan-50 text-cyan-700" },
-    "ekoDostu": { "label": "Eko-Dostu", "color": "bg-emerald-50 text-emerald-700" },
-    "yerelMimari": { "label": "Yerel Mimari", "color": "bg-orange-50 text-orange-700" },
-    "modernYasam": { "label": "Modern Yaşam", "color": "bg-violet-50 text-violet-700" },
-    "ticari": { "label": "Ticari", "color": "bg-slate-50 text-slate-700" },
-    "hastane": { "label": "Sağlık", "color": "bg-red-50 text-red-700" },
-    "spor": { "label": "Spor Tesisi", "color": "bg-sky-50 text-sky-700" },
-    "endüstriyel": { "label": "Endüstriyel", "color": "bg-zinc-50 text-zinc-700" },
-    "kamusal": { "label": "Kamusal Alan", "color": "bg-fuchsia-50 text-fuchsia-700" }
+    "kamu": { "label": "Kamu", "color": "bg-blue-50 text-blue-700" },
+    "altyapi": { "label": "Altyapı", "color": "bg-emerald-50 text-emerald-700" },
+    "ticari": { "label": "Ticari", "color": "bg-slate-50 text-slate-700" }
   },
   "en": {
-    "ofis": { "label": "Office", "color": "bg-blue-50 text-blue-700" },
-    "konut": { "label": "Residential", "color": "bg-green-50 text-green-700" },
-    "kultur": { "label": "Cultural", "color": "bg-purple-50 text-purple-700" },
-    "egitim": { "label": "Education", "color": "bg-amber-50 text-amber-700" },
-    "otel": { "label": "Hotel", "color": "bg-rose-50 text-rose-700" },
-    "surdurulebilir": { "label": "Sustainable", "color": "bg-emerald-50 text-emerald-700" },
-    "yenilenebilir": { "label": "Renewable Energy", "color": "bg-lime-50 text-lime-700" },
-    "akilliEv": { "label": "Smart Home", "color": "bg-indigo-50 text-indigo-700" },
-    "leed": { "label": "LEED Platinum", "color": "bg-teal-50 text-teal-700" },
-    "odullu": { "label": "Award-Winning", "color": "bg-yellow-50 text-yellow-700" },
-    "akustik": { "label": "Acoustic", "color": "bg-cyan-50 text-cyan-700" },
-    "ekoDostu": { "label": "Eco-Friendly", "color": "bg-emerald-50 text-emerald-700" },
-    "yerelMimari": { "label": "Vernacular", "color": "bg-orange-50 text-orange-700" },
-    "modernYasam": { "label": "Modern Living", "color": "bg-violet-50 text-violet-700" },
-    "ticari": { "label": "Commercial", "color": "bg-slate-50 text-slate-700" },
-    "hastane": { "label": "Healthcare", "color": "bg-red-50 text-red-700" },
-    "spor": { "label": "Sports Facility", "color": "bg-sky-50 text-sky-700" },
-    "endüstriyel": { "label": "Industrial", "color": "bg-zinc-50 text-zinc-700" },
-    "kamusal": { "label": "Public Space", "color": "bg-fuchsia-50 text-fuchsia-700" }
+    "public": { "label": "Public", "color": "bg-blue-50 text-blue-700" },
+    "infrastructure": { "label": "Infrastructure", "color": "bg-emerald-50 text-emerald-700" },
+    "commercial": { "label": "Commercial", "color": "bg-slate-50 text-slate-700" }
   }
 }

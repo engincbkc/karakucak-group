@@ -270,7 +270,6 @@ export function ProjectsShowcase({
         {/* Sonuç Sayısı */}
         {(selectedTags.length > 0 || searchQuery) && (
           <div className="mb-6 text-sm text-gray-500 dark:text-gray-400">
-            <span>{filteredProjects.length} proje bulundu</span>
             {(selectedTags.length > 0 || searchQuery) && (
               <button
                 onClick={() => {
