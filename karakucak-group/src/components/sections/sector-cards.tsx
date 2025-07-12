@@ -200,7 +200,7 @@ export function SectorCards() {
               <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-xl bg-amber-100 dark:bg-amber-900/30">
                 <TrendingUp className="w-6 h-6 text-amber-600 dark:text-amber-400" />
               </div>
-              <div className="text-3xl font-bold text-gray-900 dark:text-white">15+</div>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white">30+</div>
               <div className="text-sm text-gray-500 dark:text-gray-400">Yıllık Tecrübe</div>
             </div>
           </div>

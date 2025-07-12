@@ -79,7 +79,7 @@
         ],
         "about": "Karakucak Otomotiv, 2024 yılından bu yana Şanlıurfa'da SsangYong markasının yetkili bayisi olarak, otomotiv sektöründe kalitenin ve müşteri odaklı hizmet anlayışının öncüsü olmuştur. SsangYong, dünya çapında prestijli bir marka olarak, dayanıklılığı, inovatif tasarımı ve üstün teknolojisiyle tanınırken, Karakucak Otomotiv de bu mirası benimseyerek, müşterilerine güvenli, konforlu ve ileri teknolojilere sahip araçlar sunmaktadır. Karakucak Otomotiv olarak, SsangYong'un Torres, Korando, Tivoli, Musso ve Rexton gibi her biri kendi sınıfında lider modellerini, şık tasarımı, yüksek performans ve üstün güvenliği bir arada sunan araçlarla temsil etmekteyiz. SsangYong araçları, gelişmiş motor teknolojileri, şık tasarımları ve çevre dostu yenilikleri ile sektördeki farkını ortaya koymaktadır. Biz de bu güçlü mirası, sizlere en yüksek standartlarda araç satışı ve servis hizmetleri sunarak devam ettiriyoruz. Müşteri memnuniyeti, faaliyetlerimizin temeline oturur ve her müşterimizin özel gereksinimlerini en iyi şekilde karşılamayı hedefleriz. Satış sonrası hizmetlerimiz, Karakucak Otomotiv'in sektördeki farkını bir kez daha ortaya koymaktadır. Bakım, onarım, yedek parça temini ve garanti hizmetleri alanlarında, uzman teknisyenlerimiz ve modern ekipmanlarımız ile her zaman en yüksek hizmeti sunmayı taahhüt ederiz. SsangYong araçlarının her bir parçası için sunduğumuz üstün hizmet, sadece aracınızın ömrünü uzatmakla kalmaz, aynı zamanda sizin güvenliğiniz ve konforunuz için de en yüksek standartları sağlar. Torres EVX gibi elektrikli araç modelleriyle, SsangYong markası, otomotiv sektöründeki geleceği bugünden şekillendirmektedir. Torres EVX, uzun menzil kapasitesi, şık tasarımı ve teknolojik donanımı ile çevre dostu bir seçenek sunmakla beraber yenilikçi teknolojilerle sürüş deneyimini bir adım öteye taşır. Karakucak Otomotiv, SsangYong markasının geleceğini takip ederek, müşterilerine sadece bugünün değil, yarının otomobil deneyimini de sunmaktadır.",
         "description": "Yenilikçi teknolojiler ve sürdürülebilir çözümlerle otomotiv sektörüne değer katıyoruz.",
-        "backgroundImage": "/images/otomotiv/korando.jpg",
+        "backgroundImage": "/images/otomotiv/kgm_korea.jpg",
         "primaryButtonText": "Projelerimiz",
         "primaryButtonLink": "  ",
         "secondaryButtonText": "İletişime Geçin",
@@ -196,7 +196,6 @@
           "Optimum Kaynak Kullanımı"
         ],
         "stats": [
-          { "value": "2015", "label": "Kurulan Yıl" },
           { "value": "15+", "label": "Tarımsal Ürün" }
         ],
         "description": "Modern tarım teknolojileri ve sürdürülebilir uygulamalarla tarımsal üretimde verimliliği artırıyoruz.",
@@ -256,8 +255,7 @@
           "Çırçır ve Prese Teknolojileri"
         ],
         "stats": [
-          { "value": "2010", "label": "Kurulan Yıl" },
-          { "value": "20+", "label": "Müşteri" }
+          { "value": "1997", "label": "Kurulan Yıl" }
         ],
         "description": "Çırçır & Prese Fabrikası ile sürdürülebilir pamuk üretimi ve işleme teknolojilerimizle tekstil sektörüne değer katıyoruz.",
         "backgroundImage": "/images/pamuk/pamuk.jpg",
