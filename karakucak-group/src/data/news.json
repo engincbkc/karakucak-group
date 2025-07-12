@@ -1,19 +1,19 @@
 {
   "tr": {
     "categories": {
-      "kurumsal": { "label": "Kurumsal", "color": "bg-blue-50 text-blue-700" },
-      "projeler": { "label": "Projeler", "color": "bg-green-50 text-green-700" },
-      "etkinlikler": { "label": "Etkinlikler", "color": "bg-purple-50 text-purple-700" },
-      "oduller": { "label": "Ödüller", "color": "bg-amber-50 text-amber-700" },
-      "basin": { "label": "Basın", "color": "bg-rose-50 text-rose-700" }
+      "insaat-taahhut": { "label": "İnşaat & Taahhüt", "color": "bg-blue-50 text-blue-700" },
+      "otomotiv": { "label": "Otomotiv", "color": "bg-green-50 text-green-700" },
+      "madencilik": { "label": "Madencilik", "color": "bg-purple-50 text-purple-700" },
+      "tarim": { "label": "Tarım", "color": "bg-amber-50 text-amber-700" },
+      "pamuk-sanayi": { "label": "Pamuk Sanayi", "color": "bg-rose-50 text-rose-700" }
     },
     "news": [
       {
         "id": "kgm-ssangyong-acilis",
         "title": "KGM SsangYong Bayisi Resmi Açılışı Gerçekleşti",
         "excerpt": "Karakucak Group'un otomotiv sektöründeki yeni markası KGM SsangYong'un ilk bayisi, görkemli bir törenle hizmete açıldı.",
-        "image": "/images/otomotiv/cropped_kgm_magaza.png",
-        "category": "kurumsal",
+        "image": "/images/otomotiv/kgm_bayii_magaza.jpg",
+        "category": "otomotiv",
         "publishDate": "2025-06-25",
         "slug": "kgm-ssangyong-acilis",
         "content": "<p>Karakucak Group'un otomotiv sektöründeki yeni yatırımı KGM SsangYong'un ilk yetkili bayisi, düzenlenen görkemli bir törenle resmi olarak hizmete açıldı. Açılış törenine üst düzey yöneticiler, SsangYong Kore genel merkez temsilcileri ve çok sayıda davetli katıldı.</p><p>İstanbul'un merkezi lokasyonunda 2000 metrekare kapalı alan üzerine kurulan yeni showroom, satış ve satış sonrası hizmetleri tek bir çatı altında birleştiren modern bir konsepte sahip. Showroom'da SsangYong'un tüm yeni modelleri sergileniyor ve müşterilere kapsamlı test sürüşü imkanı sunuluyor.</p><p>Açılış töreninde konuşan Karakucak Group Otomotiv Bölümü Başkanı Ahmet Karakucak, 'KGM SsangYong bayiliğimizle, Türkiye'deki otomotiv piyasasına yenilikçi ve kaliteli araçlar sunmaktan gurur duyuyoruz. SsangYong'un güçlü SUV ve pickup modelleriyle Türk tüketicisinin beklentilerini karşılamayı ve sektörde önemli bir pazar payı elde etmeyi hedefliyoruz' dedi.</p><p>SsangYong Kore'den gelen temsilciler de Türkiye pazarına verdikleri önemi vurgulayarak, KGM Otomotiv ile güçlü bir işbirliğine imza attıklarını belirttiler.</p><p>Yeni bayide satışa sunulan SsangYong modelleri arasında Rexton, Korando ve Musso Grand modelleri öne çıkıyor. Şirket, önümüzdeki yıl içinde Türkiye genelinde beş yeni bayi daha açmayı planlıyor.</p>",
@@ -29,15 +29,15 @@
         "id": "madencilik-yeni-teknoloji",
         "title": "Karakucak Madencilik Yeni Teknolojiyle Üretim Kapasitesini Artırdı",
         "excerpt": "Karakucak Madencilik, son teknoloji ekipman yatırımıyla kum ve taş ocaklarında üretim kapasitesini %30 artırdı.",
-        "image": "/images/madencilik/madencilik-tesis.jpg",
-        "category": "projeler",
+        "image": "/images/madencilik/madencilik.jpg",
+        "category": "madencilik",
         "publishDate": "2025-06-10",
         "slug": "madencilik-yeni-teknoloji",
         "content": "<p>Karakucak Group bünyesinde faaliyet gösteren Karakucak Madencilik, taş ve kum ocaklarında gerçekleştirdiği yeni teknoloji yatırımlarıyla üretim kapasitesini %30 oranında artırdı. Toplam 15 milyon TL'lik yatırımla satın alınan yeni ekipmanlar, daha verimli ve çevre dostu madencilik faaliyetlerine olanak sağlıyor.</p><p>Çevreye duyarlı madencilik anlayışıyla faaliyet gösteren Karakucak Madencilik, yeni teknoloji sayesinde toz emisyonunu önemli ölçüde azaltmayı ve su tüketimini optimize etmeyi başardı. Ayrıca, üretim süreçlerindeki enerji verimliliği de %25 oranında iyileştirildi.</p><p>Karakucak Madencilik Genel Müdürü Cevdet Doğru, 'Modern ekipman yatırımlarımız, sadece üretim kapasitemizi artırmakla kalmıyor, aynı zamanda sürdürülebilir madencilik vizyonumuzu destekliyor. Çevresel etkilerimizi minimize ederken, kaliteli malzeme üretimini en verimli şekilde gerçekleştirmeyi hedefliyoruz' dedi.</p><p>Yeni teknoloji yatırımı kapsamında, modern kırıcılar, elekler ve konveyör sistemleri devreye alındı. Bu ekipmanlar sayesinde farklı boyutlardaki agrega üretiminde hassasiyet ve kalite artırıldı.</p><p>Şirket, önümüzdeki dönemde kum ve taş ocaklarında rehabilitasyon çalışmalarını da hızlandıracak ve madencilik faaliyetleri sona eren bölgelerde ekolojik dengeyi koruyacak projeler hayata geçirecek.</p>",
         "relatedProjects": ["modern-madencilik"],
         "gallery": [
           {
-            "url": "/images/madencilik/madencilik-tesis.jpg",
+            "url": "/images/madencilik/madencilik2.jpg",
             "alt": "Karakucak Madencilik Tesisleri"
           }
         ]
@@ -47,7 +47,7 @@
         "title": "Karakucak Tekstil İhracatta Rekor Kırdı",
         "excerpt": "Karakucak Tekstil, organik pamuk ürünleri ihracatında geçen yıla göre %40 artış sağlayarak sektör rekoru kırdı.",
         "image": "/images/pamuk/pamuk.jpg",
-        "category": "kurumsal",
+        "category": "pamuk-sanayi",
         "publishDate": "2025-05-20",
         "slug": "pamuk-sektoru-ihracat",
         "content": "<p>Karakucak Group bünyesindeki Karakucak Tekstil, organik pamuk ürünleri ihracatında geçen yıla göre %40'lık artışla sektörde yeni bir rekora imza attı. Özellikle Avrupa pazarına yönelik sürdürülebilir tekstil ürünleri, şirketin bu başarısında önemli rol oynadı.</p><p>Ege Bölgesi'nde üretilen yüksek kaliteli organik pamuğu işleyen Karakucak Tekstil, çevreye duyarlı üretim süreçleri ve uluslararası sertifikaları ile küresel markalar tarafından tercih ediliyor. Şirket, son yıllarda organik ve sürdürülebilir ürünlere olan talebin artmasıyla beraber üretim kapasitesini de kademeli olarak artırdı.</p><p>Karakucak Tekstil Genel Müdürü İbrahim Karakucak, 'Türk pamuğunun kalitesini dünyaya tanıtmak ve katma değerli tekstil ürünleriyle ihracatımızı artırmak en önemli hedeflerimiz arasında. Sürdürülebilirlik odaklı yaklaşımımız ve inovatif üretim teknolojilerimiz sayesinde global pazarda güçlü bir konuma ulaştık' dedi.</p><p>Şirket, geçtiğimiz yıl devreye aldığı yeni tesisinde, günlük 20 ton pamuk işleme kapasitesine ulaştı. Ayrıca, ar-ge departmanı tarafından geliştirilen özel dokuma teknikleri sayesinde daha az su ve enerji kullanarak üretim yapılması sağlandı.</p><p>Karakucak Tekstil, önümüzdeki yıl Almanya, Fransa ve İskandinav ülkelerindeki pazar payını artırmayı ve yeni pazarlara açılmayı hedefliyor.</p>",
@@ -62,16 +62,16 @@
       {
         "id": "mnk-mimarlik-yeni-proje",
         "title": "MNK Mimarlık'tan Sürdürülebilir Konut Projesi",
-        "excerpt": "MNK Mimarlık, tamamen yenilenebilir enerji kaynaklarıyla çalışan ve kendi enerjisini üreten yeni konut projesini tanıttı.",
-        "image": "/images/mimarlik/modern-konut.jpg",
-        "category": "projeler",
+        "excerpt": "MNK Mimarlık, çevre dostu malzemeler ve yenilenebilir enerji sistemleriyle donatılan sürdürülebilir konut projesini tanıttı.",
+        "image": "/images/mimarlik/mimarlik_2.jpg",
+        "category": "insaat-taahhut",
         "publishDate": "2025-05-05",
         "slug": "mnk-mimarlik-yeni-proje",
         "content": "<p>Karakucak Group'un mimarlık şirketi MNK Mimarlık, sürdürülebilir ve çevre dostu özellikleriyle öne çıkan yeni konut projesinin detaylarını düzenlenen basın toplantısıyla tanıttı. 'EcoLife' adı verilen proje, kendi enerjisini üreten ve doğayla uyumlu yaşam alanları sunmayı hedefliyor.</p><p>İstanbul'un Beykoz ilçesinde hayata geçirilecek projede, 60 konut birimi ve sosyal tesisler yer alacak. Projenin en önemli özelliği, güneş enerjisi sistemleri, yağmur suyu toplama üniteleri ve akıllı ev teknolojileriyle donatılmış olması.</p><p>MNK Mimarlık Genel Müdürü Mirza Karakucak, 'EcoLife projemiz, sürdürülebilir mimari anlayışımızın somut bir örneği. Bu projede sadece estetik ve fonksiyonel yapılar tasarlamakla kalmadık, aynı zamanda gelecek nesillere yaşanabilir bir çevre bırakmak için çevresel ayak izimizi minimuma indirmeyi hedefledik' dedi.</p><p>Proje kapsamında konutların çatı ve cephelerinde konumlandırılan güneş panelleri, binaların enerji ihtiyacının tamamını karşılayacak kapasiteye sahip. Ayrıca, akıllı ev sistemleri sayesinde konut sahipleri enerji tüketimlerini mobil cihazlarından izleyebilecek ve optimize edebilecek.</p><p>Konutlarda kullanılacak malzemelerin büyük bölümü geri dönüştürülmüş veya sürdürülebilir kaynaklardan temin edilecek. Projenin 2025 yılı sonunda tamamlanması planlanıyor.</p>",
         "relatedProjects": ["ecolife-konut"],
         "gallery": [
           {
-            "url": "/images/mimarlik/modern-konut.jpg",
+            "url": "/images/mimarlik/mimarlik_2.jpg",
             "alt": "EcoLife Konut Projesi"
           }
         ]
@@ -80,15 +80,15 @@
         "id": "tarim-yeni-teknoloji",
         "title": "Karakucak Tarım Akıllı Tarım Teknolojilerine Yatırım Yapıyor",
         "excerpt": "Karakucak Tarım, verimlilik ve sürdürülebilirliği artırmak için akıllı tarım teknolojilerine 10 milyon dolarlık yatırım yapacağını duyurdu.",
-        "image": "/images/tarim/akilli-tarim.jpg",
-        "category": "projeler",
+        "image": "/images/tarim/tarim.jpg",
+        "category": "tarim",
         "publishDate": "2025-04-15",
         "slug": "tarim-yeni-teknoloji",
         "content": "<p>Karakucak Group'un tarım şirketi Karakucak Tarım, önümüzdeki 3 yıl içinde akıllı tarım teknolojilerine toplam 10 milyon dolarlık yatırım yapacağını duyurdu. Yatırımlar kapsamında, uydu görüntüleme sistemleri, hassas sulama teknolojileri, toprak analiz cihazları ve otonom tarım makineleri tedarik edilecek.</p><p>Şirket, bu yatırımlarla birlikte tarımsal verimliliği %30 oranında artırmayı ve su tüketimini %40 azaltmayı hedefliyor. Ayrıca, yapay zeka ve büyük veri analitiği kullanılarak, iklim değişikliğinin etkilerine karşı daha dayanıklı tarım pratikleri geliştirilecek.</p><p>Karakucak Tarım Genel Müdürü Mehmet Ali Karakucak, 'Akıllı tarım teknolojileri, sadece verimliliği artırmakla kalmıyor, aynı zamanda doğal kaynakların sürdürülebilir kullanımını da sağlıyor. Bu yatırımlarla, Türkiye'nin tarım sektörüne öncülük etmeyi ve küresel standartlarda üretim yapmayı hedefliyoruz' dedi.</p><p>Şirket, ilk etapta İç Anadolu Bölgesi'ndeki 5.000 dönümlük arazide pilot uygulamaya başlayacak. Burada edinilen deneyim ve veriler ışığında, teknolojilerin diğer tarım alanlarına da yaygınlaştırılması planlanıyor.</p><p>Karakucak Tarım, ayrıca üniversiteler ve araştırma kurumlarıyla işbirliği yaparak, Türkiye'ye özgü tarım koşullarına uygun teknolojik çözümler geliştirmek için Ar-Ge çalışmalarını da destekleyecek.</p>",
         "relatedProjects": ["akilli-tarim"],
         "gallery": [
           {
-            "url": "/images/tarim/akilli-tarim.jpg",
+            "url": "/images/tarim/tarim.jpg",
             "alt": "Akıllı Tarım Teknolojileri"
           }
         ]
@@ -122,11 +122,11 @@
   },
   "en": {
     "categories": {
-      "kurumsal": { "label": "Corporate", "color": "bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300" },
-      "projeler": { "label": "Projects", "color": "bg-green-50 text-green-700 dark:bg-green-900/30 dark:text-green-300" },
-      "etkinlikler": { "label": "Events", "color": "bg-purple-50 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300" },
-      "oduller": { "label": "Awards", "color": "bg-amber-50 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300" },
-      "basin": { "label": "Press", "color": "bg-rose-50 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300" }
+      "insaat-taahhut": { "label": "Construction & Contracting", "color": "bg-blue-50 text-blue-700" },
+      "otomotiv": { "label": "Automotive", "color": "bg-green-50 text-green-700" },
+      "madencilik": { "label": "Mining", "color": "bg-purple-50 text-purple-700" },
+      "tarim": { "label": "Agriculture", "color": "bg-amber-50 text-amber-700" },
+      "pamuk-sanayi": { "label": "Cotton Industry", "color": "bg-rose-50 text-rose-700" }
     },
     "news": [
      
