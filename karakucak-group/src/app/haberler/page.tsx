@@ -41,7 +41,7 @@ export default function NewsPage() {
             alt="Haberler" 
             fill 
             priority
-            className="object-cover" 
+            className="object-contain" 
           />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
@@ -104,7 +104,7 @@ export default function NewsPage() {
                     src={newsItem.image} 
                     alt={newsItem.title} 
                     fill 
-                    className="object-cover transition-transform hover:scale-105 duration-500" 
+                    className="object-contain transition-transform hover:scale-105 duration-500" 
                   />
                   {category && (
                     <span className={`absolute top-4 right-4 px-3 py-1 text-xs font-medium rounded-full ${category.color || 'bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300'}`}>

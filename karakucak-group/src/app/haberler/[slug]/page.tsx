@@ -64,7 +64,7 @@ export default function NewsDetailPage({ params }: { params: { slug: string } })
           alt={newsItem.title} 
           fill 
           priority
-          className="object-cover" 
+          className="object-contain" 
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10" />
         
@@ -127,7 +127,7 @@ export default function NewsDetailPage({ params }: { params: { slug: string } })
                         src={item.url} 
                         alt={item.alt} 
                         fill 
-                        className="object-cover transition-transform hover:scale-105 duration-700" 
+                        className="object-contain transition-transform hover:scale-105 duration-700" 
                       />
                     </div>
                   ))}
@@ -147,7 +147,7 @@ export default function NewsDetailPage({ params }: { params: { slug: string } })
                           src={project?.image || ''} 
                           alt={project?.title || ''} 
                           fill 
-                          className="object-cover transition-transform group-hover:scale-105 duration-500" 
+                          className="object-contain transition-transform group-hover:scale-105 duration-500" 
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
                         <div className="absolute bottom-0 left-0 right-0 p-4">
