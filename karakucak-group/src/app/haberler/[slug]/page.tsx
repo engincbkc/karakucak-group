@@ -18,7 +18,9 @@ export function generateStaticParams() {
 
 // Bu fonksiyon sayfa meta verilerini dinamik olarak üretir
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const newsItem = getNewsBySlug(params.slug)
+  // Next.js 15'te params'yi beklemeliyiz
+  const slug = await Promise.resolve(params.slug)
+  const newsItem = getNewsBySlug(slug)
   
   if (!newsItem) {
     return {
@@ -35,9 +37,18 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   )
 }
 
-// Haber detay sayfasu0131 bileu015feni
-export default function NewsDetailPage({ params }: { params: { slug: string } }) {
-  const newsItem = getNewsBySlug(params.slug)
+// Viewport konfigürasyonu için ayrı bir export
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 2,
+}
+
+// Haber detay sayfası bileşeni - Next.js 15 ile uyumlu olarak async yapıldı
+export default async function NewsDetailPage({ params }: { params: { slug: string } }) {
+  // Next.js 15'te params'yi beklemeliyiz
+  const slug = await Promise.resolve(params.slug)
+  const newsItem = getNewsBySlug(slug)
   
   // Eğer haber bulunamazsa 404 sayfasına yönlendir
   if (!newsItem) {

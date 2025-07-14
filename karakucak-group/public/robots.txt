@@ -1,0 +1,15 @@
+# Karakucak Group robots.txt
+# Allow all web crawlers to access all content
+User-agent: *
+Allow: /
+
+# Sitemap declaration
+Sitemap: https://karakucakgroup.com/sitemap.xml
+
+# Optimize crawling by specifying crawl-delay
+Crawl-delay: 10
+
+# Avoid unnecessary crawling in these directories
+Disallow: /api/
+Disallow: /_next/
+Disallow: /*?

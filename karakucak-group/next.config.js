@@ -27,6 +27,12 @@ const nextConfig = {
   // Improve performance with enhanced compression
   compress: true,
   
+  // Enhanced static generation for improved SEO performance
+  experimental: {
+    // Keep only standard supported options
+    optimizeCss: true,
+  },
+
   // Configure image optimization
   images: {
     // Enable better image optimization
