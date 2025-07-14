@@ -30,7 +30,7 @@ const nextConfig = {
   // Enhanced static generation for improved SEO performance
   experimental: {
     // Keep only standard supported options
-    optimizeCss: true,
+    // optimizeCss: true,
   },
 
   // Configure image optimization
