@@ -99,7 +99,7 @@ export default function NewsPage() {
             return (
               <div key={newsItem.id} className="flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden h-full transition-transform hover:translate-y-[-5px] hover:shadow-lg">
                 {/* Haber Görseli */}
-                <div className="relative aspect-video overflow-hidden">
+                <div className="relative w-full h-[220px] bg-gray-100 dark:bg-gray-700">
                   <Image 
                     src={newsItem.image} 
                     alt={newsItem.title} 

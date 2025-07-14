@@ -58,13 +58,13 @@ export default function NewsDetailPage({ params }: { params: { slug: string } })
   return (
     <div className="bg-white dark:bg-gray-900">
       {/* Hero Bölümü */}
-      <div className="relative w-full h-[50vh] md:h-[60vh]">
+      <div className="relative w-full h-[50vh] md:h-[60vh] bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
         <Image 
           src={newsItem.image} 
           alt={newsItem.title} 
           fill 
           priority
-          className="object-contain" 
+          className="object-contain p-4" 
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10" />
         
