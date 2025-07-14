@@ -2,67 +2,6 @@
   "tr": {
     "sectors": [
       {
-        "id": "insaat-taahhut",
-        "title": "İnşaat & Taahhüt",
-        "companyName": "MNK Mimarlık",
-        "companyDetail": "MNK Mimarlık",
-        "icon": "building",
-        "keyPoints": [
-          "Modern Mimari Tasarımlar",
-          "Yüksek Mühendislik Standartları",
-          "Sürdürülebilir Yapı Çözümleri"
-        ],
-        "stats": [
-          { "value": "2020", "label": "Kurulan Yıl" },
-          { "value": "10+", "label": "Tamamlanan Proje" }
-        ],
-        "about": "MNK Mimarlık, 2020 yılında inşaat ve taahhüt sektöründe faaliyet göstermeye başlamış, kısa sürede sektördeki güvenilirliğini ve başarısını kanıtlamıştır. Firma, özellikle kamu müteahhitliği alanında faaliyet göstererek, kamu projelerinin inşaat, yenileme ve taahhüt hizmetlerini titizlikle yerine getirmektedir. Şirketimiz, üstlendiği tüm projelerde ekstra çalışma hızı, kaliteli malzeme kullanımı ve zamanında teslim ilkelerini benimsemektedir. İleri düzeyde proje yönetim teknikleri kullanarak, her aşamada proje takibini en yüksek hassasiyetle yapmaktayız. Bütçe kontrolü, zaman yönetimi ve kaynak planlaması gibi temel unsurlara odaklanarak, projeleri en uygun fiyatlarla ve yüksek kaliteyle tamamlamaktayız. MNK Mimarlık, güçlü teknolojik altyapısı ve deneyimli mühendislik ekibiyle projelerdeki tüm süreçleri titizlikle yönetmektedir. İnşaat malzeme tedarik zinciri, iş sağlığı ve güvenliği önlemleri, yapı denetimi ve yasal uyumluluk konularında yüksek standartlar sağlanmakta, her aşamada mükemmellik hedeflenmektedir. Projelerimizde; modern tasarım anlayışı, mühendislik bilgi birikimi ve sektördeki en son yenilikler ışığında sürdürülebilir ve çevre dostu inşaat çözümleri sunuyoruz. Her bir projeye özel çözümler üreterek, hem inşaat süreçlerinde verimlilik hem de müşteri memnuniyetini ön planda tutuyoruz.",
-        "description": "Modern mimari anlayışımız ve yüksek mühendislik standartlarımızla inşaat sektöründe güvenilir çözümler sunuyoruz.",
-        "backgroundImage": "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg",
-        "primaryButtonText": "Projelerimiz",
-        "primaryButtonLink": "#projeler",
-        "secondaryButtonText": "İletişime Geçin",
-        "secondaryButtonLink": "/iletisim",
-        "overlayColor": "from-gray-900/95 to-amber-600/80",
-        "services": {
-          "title": "Hizmetlerimiz",
-          "description": "Karakucak Group olarak, sürdürülebilir ve yenilikçi mimari tasarımlarla çevresel, ekonomik ve sosyal değer yaratan projeler geliştiriyoruz.",
-          "imageSrc": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3",
-          "imageAlt": "İnşaat Hizmetlerimiz",
-          "items": [
-            { "icon": "home", "title": "Konut Projeleri" },
-            { "icon": "office", "title": "Ticari Yapılar" },
-            { "icon": "building", "title": "Endüstriyel Tesisler" },
-            { "icon": "museum", "title": "Kültür Merkezleri" }
-          ]
-        },
-        "detailBgImage": "/images/mimarlik/mimarlik_2.jpg",
-        "feature": {
-          "title": "MNK Mimarlık",
-          "description1": "MNK Mimarlık, 1997 yılından bu yana inşaat ve taahhüt sektöründe faaliyet göstermeye başlamış, kısa sürede sektördeki güvenilirliğini ve başarısını kanıtlamıştır. Firma, özellikle kamu müteahhitliği alanında faaliyet göstererek, kamu projelerinin inşaat, yenileme ve taahhüt hizmetlerini titizlikle yerine getirmektedir.",
-          "description2": "Şirketimiz, üstlendiği tüm projelerde ekstra çalışma hızı, kaliteli malzeme kullanımı ve zamanında teslim ilkelerini benimsemektedir. İleri düzeyde proje yönetim teknikleri kullanarak, her aşamada proje takibini en yüksek hassasiyetle yapmaktayız.",
-          "featureImage": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3",
-          "buttonText": "MNK Mimarlık'ı Keşfedin",
-          "buttonLink": "#projeler"
-        },
-        "projects": {
-          "showProjects": true,
-          "title": "Öne Çıkan Projelerimiz",
-          "subtitle": "İnşaat ve taahhüt alanında gerçekleştirdiğimiz prestijli projelerimizden bazıları",
-          "viewAllLink": "/projeler",
-          "viewAllText": "Tüm Projeleri Görüntüle",
-          "itemsPerPage": 3,
-          "filter": ["insaat", "mimarlik"]
-        },
-        "cta": {
-          "title": "Projeleriniz İçin Yanınızdayız",
-          "description": "Modern, sürdürülebilir ve fonksiyonel yapı projeleri için bizimle iletişime geçin.",
-          "buttons": [
-            { "text": "Bize Ulaşın", "href": "/iletisim", "isPrimary": true }
-          ]
-        }
-      },
-      {
         "id": "otomotiv",
         "title": "Otomotiv",
         "companyName": "KGM SsangYong Karakucak Otomotiv Bayii",
@@ -124,6 +63,68 @@
         }
       },
       {
+        "id": "insaat-taahhut",
+        "title": "İnşaat & Taahhüt",
+        "companyName": "MNK Mimarlık",
+        "companyDetail": "MNK Mimarlık",
+        "icon": "building",
+        "keyPoints": [
+          "Modern Mimari Tasarımlar",
+          "Yüksek Mühendislik Standartları",
+          "Sürdürülebilir Yapı Çözümleri"
+        ],
+        "stats": [
+          { "value": "2020", "label": "Kurulan Yıl" },
+          { "value": "10+", "label": "Tamamlanan Proje" }
+        ],
+        "about": "MNK Mimarlık, 2020 yılında inşaat ve taahhüt sektöründe faaliyet göstermeye başlamış, kısa sürede sektördeki güvenilirliğini ve başarısını kanıtlamıştır. Firma, özellikle kamu müteahhitliği alanında faaliyet göstererek, kamu projelerinin inşaat, yenileme ve taahhüt hizmetlerini titizlikle yerine getirmektedir. Şirketimiz, üstlendiği tüm projelerde ekstra çalışma hızı, kaliteli malzeme kullanımı ve zamanında teslim ilkelerini benimsemektedir. İleri düzeyde proje yönetim teknikleri kullanarak, her aşamada proje takibini en yüksek hassasiyetle yapmaktayız. Bütçe kontrolü, zaman yönetimi ve kaynak planlaması gibi temel unsurlara odaklanarak, projeleri en uygun fiyatlarla ve yüksek kaliteyle tamamlamaktayız. MNK Mimarlık, güçlü teknolojik altyapısı ve deneyimli mühendislik ekibiyle projelerdeki tüm süreçleri titizlikle yönetmektedir. İnşaat malzeme tedarik zinciri, iş sağlığı ve güvenliği önlemleri, yapı denetimi ve yasal uyumluluk konularında yüksek standartlar sağlanmakta, her aşamada mükemmellik hedeflenmektedir. Projelerimizde; modern tasarım anlayışı, mühendislik bilgi birikimi ve sektördeki en son yenilikler ışığında sürdürülebilir ve çevre dostu inşaat çözümleri sunuyoruz. Her bir projeye özel çözümler üreterek, hem inşaat süreçlerinde verimlilik hem de müşteri memnuniyetini ön planda tutuyoruz.",
+        "description": "Modern mimari anlayışımız ve yüksek mühendislik standartlarımızla inşaat sektöründe güvenilir çözümler sunuyoruz.",
+        "backgroundImage": "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg",
+        "primaryButtonText": "Projelerimiz",
+        "primaryButtonLink": "#projeler",
+        "secondaryButtonText": "İletişime Geçin",
+        "secondaryButtonLink": "/iletisim",
+        "overlayColor": "from-gray-900/95 to-amber-600/80",
+        "services": {
+          "title": "Hizmetlerimiz",
+          "description": "Karakucak Group olarak, sürdürülebilir ve yenilikçi mimari tasarımlarla çevresel, ekonomik ve sosyal değer yaratan projeler geliştiriyoruz.",
+          "imageSrc": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3",
+          "imageAlt": "İnşaat Hizmetlerimiz",
+          "items": [
+            { "icon": "home", "title": "Konut Projeleri" },
+            { "icon": "office", "title": "Ticari Yapılar" },
+            { "icon": "building", "title": "Endüstriyel Tesisler" },
+            { "icon": "museum", "title": "Kültür Merkezleri" }
+          ]
+        },
+        "detailBgImage": "/images/mimarlik/mimarlik_2.jpg",
+        "feature": {
+          "title": "MNK Mimarlık",
+          "description1": "MNK Mimarlık, 1997 yılından bu yana inşaat ve taahhüt sektöründe faaliyet göstermeye başlamış, kısa sürede sektördeki güvenilirliğini ve başarısını kanıtlamıştır. Firma, özellikle kamu müteahhitliği alanında faaliyet göstererek, kamu projelerinin inşaat, yenileme ve taahhüt hizmetlerini titizlikle yerine getirmektedir.",
+          "description2": "Şirketimiz, üstlendiği tüm projelerde ekstra çalışma hızı, kaliteli malzeme kullanımı ve zamanında teslim ilkelerini benimsemektedir. İleri düzeyde proje yönetim teknikleri kullanarak, her aşamada proje takibini en yüksek hassasiyetle yapmaktayız.",
+          "featureImage": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3",
+          "buttonText": "MNK Mimarlık'ı Keşfedin",
+          "buttonLink": "#projeler"
+        },
+        "projects": {
+          "showProjects": true,
+          "title": "Öne Çıkan Projelerimiz",
+          "subtitle": "İnşaat ve taahhüt alanında gerçekleştirdiğimiz prestijli projelerimizden bazıları",
+          "viewAllLink": "/projeler",
+          "viewAllText": "Tüm Projeleri Görüntüle",
+          "itemsPerPage": 3,
+          "filter": ["insaat", "mimarlik"]
+        },
+        "cta": {
+          "title": "Projeleriniz İçin Yanınızdayız",
+          "description": "Modern, sürdürülebilir ve fonksiyonel yapı projeleri için bizimle iletişime geçin.",
+          "buttons": [
+            { "text": "Bize Ulaşın", "href": "/iletisim", "isPrimary": true }
+          ]
+        }
+      },
+      
+      {
         "id": "madencilik",
         "title": "Madencilik",
         "companyName": "Karakucak Madencilik",
@@ -179,65 +180,6 @@
         "cta": {
           "title": "Sürdürülebilir Madencilik İçin",
           "description": "Çevre dostu ve yenilikçi madencilik çözümlerimiz için bizimle iletişime geçin.",
-          "buttons": [
-            { "text": "Bize Ulaşın", "href": "/iletisim", "isPrimary": true }
-          ]
-        }
-      },
-      {
-        "id": "tarim",
-        "title": "Tarım",
-        "companyName": "Karakucak Tarım",
-        "companyDetail": "Karakucak Tarım",
-        "icon": "leaf",
-        "keyPoints": [
-          "Akıllı Tarım Teknolojileri",
-          "Sürdürülebilir Tarım Uygulamaları",
-          "Optimum Kaynak Kullanımı"
-        ],
-        "stats": [
-          { "value": "15+", "label": "Tarımsal Ürün" }
-        ],
-        "description": "Modern tarım teknolojileri ve sürdürülebilir uygulamalarla tarımsal üretimde verimliliği artırıyoruz.",
-        "backgroundImage": "/images/tarim/tarim.jpg",
-        "primaryButtonText": "Projelerimiz",
-        "primaryButtonLink": "",
-        "secondaryButtonText": "İletişime Geçin",
-        "secondaryButtonLink": "/iletisim",
-        "overlayColor": "from-gray-900/95 to-amber-600/80",
-        "services": {
-          "title": "Hizmetlerimiz",
-          "description": "Karakucak Group olarak tarım sektöründe yenilikçi ve sürdürülebilir çözümler sunuyoruz.",
-          "imageSrc": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3",
-          "imageAlt": "Tarım Hizmetlerimiz",
-          "items": [
-            { "icon": "crop", "title": "Tarla Bitkileri" },
-            { "icon": "organic", "title": "Organik Tarım" },
-            { "icon": "tech", "title": "Tarım Teknolojileri" },
-            { "icon": "irrigation", "title": "Modern Sulama" }
-          ]
-        },
-        "detailBgImage": "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1200&q=80",
-        "feature": {
-          "title": "Sürdürülebilir Tarım",
-          "description1": "Karakucak Tarım, sürdürülebilir tarım uygulamalarıyla sektörde öncü rol oynamaktadır.",
-          "description2": "Modern tarım teknolojileri ve verimli sulama sistemleriyle kaynak kullanımını optimize ediyoruz.",
-          "featureImage": "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?ixlib=rb-4.0.3",
-          "buttonText": "Yaklaşımımızı Keşfedin",
-          "buttonLink": "#"
-        },
-        "projects": {
-          "showProjects": true,
-          "title": "Öne Çıkan Projelerimiz",
-          "subtitle": "Tarım alanında gerçekleştirdiğimiz başarılı projelerimizden bazıları",
-          "viewAllLink": "/projeler",
-          "viewAllText": "Tüm Projeleri Görüntüle",
-          "itemsPerPage": 3,
-          "filter": ["tarim"]
-        },
-        "cta": {
-          "title": "Sürdürülebilir Tarım İçin",
-          "description": "Modern ve verimli tarım çözümlerimiz için bizimle iletişime geçin.",
           "buttons": [
             { "text": "Bize Ulaşın", "href": "/iletisim", "isPrimary": true }
           ]
@@ -301,7 +243,67 @@
             { "text": "Bize Ulaşın", "href": "/iletisim", "isPrimary": true }
           ]
         }
+      },
+      {
+        "id": "tarim",
+        "title": "Tarım",
+        "companyName": "Karakucak Tarım",
+        "companyDetail": "Karakucak Tarım",
+        "icon": "leaf",
+        "keyPoints": [
+          "Akıllı Tarım Teknolojileri",
+          "Sürdürülebilir Tarım Uygulamaları",
+          "Optimum Kaynak Kullanımı"
+        ],
+        "stats": [
+          { "value": "15+", "label": "Tarımsal Ürün" }
+        ],
+        "description": "Modern tarım teknolojileri ve sürdürülebilir uygulamalarla tarımsal üretimde verimliliği artırıyoruz.",
+        "backgroundImage": "/images/tarim/tarim.jpg",
+        "primaryButtonText": "Projelerimiz",
+        "primaryButtonLink": "",
+        "secondaryButtonText": "İletişime Geçin",
+        "secondaryButtonLink": "/iletisim",
+        "overlayColor": "from-gray-900/95 to-amber-600/80",
+        "services": {
+          "title": "Hizmetlerimiz",
+          "description": "Karakucak Group olarak tarım sektöründe yenilikçi ve sürdürülebilir çözümler sunuyoruz.",
+          "imageSrc": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3",
+          "imageAlt": "Tarım Hizmetlerimiz",
+          "items": [
+            { "icon": "crop", "title": "Tarla Bitkileri" },
+            { "icon": "organic", "title": "Organik Tarım" },
+            { "icon": "tech", "title": "Tarım Teknolojileri" },
+            { "icon": "irrigation", "title": "Modern Sulama" }
+          ]
+        },
+        "detailBgImage": "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1200&q=80",
+        "feature": {
+          "title": "Sürdürülebilir Tarım",
+          "description1": "Karakucak Tarım, sürdürülebilir tarım uygulamalarıyla sektörde öncü rol oynamaktadır.",
+          "description2": "Modern tarım teknolojileri ve verimli sulama sistemleriyle kaynak kullanımını optimize ediyoruz.",
+          "featureImage": "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?ixlib=rb-4.0.3",
+          "buttonText": "Yaklaşımımızı Keşfedin",
+          "buttonLink": "#"
+        },
+        "projects": {
+          "showProjects": true,
+          "title": "Öne Çıkan Projelerimiz",
+          "subtitle": "Tarım alanında gerçekleştirdiğimiz başarılı projelerimizden bazıları",
+          "viewAllLink": "/projeler",
+          "viewAllText": "Tüm Projeleri Görüntüle",
+          "itemsPerPage": 3,
+          "filter": ["tarim"]
+        },
+        "cta": {
+          "title": "Sürdürülebilir Tarım İçin",
+          "description": "Modern ve verimli tarım çözümlerimiz için bizimle iletişime geçin.",
+          "buttons": [
+            { "text": "Bize Ulaşın", "href": "/iletisim", "isPrimary": true }
+          ]
+        }
       }
+     
     ]
   },
   "en": {
