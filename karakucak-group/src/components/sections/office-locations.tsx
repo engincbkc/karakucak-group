@@ -21,7 +21,7 @@ const officeLocations: OfficeLocation[] = [
     id: 1,
     name: "Merkez Ofis",
     city: "İstanbul",
-    address: "Barbaros Mah. Begonya Sok. No: 3, Ataşehir, İstanbul, 34746",
+    address: "Şanlıurfa Karaköprü",
     phone: "+90 212 123 45 67",
     email: "istanbul@karakucakgroup.com",
     image: "https://images.unsplash.com/photo-1524778880162-0cf5b9dab69c?q=80&w=1170",
@@ -66,7 +66,7 @@ export function OfficeLocations() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="h-full overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300">
+              <Card title="" className="h-full overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="relative h-48 w-full overflow-hidden">
                   <Image
                     src={office.image}

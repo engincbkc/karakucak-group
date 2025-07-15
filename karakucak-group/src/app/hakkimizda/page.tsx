@@ -38,7 +38,7 @@ export default function HakkimizdaPage() {
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-gray-900 to-transparent">
                   <p className="text-white font-medium">Merkez Ofis</p>
-                  <p className="text-sm text-gray-300">İstanbul/Ataşehir</p>
+                  <p className="text-sm text-gray-300">Şanlıurfa/Karaköprü</p>
                 </div>
               </div>
             </Card>
@@ -105,7 +105,7 @@ export default function HakkimizdaPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader 
             title="Hikayemiz" 
-            subtitle="1998'den bugüne, değerlerimizden ödün vermeden sürdürülebilir büyüme yolculuğumuz."
+            subtitle="1997'den bugüne, değerlerimizden ödün vermeden sürdürülebilir büyüme yolculuğumuz."
             alignment="center"
             className="mb-16"
           />
@@ -145,10 +145,7 @@ export default function HakkimizdaPage() {
                 Vizyon Sahibi Bir Başlangıç
               </h3>
               <p className="text-lg mb-6 text-gray-700 dark:text-gray-300">
-                Karakucak Group, 1998 yılında Mirza Karakucak tarafından madencilik sektöründeki fırsatları değerlendirmek üzere kuruldu. Kısa sürede büyüyen şirketimiz, otomotiv sektöründe yatırımlar yaparak faaliyet alanlarını genişletti.
-              </p>
-              <p className="text-lg mb-8 text-gray-700 dark:text-gray-300">
-                2005 yılında pamuk ve tekstil sektörüne adım atan grubumuz, 2012 yılında MNK Mimarlık şirketini bünyesine katarak inşaat ve tasarım alanında da faaliyet göstermeye başladı. Bugün, dört ana sektörde yürüttüğümüz faaliyetler ile Türkiye ekonomisine değer katmaya devam ediyoruz.
+                1997 yılında Karakucak Tekstil ile sektöre adım atan grubumuz, Çırçır ve prese fabrikası ile tekstil alanında güçlü bir altyapı oluşturdu. 2011 yılında Karakucak Madencilik'in kurulmasıyla faaliyet alanlarımızı genişlettik. 2020 yılında MNK Mimarlık ile inşaat ve tasarım sektöründe hizmet vermeye başladık. 2024 yılında ise KGM Ssangyong ile otomotiv sektöründe önemli bir adım daha attık. Bugün beş ana sektörde yürüttüğümüz faaliyetler ile Türkiye ekonomisine değer katmaya devam ediyoruz.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button 
