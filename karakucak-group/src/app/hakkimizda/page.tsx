@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ChevronRight, ChevronDown, Building2, Award, Users, Globe, Lightbulb, Clock, BarChart, Target, Shield } from "lucide-react";
+import { ChevronRight, ChevronDown, Award, Users, Clock, BarChart, Target, Shield, Car, Factory, Building, Mountain, Leaf, Hammer, PencilRuler, Map } from "lucide-react";
 import { CollaborationCTA } from "@/components/sections/collaboration-cta";
 
 export default function HakkimizdaPage() {
@@ -59,7 +59,7 @@ export default function HakkimizdaPage() {
           >
             {/* Tag/badge */}
             <div className="inline-block px-4 py-1 mb-6 bg-blue-700/30 backdrop-blur-sm rounded-full border border-blue-500/20">
-              <span className="text-sm font-medium text-blue-200">1998'den Beri</span>
+              <span className="text-sm font-medium text-blue-200">1997'den Beri</span>
             </div>
             
             {/* Main title with gradient */}
@@ -167,28 +167,29 @@ export default function HakkimizdaPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader 
             title="Faaliyet Alanlarımız" 
-            subtitle="Dört farklı sektörde uzmanlaşmış ekiplerimizle hizmet veriyoruz."
+            subtitle="Beş farklı sektörde uzmanlaşmış ekiplerimizle hizmet veriyoruz."
             alignment="center"
             className="mb-16"
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <Card title="Otomotiv" className="h-full">
-                <div className="p-6 flex flex-col h-full">
+              <Card title="Otomotiv" className="h-full overflow-hidden">
+                <div className="p-6 flex flex-col h-full justify-between">
                   <div className="mb-5 rounded-full bg-blue-100 dark:bg-blue-900/30 p-3 w-12 h-12 flex items-center justify-center">
-                    <Building2 className="w-6 h-6 text-blue-700 dark:text-blue-400" />
+                    <Car className="w-6 h-6 text-blue-700 dark:text-blue-400" />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">Otomotiv</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow">
-                    Geniş araç filomuz ve madencilik alanındaki yatırımlarımızla sektörün öncü kuruluşları arasında yer alıyoruz. Yenilikçi çözümler ve çevre dostu yaklaşımlar ile fark yaratıyoruz.
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow min-h-[120px] flex items-start">
+                    Geniş araç filomuz ve yenilikçi çözümlerimizle otomotiv sektörünün öncü kuruluşları arasında yer alıyoruz. Çevre dostu yaklaşımlar ile sürdürülebilir hizmet sunuyoruz.
                   </p>
-                  <Button 
+                  <div className="mt-auto pt-4">
+                    <Button 
                     href="/sektor/otomotiv" 
                     variant="ghost" 
                     size="sm"
@@ -198,6 +199,7 @@ export default function HakkimizdaPage() {
                   >
                     Detaylı Bilgi
                   </Button>
+                  </div>
                 </div>
               </Card>
             </motion.div>
@@ -208,16 +210,17 @@ export default function HakkimizdaPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <Card title="Pamuk ve Tekstil" className="h-full">
-                <div className="p-6 flex flex-col h-full">
+              <Card title="Pamuk ve Tekstil" className="h-full overflow-hidden">
+                <div className="p-6 flex flex-col h-full justify-between">
                   <div className="mb-5 rounded-full bg-green-100 dark:bg-green-900/30 p-3 w-12 h-12 flex items-center justify-center">
-                    <Globe className="w-6 h-6 text-green-700 dark:text-green-400" />
+                    <Factory className="w-6 h-6 text-green-700 dark:text-green-400" />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">Pamuk ve Tekstil</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow">
-                    Sürdürülebilir üretim prensipleriyle pamuk ve tekstil sektöründe kalite standartlarını yükseltiyoruz. Müşteri odaklı üretim anlayışımızla yerel ve global pazarda güçlü bir varlık gösteriyoruz.
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow min-h-[120px] flex items-start">
+                    Sürdürülebilir üretim prensipleriyle pamuk ve tekstil sektöründe kalite standartlarını yükseltiyoruz. Müşteri odaklı yaklaşımımızla yerel ve global pazarda güçlü bir varlık sağlıyoruz.
                   </p>
-                  <Button 
+                  <div className="mt-auto pt-4">
+                    <Button 
                     href="/sektor/pamuk-sanayi" 
                     variant="ghost" 
                     size="sm"
@@ -227,6 +230,7 @@ export default function HakkimizdaPage() {
                   >
                     Detaylı Bilgi
                   </Button>
+                  </div>
                 </div>
               </Card>
             </motion.div>
@@ -237,16 +241,17 @@ export default function HakkimizdaPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <Card title="MNK Mimarlık" className="h-full">
-                <div className="p-6 flex flex-col h-full">
+              <Card title="İnşaat&Taahhüt" className="h-full overflow-hidden">
+                <div className="p-6 flex flex-col h-full justify-between">
                   <div className="mb-5 rounded-full bg-purple-100 dark:bg-purple-900/30 p-3 w-12 h-12 flex items-center justify-center">
-                    <Lightbulb className="w-6 h-6 text-purple-700 dark:text-purple-400" />
+                    <PencilRuler className="w-6 h-6 text-purple-700 dark:text-purple-400" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">MNK Mimarlık</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow">
-                    Modern ve yenilikçi tasarım çözümleriyle mimarlık sektöründe fark yaratan projeler geliştiriyoruz. Ticari, konut ve kurumsal projelerinizde estetik ve işlevsellik odaklı yaklaşımımızı deneyimleyin.
+                  <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">İnşaat&Taahhüt</h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow min-h-[120px] flex items-start">
+                    Modern ve yenilikçi tasarım çözümleriyle inşaat sektöründe fark yaratan projeler geliştiriyoruz. Ticari ve kurumsal projelerinizde estetik ve işlevsellik odaklı yaklaşımımızı sunuyoruz.
                   </p>
-                  <Button 
+                  <div className="mt-auto pt-4">
+                    <Button 
                     href="/sektor/insaat-taahhut" 
                     variant="ghost" 
                     size="sm"
@@ -256,6 +261,7 @@ export default function HakkimizdaPage() {
                   >
                     Detaylı Bilgi
                   </Button>
+                  </div>
                 </div>
               </Card>
             </motion.div>
@@ -266,16 +272,17 @@ export default function HakkimizdaPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <Card title="Kurumsal Hizmetler" className="h-full">
-                <div className="p-6 flex flex-col h-full">
+              <Card title="Madencilik" className="h-full overflow-hidden">
+                <div className="p-6 flex flex-col h-full justify-between">
                   <div className="mb-5 rounded-full bg-amber-100 dark:bg-amber-900/30 p-3 w-12 h-12 flex items-center justify-center">
-                    <BarChart className="w-6 h-6 text-amber-700 dark:text-amber-400" />
+                    <Hammer className="w-6 h-6 text-amber-700 dark:text-amber-400" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">Kurumsal Hizmetler</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow">
-                    Karakucak Group olarak kurumsal danışmanlık, yatırım ve stratejik planlama hizmetlerimizle iş ortaklarımıza değer katıyoruz. 25 yıllık tecrübemizle iş dünyanızın gelişimini destekliyoruz.
+                  <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">Madencilik</h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow min-h-[120px] flex items-start">
+                    Taş & Kum Ocağı işletmeciliğinde çevre dostu madencilik uygulamalarımızla ve ileri teknoloji ekipmanlarımızla sürdürülebilir madencilik faaliyetleri yürütüyoruz.
                   </p>
-                  <Button 
+                  <div className="mt-auto pt-4">
+                    <Button 
                     href="/sektor/madencilik" 
                     variant="ghost" 
                     size="sm"
@@ -285,6 +292,39 @@ export default function HakkimizdaPage() {
                   >
                     Detaylı Bilgi
                   </Button>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              <Card title="Tarım" className="h-full overflow-hidden">
+                <div className="p-6 flex flex-col h-full justify-between">
+                  <div className="mb-5 rounded-full bg-green-100 dark:bg-green-900/30 p-3 w-12 h-12 flex items-center justify-center">
+                    <Leaf className="w-6 h-6 text-green-700 dark:text-green-400" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">Tarım</h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow min-h-[120px] flex items-start">
+                    Modern tarım teknolojileri ve sürdürülebilir uygulamalarla tarımsal üretimde verimliliği artırıyoruz. Çevre dostu yaklaşımımızla sektörde öncü çalışmalar yapıyoruz.
+ektörde öncü çalışmalar yapıyoruz.
+                  </p>
+                  <div className="mt-auto pt-4">
+                    <Button 
+                    href="/sektor/tarim" 
+                    variant="ghost" 
+                    size="sm"
+                    iconPosition="right"
+                    icon={<ChevronRight />}
+                    className="mt-auto"
+                  >
+                    Detaylı Bilgi
+                  </Button>
+                  </div>
                 </div>
               </Card>
             </motion.div>
@@ -396,7 +436,7 @@ export default function HakkimizdaPage() {
             >
               <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-xl h-full">
                 <div className="mb-5 rounded-full bg-teal-100 dark:bg-teal-900/30 p-3 w-12 h-12 flex items-center justify-center">
-                  <Globe className="w-6 h-6 text-teal-700 dark:text-teal-400" />
+                  <Map className="w-6 h-6 text-teal-700 dark:text-teal-400" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">Sosyal Sorumluluk</h3>
                 <p className="text-gray-700 dark:text-gray-300">
