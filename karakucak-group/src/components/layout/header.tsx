@@ -58,12 +58,13 @@ export function Header() {
             <div className="flex flex-shrink-0 items-center">
               <Link href="/" className="flex items-center">
                 <Image 
-                  src="/images/logo/main_logo-removebg-preview.png" 
+                  src="/images/logo/logo_header_bgsiz.png" 
                   alt="Karakucak Group Logo" 
-                  width={500} 
-                  height={100} 
-                  className="object-contain h-35 w-auto" 
+                  width={450} 
+                  height={120} 
+                  className="object-contain w-auto h-[80px] sm:h-[100px] md:h-[120px]" 
                   priority
+                  style={{ maxWidth: '100%' }}
                 />
               </Link>
             </div>
